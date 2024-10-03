@@ -1,0 +1,853 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\dtpproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\dtpproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\imageproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\imageproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\cartitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\cartitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\addcartitemrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\addcartitemrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\productdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\productdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\cartttemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\cartttemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\changequantitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\changequantitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\categoryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\categoryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\paypalpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\paypalpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\negotiation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\negotiation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\cartupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\cartupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\negotiationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\negotiationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\voucherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\voucherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\updatecommentstatusdto .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\updatecommentstatusdto .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\userrequestcscs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\userrequestcscs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\controllers\\subcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\controllers\\subcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\tokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\tokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|c:\\users\\orangee\\desktop\\orangemasterpice\\theme\\backend\\masterpiece\\masterpiece\\dto\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5B6AED-5522-4A9B-A46D-74DAB3F6EB3D}|Masterpiece\\Masterpiece.csproj|solutionrelative:masterpiece\\dto\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAANEAAAAAAAAAAAAQwOoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:14:22.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Product.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Product.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA5wA4AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:30:25.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DTPProduct.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\DTPProduct.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\DTPProduct.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\DTPProduct.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\DTPProduct.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T09:04:07.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\ProductDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\ProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T06:24:35.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\PaymentController.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAgwJgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:40:30.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CommentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\CommentDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\CommentDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\CommentDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\CommentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T15:41:22.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\CommentController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CommentController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\CommentController.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAowHoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T15:37:52.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ImageProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\ImageProductDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\ImageProductDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\ImageProductDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\ImageProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:34:40.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\IEmailService.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\IEmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:58:47.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "cartItemResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\cartItemResponseDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\cartItemResponseDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\cartItemResponseDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\cartItemResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T10:14:28.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "addCartItemRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\addCartItemRequestDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\addCartItemRequestDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\addCartItemRequestDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\addCartItemRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T10:13:25.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductDetailsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\ProductDetailsDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\ProductDetailsDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\ProductDetailsDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\ProductDetailsDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:58:25.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\CartController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwE4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T10:12:26.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CartTtemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\CartTtemRequest.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\CartTtemRequest.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\CartTtemRequest.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\CartTtemRequest.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T11:56:39.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "changeQuantityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\changeQuantityDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\changeQuantityDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\changeQuantityDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\changeQuantityDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T10:15:17.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\EmailService.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\EmailService.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwB0AAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:59:13.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "categoryRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:29:14.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\CartItemController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\CartItemController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAGQAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T11:55:19.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Color.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Color.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Color.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Color.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:40:32.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "VoucherController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\VoucherController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\VoucherController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\VoucherController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\VoucherController.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAewM4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:17:56.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PayPalPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\PayPalPaymentService.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\PayPalPaymentService.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\PayPalPaymentService.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\PayPalPaymentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:12:18.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PasswordHash.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\PasswordHash.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\PasswordHash.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\PasswordHash.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\PasswordHash.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:39:54.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserRegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\UserRegisterDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\UserRegisterDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\UserRegisterDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\UserRegisterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T13:09:46.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Payment.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Payment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:10:37.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Program.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Program.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Program.cs",
+              "RelativeToolTip": "Masterpiece\\Program.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAQwFQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:54:26.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Order.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:09:34.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Voucher.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Voucher.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Voucher.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Voucher.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Voucher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:48:52.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\CartItem.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\CartItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T11:58:12.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Category.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:29:22.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\OrderItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:19:45.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Message.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Message.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Message.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:48:47.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Negotiation.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Negotiation.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Negotiation.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Negotiation.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Negotiation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T07:48:48.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Subcategory.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Subcategory.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Subcategory.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Subcategory.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Subcategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:17:09.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Cart.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T13:36:26.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\Comment.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T15:36:37.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CartUPdateREquest.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\CartUPdateREquest.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\CartUPdateREquest.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\CartUPdateREquest.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\CartUPdateREquest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T12:01:16.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "NegotiationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\NegotiationRequest.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\NegotiationRequest.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\NegotiationRequest.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\NegotiationRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T09:34:32.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\OrderDto.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\OrderDto.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\OrderDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:03:34.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OrderItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\OrderItemDto.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\OrderItemDto.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\OrderItemDto.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\OrderItemDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:04:54.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PaymentRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\PaymentRequestDto.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\PaymentRequestDto.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\PaymentRequestDto.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\PaymentRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:11:25.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "VoucherRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:19:45.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UpdateCommentStatusDTO .cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\UpdateCommentStatusDTO .cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\UpdateCommentStatusDTO .cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\UpdateCommentStatusDTO .cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\UpdateCommentStatusDTO .cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T17:06:41.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserRequestcscs.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\UserRequestcscs.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\UserRequestcscs.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\UserRequestcscs.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\UserRequestcscs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T16:43:52.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAowEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:05:52.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\appsettings.json",
+              "RelativeDocumentMoniker": "Masterpiece\\appsettings.json",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\appsettings.json",
+              "RelativeToolTip": "Masterpiece\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-13T13:41:52.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwEEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T16:41:47.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SubCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\SubCategoryController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\SubCategoryController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\SubCategoryController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\SubCategoryController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAqwFEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:16:14.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:02:21.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\MyDbContext.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\MyDbContext.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\MyDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:49:46.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "SubCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\SubCategory.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\SubCategory.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\DTO\\SubCategory.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\SubCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:17:04.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\Models\\User.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T13:41:16.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TokenGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\TokenGenerator.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\TokenGenerator.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\theme\\Backend\\Masterpiece\\Masterpiece\\TokenGenerator.cs",
+              "RelativeToolTip": "Masterpiece\\TokenGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:39:14.854Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملفي الشخصي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .profile-sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            color: rgb(5, 5, 5);
+            padding: 20px;
+            border-radius: 10px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .profile-sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .profile-sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile-sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-sidebar ul li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .profile-sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .profile-sidebar ul li a:hover, .profile-sidebar ul li a.active {
+            background-color: #ff5722;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+        }
+
+        .dropdown-icon {
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            font-size: 12px;
+        }
+
+       
+        .profile-content {
+            margin-right: 270px;
+            padding: 30px;
+            background-image: url('/صور/cart.jpg'); /* رابط الصورة */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        .profile-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .profile-content p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .profile-content a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .profile-content a:hover {
+            text-decoration: underline;
+        }
+
+        .notification-icon {
+            position: relative;
+            font-size: 20px;
+            color: #ff5722;
+            cursor: pointer;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 3px 6px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<!-- Top Navigation Bar -->
+<div class="top-navbar">
+    <a href="#" class="navbar-brand">لوحة التحكم</a>
+    <div class="nav-links">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <a href="#"><i class="fas fa-user-circle"></i> مرحبًا, ناريمان</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 profile-sidebar">
+            <div class="text-center">
+                <img src="/صور/نساء1.jpg" alt="صورة المستخدم">
+                <h3>ناريمان الأسعد</h3>
+                <!-- <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div> -->
+            </div>
+            <ul>
+                <li class="dropdown">
+                    <a class="active" onclick="toggleDropdown(this)">لوحة التحكم <span class="dropdown-icon">+</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">إعدادات الحساب</a>
+                        <a href="#">معلومات الحساب</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleDropdown(this)">طلباتي السابقة <span class="dropdown-icon">+</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">عرض جميع الطلبات</a>
+                        <a href="#">تتبع الطلبات</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleDropdown(this)">الإشعارات <span class="dropdown-icon">+</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">إشعارات جديدة</a>
+                        <a href="#">إعدادات الإشعارات</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleDropdown(this)">القسائم <span class="dropdown-icon">+</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">قسائمي المتاحة</a>
+                        <a href="#">استخدام قسيمة</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleDropdown(this)">تحديث الحساب <span class="dropdown-icon">+</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">تغيير كلمة المرور</a>
+                        <a href="#">تحديث البيانات</a>
+                    </div>
+                </li>
+                <li><a href="index.html">تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-9 profile-content">
+           
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown(element) {
+        var dropdownContent = element.nextElementSibling;
+        var icon = element.querySelector('.dropdown-icon');
+
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            icon.textContent = "+";
+        } else {
+            dropdownContent.style.display = "block";
+            icon.textContent = "−";
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

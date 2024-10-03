@@ -1,0 +1,655 @@
+﻿/* الأسلوب العام للشاشة الكبيرة */
+.split-screen {
+    display: flex;
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    left: 10%;
+}
+
+.left-side {
+    flex: 1;
+    background-color: #37807F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    min-width: 300px;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+    .content1 h1 {
+        font-size: 5rem;
+        margin-left: 15%;
+    }
+
+    .content1 p {
+        color: white;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        margin-left: 17%;
+        text-align: right;
+        margin-top: 5%;
+        font-family: inherit;
+        font-weight: 700;
+    }
+
+.right-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+    .right-side img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.container.body-content {
+    margin: 5%;
+    margin-top: 10%;
+}
+
+.title {
+    color: white;
+}
+
+/* style sec2 */
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 7%;
+    margin-top: 2%;
+}
+
+    .sec2 h1 {
+        margin-bottom: 4%;
+    }
+
+    .sec2 p {
+        width: 50%;
+        font-size: 1rem;
+        text-align: center;
+        position: relative;
+        right: -2%;
+    }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .split-screen {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .content1 h1 {
+        font-size: 3rem;
+        margin-left: 5%;
+    }
+
+    .content1 p {
+        font-size: 1.2rem;
+        margin-left: 5%;
+    }
+
+    .right-side img {
+        height: auto; /* Adjust height for smaller screens */
+        max-height: 300px; /* Optional: Limit max height */
+    }
+
+    .sec2 p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .split-screen {
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .left-side, .right-side {
+        flex: none; /* Remove flex behavior */
+        width: 100%; /* Take full width */
+    }
+
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 4%;
+ 
+    }
+
+        .content1 h1 {
+            font-size: 1.3rem;
+            margin-left: 14%;
+        }
+   
+    .content1 p {
+        font-size: 1rem;
+        margin-left: 2%;
+    }
+
+ 
+        .right-side img {
+            height: auto;
+            max-height: 350px;
+        }
+   
+    .sec2 p {
+        width: 90%;
+    }
+}
+/* sec3 style*/
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    direction: rtl;
+ 
+    min-width:120%;
+}
+
+.info-box {
+    max-width: 300px;
+    margin: 0 1rem;
+}
+
+    .info-box img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .info-box p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+    }
+
+        .info-box p span {
+            display: block;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        margin-bottom: 2rem;
+    }
+}
+/* sec4 style*/
+.story-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(193, 243, 228);
+   
+    direction: rtl;
+    position: relative;
+    left: 10%;
+    flex-wrap: wrap; /* لجعل التصميم مرنًا */
+}
+
+.text-content {
+  display:flex;
+  flex-direction:column;
+    max-width: 600px;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+    .text-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        vertical-align: inherit;
+        text-align: right;
+    }
+
+    .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-align:right;
+        margin-bottom: 1.5rem;
+    }
+
+    .text-content .cta-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+.image-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+    .image-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+@media (max-width: 768px) {
+    .story-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .text-content .cta-button {
+        padding: 0.5rem 1rem;
+    }
+}
+/*sec5 style*/
+
+.report-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    direction: rtl;
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+    position: relative;
+    left: 10%;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 2rem;
+}
+
+    .text-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    .text-content .cta-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+.image-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+    .image-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+@media (max-width: 768px) {
+    .report-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .text-content .cta-button {
+        padding: 0.5rem 1rem;
+    }
+}
+/*/*//**sec6 style*/
+.mission-section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #9b59b6;
+    direction: rtl;
+    flex-wrap: wrap;
+    position: relative;
+    left: 10%;
+}
+
+.text-content1 {
+    flex: 1;
+    max-width: 600px;
+    color: white;
+}
+
+    .text-content1 h2 {
+        font-size: 2rem;
+        text-align:right;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    .text-content1 p {
+        text-align: right;
+        font-size: 2.5rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+   
+    }
+
+.image-content1 {
+    flex: 1;
+    max-width: 600px;
+}
+
+    .image-content1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+@media (max-width: 768px) {
+    .mission-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content1 {
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .image-content1 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content1 p {
+        font-size: 2rem;
+    }
+
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+}
+/*sec slider style*/
+
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+    position: relative;
+    left: 10%;
+}
+/*sec  التعريف عن الموقع */
+/*sec7 style*/
+.recycling-section {
+    text-align: center;
+    padding: 2rem;
+    direction: rtl;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px auto;
+   min-width: 1150px;
+    position: relative;
+    left: 10%;
+}
+
+    .recycling-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .recycling-section p {
+        font-size: 1.2rem;
+        color: #555;
+        line-height: 1.6;
+    }
+.recycling-section {
+    text-align: center;
+    padding: 2rem;
+    direction: rtl;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+    .recycling-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .recycling-section p {
+        font-size: 1.2rem;
+        color: #555;
+        line-height: 1.6;
+    }
+/********************************/
+/*sec8 style*/
+.invention-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    direction: rtl;
+    flex-wrap: wrap;
+    position: relative;
+    left: 10%;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 2rem;
+}
+
+    .text-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    .text-content ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+        .text-content ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+            .text-content ul li::before {
+                content: "★";
+                color: #2ecc71;
+                margin-left: 0.5rem;
+            }
+
+.video-content {
+    flex: 1;
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+    .video-content iframe {
+        width: 100%;
+        height: 315px;
+        border-radius: 5px;
+    }
+
+@media (max-width: 768px) {
+    .invention-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .video-content {
+        max-width: 100%;
+    }
+}
+/***************************/
+/*sec9 style*/
+.market-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    direction: rtl;
+    position: relative;
+    left: 10%;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 2rem;
+    color: #333;
+}
+
+    .text-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    .text-content ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+        .text-content ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+            .text-content ul li::before {
+                content: "★";
+                color: #2ecc71;
+                margin-left: 0.5rem;
+            }
+
+.image-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+    .image-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+@media (max-width: 768px) {
+    .market-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+}

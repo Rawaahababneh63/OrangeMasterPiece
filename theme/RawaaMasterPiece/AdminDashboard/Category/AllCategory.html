@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الفئات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png" />
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #343a40;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .sidebar .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .sidebar .profile h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #ffb703;
+        }
+
+        .sidebar ul li a i {
+            margin-left: 10px;
+        }
+
+        .submenu {
+            display: none;
+            list-style-type: none;
+            padding-left: 15px;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+        .content {
+            margin-right: 270px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="/Content/imges/women/7.jpg" alt="صورة الملف الشخصي">
+            <h3>أصيل عبابنة</h3>
+        </div>
+        <ul>
+            <li class="dropdown">
+                <a href="/AdminDashboard/index1.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+            </li>
+			
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-download"></i> الأقسام</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Category/AllCategory.html">عرض الأقسام</a></li>
+                    <li><a href="/AdminDashboard/Category/AddCategory.html">إضافة القسم</a></li>
+                    <li><a href="/AdminDashboard/Category/UpdataCategory.html">إضافة حذف قسم</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-download"></i> المنتجات</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Product/allProduct.html">عرض المنتجات</a></li>
+                    <li><a href="/AdminDashboard/Product/addProduct.html">إضافة منتج</a></li>
+                    <li><a href="/AdminDashboard/Product/addProduct.html">تعديل منتج</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-gift"></i> الطلبات</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Order/AllOrder.html">كل الطلبات</a></li>
+                    <li><a href="/AdminDashboard/Order/GetOrder.html">البحث بالبريد الإلكتروني</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-trophy"></i>عرض المستخدمين </a></li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-cog"></i> الدردشة</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Chat/AllChats.html">عرض الدردشات</a></li>
+                    <li><a href="/AdminDashboard/Chat/ReplyChat.html">الرد على الدردشات</a></li>
+                </ul>
+            </li>
+			<li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-ticket-alt"></i> التفاوض على السعر</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Voucher/showVoucher.html">عرض الطلبات التفاوض</a></li>          
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-ticket-alt"></i> القسائم</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Voucher/showVoucher.html">عرض القسائم</a></li>
+                    <li><a href="/AdminDashboard/Voucher/AddVoucher.html">إضافة قسيمة</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-comments"></i> التعليقات</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Comments/ShowComments.html">عرض التعليقات</a></li>
+                    <li><a href="/AdminDashboard/Comments/ReplyComments.html">الرد على التعليقات</a></li>
+                </ul>
+            </li>
+            <li><a href="/index.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
+        </ul>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="content">
+        <h1>إدارة الفئات</h1>
+
+        <!-- مربع البحث -->
+        <div class="mb-4">
+            <label for="searchInput" class="form-label">بحث عن فئة:</label>
+            <input type="text" id="searchInput" class="form-control" placeholder="أدخل اسم الفئة للبحث...">
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="window.location.href='../category/addCategory.html'">إضافة فئة جديدة</button>
+        <br><br>
+
+        <div class="table-container">
+            <table class="table table-bordered table-hover table-responsive-sm table-sm shadow-sm">
+                <thead class="text-center">
+                    <tr>
+                        <th scope="col" class="table-warning">رقم الفئة</th>
+                        <th scope="col" class="table-warning">اسم الفئة</th>
+                        <th scope="col" class="table-warning">الوصف</th>
+                        <th scope="col" class="table-warning">صورة الفئة</th>
+                        <th scope="col" class="table-warning">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="container" class="text-center">
+                    <!-- سيتم إدراج المحتوى ديناميكياً هنا -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- عناصر التحكم في الترقيم -->
+        <div id="pagination-container" class="d-flex justify-content-center mt-4"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript الخاص بالبحث -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#container tr');
+
+            rows.forEach(row => {
+                const categoryName = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+
+                if (categoryName.includes(searchValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

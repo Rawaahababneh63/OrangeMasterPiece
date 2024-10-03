@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "kEY9APjktF0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Orangee\\source\\repos\\NewNewMasterpiece\\Backend\\Masterpiece\\Masterpiece.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Orangee\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\Orangee\\.nuget\\packages\\mailkit\\4.7.1.1\\mailkit.4.7.1.1.nupkg.sha512",
+    "C:\\Users\\Orangee\\.nuget\\packages\\mimekit\\4.7.1\\mimekit.4.7.1.nupkg.sha512",
+    "C:\\Users\\Orangee\\.nuget\\packages\\system.formats.asn1\\8.0.1\\system.formats.asn1.8.0.1.nupkg.sha512",
+    "C:\\Users\\Orangee\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

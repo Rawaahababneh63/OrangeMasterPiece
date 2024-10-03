@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from preview.colorlib.com/theme/capitalshop/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 04:32:23 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Shop | eCommers</title>
+<meta name="description" content>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.png">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/slicknav.css">
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="assets/css/animate.min.css">
+<link rel="stylesheet" href="assets/css/price_rangs.css">
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/css/themify-icons.css">
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/nice-select.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style1.css" />
+</head>
+<body>
+
+<div id="preloader-active">
+<div class="preloader d-flex align-items-center justify-content-center">
+<div class="preloader-inner position-relative">
+<div class="preloader-circle"></div>
+<div class="preloader-img pere-text">
+<img src="assets/img/icon/loder.png" alt="loder">
+</div>
+</div>
+</div>
+</div>
+
+<header>
+    <div class="header-area">
+        <!-- الجزء الأول (Header-Top) -->
+        <div class="header-top d-none d-sm-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="d-flex justify-content-between flex-wrap align-items-center">
+                            <div class="header-info-left">
+                                <ul>
+                                   
+                                    <!-- <li><a href="#">الخصوصية</a></li> -->
+                                    <li><a href="CleanOut.html#faq">الأسئلة الشائعة</a></li>
+                                    <li><a href="About1.html">معلومات عنا</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-info-right d-flex">
+                                <ul class="order-list">
+                                    <li><a href="#">قائمة أمنياتي</a></li>
+                                    <li><a href="checkout.html">تتبع الطلب</a></li>
+                                </ul>
+                                <ul class="header-social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- الجزء الثاني (Header-Bottom) -->
+        <div class="header-bottom text-center">
+            <p dir="rtl" >تخفيضات تصل إلى 50%  أسرع ! العرض لفترة محدودة <a href="categories.html" class="browse-btn" >تسوق الآن</a></p>
+        </div>
+    
+  
+          
+        </div>
+    </div>
+    </header>
+    
+<main>
+
+<div class="hero-area section-bg2">
+<div class="container">
+<div class="row">
+<div class="col-xl-12">
+<div class="slider-area">
+<div class="slider-height2 slider-bg4 d-flex align-items-center justify-content-center">
+<div class="hero-caption hero-caption2">
+<h2>عربة التسوق</h2>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item"><a href="#">عربة التسوق</a></li>
+<li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--بدء منطقة عربة التسوق-->
+<div class="shopping_cart_area mt-100" dir="rtl">
+    <div class="container">
+      <form action="#">
+        <div class="row">
+          <div class="col-12">
+            <div class="table_desc">
+              <div class="cart_page table-responsive">
+                <table>
+                  <thead>
+                  <tr>
+  
+    <th class="product_name">اسم المنتج</th> <!-- ProductName -->
+    <th class="product_thumb">Image</th>
+    <th class="product-price">السعر الأصلي</th> <!-- Original Price -->
+    <th  class="product_discount">الخصم</th> <!-- Discount -->
+    <th  class="product_total">السعر النهائي</th> <!-- Final Price -->
+    <th class="product_quantity">الكمية</th> <!-- Quantity -->
+    <th class="product_remove">الحذف من السلة</th> <!-- Action -->
+</tr>
+
+                  </thead>
+                  <tbody id="table"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--بدء منطقة كود الخصم-->
+        <div class="coupon_area">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="coupon_code left">
+                <h3>كوبون الخصم</h3>
+                <div class="coupon_inner">
+                  <p>أدخل رمز القسيمة إذا كان لديك واحد.</p>
+                  <input
+                  id="voucher" name="voucher"   
+                    placeholder="رمز الكوبون"
+                    type="text"
+                  />
+                  <button type="button"onclick="applyVoucher()">
+                    تطبيق الكوبون
+                  </button>
+                  <p id="errorMessage" class="text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="coupon_code right">
+                <h3>إجمالي العربة</h3>
+                <div class="coupon_inner">
+                  <!-- <div class="cart_subtotal">
+                    <p>المجموع الفرعي</p>
+                    <p class="cart_amount" id="totalCartPrice"></p>
+                  </div>
+                  <div class="cart_subtotal">
+                    <p>الخصم</p>
+                    <p id="disconteAmount" class="cart_amount"></p>
+                  </div> -->
+                  <hr />
+                  <div class="cart_subtotal">
+                    <p>السعر الإجمالي</p>
+                    <p>Total Price after Product Discounts: <span id="productDiscountTotalPrice">0</span></p>
+                    <p id="totalAfterDisconte" class="cart_amount"></p>
+                  </div>
+                  <div class="checkout_btn">
+                     <button class="btn btn-success" onclick="completeOrder()">المتابعة إلى الدفع</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--نهاية منطقة كود الخصم-->
+      </form>
+    </div>
+  </div>
+  
+</main>
+<footer>
+    <div class="footer-wrapper gray-bg">
+        <div class="footer-area footer-padding">
+
+            <!-- قسم الاشتراك في النشرة الإخبارية -->
+            <section class="subscribe-area">
+                <div class="container">
+                    <div class="row justify-content-between subscribe-padding">
+                        <div class="col-xxl-2 col-xl-2 col-lg-4">
+                            <div class="footer-social">
+                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                       
+                        <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9">
+                            <div class="subscribe-caption">
+                                <form action="#">
+                                    <input type="text" placeholder="أدخل بريدك الإلكتروني">
+                                    <button class="subscribe-btn">اشترك</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-4">
+                            <div class="subscribe-caption">
+                                <h3>اشترك في النشرة الإخبارية</h3>
+                                <p>اشترك في النشرة الإخبارية للحصول على خصم 5% على جميع المنتجات.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم معلومات الفوتر -->
+            <div class="container">
+                <div class="row justify-content-between">
+                  
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>تسوق للرجال</h4>
+                                <ul>
+                                    <li><a href="#">أزياء الملابس</a></li>
+                                    <li><a href="#">شتاء</a></li>
+                                    <li><a href="#">صيف</a></li>
+                                    <li><a href="#">رسمية</a></li>
+                                    <li><a href="#">عادية</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle" >
+                                <h4>تسوق للنساء</h4>
+                                <ul>
+                                    <li><a href="#">أزياء الملابس</a></li>
+                                    <li><a href="#">شتاء</a></li>
+                                    <li><a href="#">صيف</a></li>
+                                    <li><a href="#">رسمية</a></li>
+                                    <li><a href="#">عادية</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>معلومات</h4>
+                                <ul>
+                                    <li><a href="#">من نحن</a></li>
+                                    <li><a href="#">سياسة الخصوصية</a></li>
+                                    <li><a href="#">الشروط والأحكام</a></li>
+                                    <li><a href="#">اتصل بنا</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-8">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-20">
+                                <div class="footer-logo mb-35">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="شعار"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<div id="back-top">
+<a class="wrapper" title="Go to Top" href="#">
+<div class="arrows-container">
+<div class="arrow arrow-one">
+</div>
+<div class="arrow arrow-two">
+</div>
+</div>
+</a>
+</div>
+
+
+ 
