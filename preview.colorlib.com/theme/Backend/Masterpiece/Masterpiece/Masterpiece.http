@@ -1,0 +1,6 @@
+@Masterpiece_HostAddress = http://localhost:5258
+
+GET {{Masterpiece_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
