@@ -135,7 +135,7 @@ async function loadTopFiveAbayas() {
                 `;
             });
         } else {
-            console.error('No products found or products is undefined.');
+            console.error('لا توجد منتجات متاحة حالياً.');
         }
     } catch (error) {
         console.error('Error fetching abayas:', error);

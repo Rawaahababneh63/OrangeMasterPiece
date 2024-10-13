@@ -36,7 +36,7 @@ internal class Program
                 builder.AllowAnyHeader();
             })
         );
-
+      
         // Configure the database context with SQL Server
         builder.Services.AddDbContext<MyDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("YourConnectionString")));

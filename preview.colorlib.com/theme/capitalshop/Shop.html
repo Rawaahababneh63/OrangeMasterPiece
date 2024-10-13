@@ -639,8 +639,52 @@
     display: block; /* إظهار القائمة عند التحويم على الزر */
 }
 /* فلترة السعر  */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* يسمح بتوزيع العناصر في عدة أسطر */
+}
 
+.single_product {
+    flex: 1 1 30%; /* يحدد عرض الكاردات */
+    margin: 10px; /* مسافة بين الكاردات */
+}
 
+.product_thumb {
+    position: relative; /* لضمان وضع العلامات بشكل صحيح */
+}
+
+.label_product {
+    position: absolute; /* لتحديد مكان العلامات */
+    top: 10px;
+    left: 10px;
+}
+
+/* للكود الاضافة لسلة والبرودكت ديتالز */
+/* .add_to_cart {
+    display: flex; */
+    /* justify-content: space-between; توزيع الأزرار بشكل متساوٍ */
+    /* margin-top: 10px; مسافة بين السعر والأزرار */
+/* } */
+#slider-range {
+    width: 100%; /* تأكد من أن شريط الفلتر يأخذ العرض الكامل */
+    margin: 20px 0;
+}
+
+.filter-label {
+    display: flex;
+    justify-content: space-between; /* توزيع المساحة بين النصوص */
+}
+
+.product__item {
+    margin: 15px; /* تباعد بين بطاقات المنتجات */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px; /* إضافة مساحة داخل البطاقة */
+}
+.ui-slider-horizontal .ui-slider-range {
+    background: #F53737;
+    height: 0px;
+}
 
 </style>
 <body>
@@ -774,41 +818,32 @@ document.addEventListener("DOMContentLoaded", async function() {
                 productsContainer.innerHTML = '';
                 productArray.forEach(element => {
                     const productCard = `
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                            <article class="single_product" style="margin: 20px 0;">
-                                <figure>
-                                    <div class="product_thumb">
-                                        <div class="label_product">
-                                            ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="label_sale">${((element.Price - element.PriceWithDiscount) / element.Price * 100).toFixed(0)}%</span>` : ''}
-                                            <span class="label_new">جديد</span>
-                                        </div>
-                                        <a class="primary_img" href="product-details.html" onclick="storeProductId(${element.ProductId})">
-                                            <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${element.Image}" alt="${element.Name}">
-                                        </a>
-                                        <div class="action_links">
-                                            <ul>
-                                                <li class="quick_button">
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box" title="quick view">
-                                                        <i class="icon icon-Eye"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon icon-Heart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product_content grid_content">
-                                        <h4 class="product_name"><a href="product-details.html">${element.Name}</a></h4>
-                                        <div class="price_box">
-                                            <span class="current_price">${element.PriceWithDiscount !== null && element.PriceWithDiscount > 0 ? element.PriceWithDiscount + ' JD' : element.Price + ' JD'}</span>
-                                            ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="old_price">${element.Price} JD</span>` : ''}
-                                        </div>
-                                        <div class="add_to_cart">
-                                            <a href="cart.html" onclick="addToCart(${element.ProductId}, '${element.Name}', ${element.Price}, '${element.Image}')">+ أضف إلى السلة</a>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </article>
-                        </div>
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+    <article class="single_product" style="margin: 20px 0;">
+        <figure>
+            <div class="product_thumb">
+                <div class="label_product">
+                    ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="label_sale">${((element.Price - element.PriceWithDiscount) / element.Price * 100).toFixed(0)}%</span>` : ''}
+                    <span class="label_new">جديد</span>
+                </div>
+                <a class="primary_img" href="product-details.html" onclick="storeProductId(${element.ProductId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${element.Image}" alt="${element.Name}">
+                </a>
+            </div>
+            <div class="product_content grid_content">
+                <h4 class="product_name"><a href="product-details.html" onclick="storeProductId(${element.ProductId})">${element.Name}</a></h4>
+                <div class="price_box">
+                    <span class="current_price">${element.PriceWithDiscount !== null && element.PriceWithDiscount > 0 ? element.PriceWithDiscount + ' JD' : element.Price + ' JD'}</span>
+                    ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="old_price">${element.Price} JD</span>` : ''}
+                </div>
+                <div class="add_to_cart">
+                    <a href="cart.html" style="margin-bottom: 5px;" onclick="addToCart(${element.ProductId}, '${element.Name}', ${element.Price}, '${element.Image}')">+ أضف إلى السلة</a>
+                    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${element.ProductId})">عرض سريع</a>
+                </div>
+            </div>
+        </figure>
+    </article>
+</div>
                     `;
                     productsContainer.innerHTML += productCard;
                 });
@@ -909,16 +944,7 @@ async function filterByPrice() {
                             <a class="secondary_img" href="product-details.html" onclick="storeProductId(${element.ProductId})">
                                 <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${element.Image}" alt="${element.Name}">
                             </a>
-                            <div class="action_links">
-                                <ul>
-                                    <li class="quick_button">
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box" title="quick view">
-                                            <i class="icon icon-Eye"></i>
-                                        </a>
-                                    </li>
-                                    <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon icon-Heart"></i></a></li>
-                                </ul>
-                            </div>
+                          
                         </div>
                         <div class="product_content grid_content">
                             <h4 class="product_name"><a href="product-details.html">${element.Name}</a></h4>
@@ -927,8 +953,9 @@ async function filterByPrice() {
                                 ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="old_price">${element.Price} JD</span>` : ''}
                             </div>
                             <div class="add_to_cart">
-                                <a href="cart.html" onclick="addToCart(${element.ProductId}, '${element.Name}', ${element.Price}, '${element.Image}')">+ أضف إلى السلة</a>
-                            </div>
+                                <a href="cart.html" style="margin-bottom:5px" onclick="addToCart(${element.ProductId}, '${element.Name}', ${element.Price}, '${element.Image}')">+ أضف إلى السلة</a>
+                            <a href="#" class="btn btn-quick-view" onClick="storeProductId(${element.ProductId})">
+                                </div>
                         </div>
                     </figure>
                 </article>
@@ -1001,46 +1028,39 @@ document.addEventListener("DOMContentLoaded", async function() {
                     // عرض المنتجات
                     productList.forEach(product => {
                         const productCard = `
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                <article class="single_product" style="margin: 20px 0;">
-                                    <figure>
-                                        <div class="product_thumb">
-                                            <div class="label_product">
-                                                <span class="label_new">جديد</span>
-                                                ${product.PriceWithDiscount && product.PriceWithDiscount < product.Price ? `
-                                                    <span class="label_sale">${((product.Price - product.PriceWithDiscount) / product.Price * 100).toFixed(0)}%</span>
-                                                ` : ''}
-                                            </div>
-                                            <a class="primary_img" href="product-details.html" onclick="storeProductId(${product.ProductId})">
-                                                <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.Image}" alt="${product.Name}">
-                                            </a>
-                                            <a class="secondary_img" href="product-details.html" onclick="storeProductId(${product.ProductId})">
-                                                <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.Image}" alt="${product.Name}">
-                                            </a>
-                                            <div class="action_links">
-                                                <ul>
-                                                    <li class="quick_button">
-                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box" title="عرض سريع">
-                                                            <i class="icon icon-Eye"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li class="wishlist"><a href="wishlist.html" title="إضافة إلى المفضلة"><i class="icon icon-Heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product_content grid_content">
-                                            <h4 class="product_name"><a href="product-details.html">${product.Name}</a></h4>
-                                            <div class="price_box">
-                                                <span class="current_price">${product.PriceWithDiscount !== null && product.PriceWithDiscount > 0 ? product.PriceWithDiscount + ' JD' : product.Price + ' JD'}</span>
-                                                ${product.PriceWithDiscount !== null && product.PriceWithDiscount < product.Price ? `<span class="old_price">${product.Price} JD</span>` : ''}
-                                            </div>
-                                            <div class="add_to_cart">
-                                                <a href="cart.html" title="أضف إلى السلة" onclick="addToCart(${product.ProductId}, '${product.Name}', ${product.PriceWithDiscount || 0}, '${product.Image}')">+ أضف إلى السلة</a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                </article>
-                            </div>
+                           <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+    <article class="single_product" style="margin: 20px 0;">
+        <figure>
+            <div class="product_thumb">
+                <div class="label_product">
+                    <span class="label_new">جديد</span>
+                    ${product.PriceWithDiscount && product.PriceWithDiscount < product.Price ? `
+                        <span class="label_sale">${((product.Price - product.PriceWithDiscount) / product.Price * 100).toFixed(0)}%</span>
+                    ` : ''}
+                </div>
+                <a class="primary_img" href="product-details.html" onclick="storeProductId(${product.ProductId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.Image}" alt="${product.Name}">
+                </a>
+                <a class="secondary_img" href="product-details.html" onclick="storeProductId(${product.ProductId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.Image}" alt="${product.Name}">
+                </a>
+            </div>
+            <div class="product_content grid_content">
+                <h4 class="product_name"><a href="product-details.html" onclick="storeProductId(${product.ProductId})">${product.Name}</a></h4>
+                <div class="price_box">
+                    <span class="current_price">${product.PriceWithDiscount !== null && product.PriceWithDiscount > 0 ? product.PriceWithDiscount + ' JD' : product.Price + ' JD'}</span>
+                    ${product.PriceWithDiscount !== null && product.PriceWithDiscount < product.Price ? `<span class="old_price">${product.Price} JD</span>` : ''}
+                </div>
+                <div class="add_to_cart">
+                    <a href="cart.html" title="أضف إلى السلة" style="margin-bottom:5px" onclick="addToCart(${product.ProductId}, '${product.Name}', ${product.PriceWithDiscount || 0}, '${product.Image}')">+ أضف إلى السلة</a>
+                    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${product.ProductId})">
+                        عرض سريع
+                    </a>
+                </div>
+            </div>
+        </figure>
+    </article>
+</div>
                         `;
                         productsContainer.innerHTML += productCard;
                     });
@@ -1156,9 +1176,11 @@ function displayProducts(products) {
     ` : ''}
 </div>
                 <div class="add_to_cart">
-                    <a href="cart.html" onclick="addToCart(${product.productId}, '${product.name}', ${product.priceWithDiscount || product.price}, '${product.image}')">+ أضف إلى السلة</a>
-                </div>
-            </div>
+    <a href="cart.html" class="btn btn-add-to-cart" style="margin-bottom:5px" onclick="addToCart(${product.productId}, '${product.name}', ${product.priceWithDiscount || product.price}, '${product.image}')">+ أضف إلى السلة</a>
+    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${product.productId})">
+        <i class="ti-zoom-in"></i> عرض سريع
+    </a>
+</div>
         </figure>
     </article>
 </div>
@@ -1173,9 +1195,79 @@ function displayProducts(products) {
 document.addEventListener("DOMContentLoaded", loadProductsByCategory);
 
 
+/////////////////////////
 
+var UserId = localStorage.getItem("UserId");
+debugger
+async function addToCart(productId, name, price, image) {
+
+    if (UserId != null) {
+        var url = `https://localhost:44332/api/Cart/AddCartItem/${UserId}`;
+    
+        var data = {
+            ProductId: productId,
+            Quantity: 1,
+           
+        };
+
+        let response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            alert("Product added successfully to the cart!");
+            // Redirect to the cart page
+            window.location.href = "cart.html"; // استبدل هذا بالرابط الصحيح
+        } else {
+            let error = await response.text();
+            console.error("Error:", error);
+        }
+    } else {
+        const cartItem = {
+            product_id: productId,
+            quantity: 1,
+            name: name,
+            price: price,
+            image: image,
+        };
+
+        // Check if there is already a cart in localStorage
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        // Check if the product is already in the cart
+        let existingItem = cartItems.find((item) => item.product_id === productId);
+
+        if (existingItem) {
+            // If the product is already in the cart, update the quantity
+            existingItem.quantity = parseInt(existingItem.quantity) + 1; // Increment quantity by 1
+        } else {
+            // If it's a new product, add it to the cart array
+            cartItems.push(cartItem);
+        }
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        // تأكد من عرض تفاصيل المنتج
+        alert(`Product added successfully to the cart!\nName: ${name}\nPrice: $${price}\nQuantity: ${cartItem.quantity}`);
+        
+        // Redirect to the cart page
+        window.location.href = "cart.html"; // استبدل هذا بالرابط الصحيح
+    }
+}
+
+///////////////////////////////
+// بحط كود الخاص بالبرودكت ديتيلززز ان شاء الله يزبط 
+function storeProductId(productId) {
+    localStorage.setItem('productId', productId); // تخزين productId في localStorage
+    window.location.href = 'productdetalis1.html'; // إعادة التوجيه إلى صفحة التفاصيل
+}
     </script> 
-    <script src="cart.js"></script>
+    
 <!-- JS
 ============================================ -->
 <!--jquery min js-->

@@ -250,5 +250,110 @@ namespace Masterpiece.Controllers
             _db.SaveChanges();
             return Ok("Voucher created successfully.");
         }
+
+
+
+
+
+
+
+
+        //[HttpPut("{id}/changeRwquestOrder-status")]
+        //public IActionResult ChangeStatus(int id, [FromBody] string status)
+        //{
+        //    var saleRequest = _db.SaleRequests.Include(sr => sr.User).FirstOrDefault(sr => sr.RequestId == id);
+        //    if (saleRequest == null)
+        //    {
+        //        return NotFound(new { message = "طلب البيع غير موجود." });
+        //    }
+
+        //    if (status.Equals("approve", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        saleRequest.Status = "Approved";
+        //        SendEmailNotification(saleRequest.User.Email, saleRequest.User.UserName, true);
+        //    }
+        //    else if (status.Equals("reject", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        saleRequest.Status = "Rejected";
+        //        SendEmailNotification(saleRequest.User.Email, saleRequest.User.UserName, false);
+        //    }
+        //    else
+        //    {
+        //        return BadRequest(new { message = "حالة غير صالحة. استخدم 'approve' أو 'reject'." });
+        //    }
+
+        //    _db.SaveChanges();
+        //    return NoContent();
+        //}
+
+        //private void SendEmailNotification(string email, string userName, bool isApproved)
+        //{
+        //    var subject = isApproved ? "إشعار بالموافقة" : "إشعار بالرفض";
+        //    var message = isApproved
+        //        ? $"عزيزي/عزيزتي {userName},\n\nنحن سعيدون أن نخبرك بأنه تم الموافقة على طلبك لبيع المنتج! 🎉 يمكنك الآن مشاهدة منتجك على الموقع، وعند بيعه، ستتلقى إشعارًا بذلك. شكرًا لكونك جزءًا من مجتمعنا!"
+        //        : $"عزيزي/عزيزتي {userName},\n\nنأسف لإخبارك بأن طلبك لبيع المنتج لم يتم قبوله. لا تتردد في تقديم طلب آخر في المستقبل. نحن هنا لدعمك!";
+
+        //    _emailService.SendEmail(email, subject, message);
+        //}
+
+        [HttpPut("change-status/{id}")]
+        public IActionResult ChangeStatus(int id, [FromBody] StatusChangeRequest request)
+        {
+            var saleRequest = _db.SaleRequests.Include(sr => sr.User).FirstOrDefault(sr => sr.RequestId == id);
+            if (saleRequest == null)
+            {
+                return NotFound(new { message = "طلب البيع غير موجود." });
+            }
+
+            if (string.IsNullOrWhiteSpace(request.Status))
+            {
+                return BadRequest(new { message = "حقل الحالة مطلوب." });
+            }
+
+            if (request.Status.Equals("approve", StringComparison.OrdinalIgnoreCase))
+            {
+                saleRequest.Status = "Approved";
+                // لا تحتاج إلى RejectionReason هنا
+                SendEmailNotification(saleRequest.User.Email, saleRequest.User.UserName, true, null);
+            }
+            else if (request.Status.Equals("reject", StringComparison.OrdinalIgnoreCase))
+            {
+                // تحقق من أن RejectionReason ليس فارغًا
+                if (string.IsNullOrWhiteSpace(request.RejectionReason))
+                {
+                    return BadRequest(new { message = "حقل سبب الرفض مطلوب عند رفض الطلب." });
+                }
+
+                saleRequest.Status = "Rejected";
+                SendEmailNotification(saleRequest.User.Email, saleRequest.User.UserName, false, request.RejectionReason);
+            }
+            else
+            {
+                return BadRequest(new { message = "حالة غير صالحة. استخدم 'approve' أو 'reject'." });
+            }
+
+            _db.SaveChanges();
+            return NoContent();
+        }
+
+
+
+
+        private void SendEmailNotification(string email, string userName, bool isApproved, string rejectionReason)
+        {
+            var subject = isApproved ? "إشعار بالموافقة" : "إشعار بالرفض";
+            var message = isApproved
+                ? $"عزيزي/عزيزتي {userName},\n\nنحن سعيدون أن نخبرك بأنه تم الموافقة على طلبك لبيع المنتج! 🎉 يمكنك الآن مشاهدة منتجك على الموقع، وعند بيعه، ستتلقى إشعارًا بذلك. شكرًا لكونك جزءًا من مجتمعنا!"
+                : $"عزيزي/عزيزتي {userName},\n\nنأسف لإخبارك بأن طلبك لبيع المنتج لم يتم قبوله.\n\nسبب الرفض: {rejectionReason ?? "لم يتم تحديد سبب."}\n\nلا تتردد في تقديم طلب آخر في المستقبل. نحن هنا لدعمك!";
+
+            _emailService.SendEmail(email, subject, message);
+        }
+
+
+
+
+
+
+
     }
 }

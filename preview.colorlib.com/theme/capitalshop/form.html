@@ -299,10 +299,19 @@
                 <label for="location" class="form-label">مكان السكن:</label>
                 <input type="text" id="location" name="location" class="form-input" required>
             </div>
-            <div class="form-field">
-                <label for="categoryNmae">فئة:</label>
-                <input type="text" id="categoryName" name="categoryName" class="form-input" readonly>
-            </div>
+            <div  class="form-field">
+                <label for="category" class="form-label">فئة:</label>
+                <select id="CategoryId" class="custom-form-select">
+                    <!-- سيتم إضافة الفئات الرئيسية هنا باستخدام JavaScript -->
+                </select>
+                </div>
+                <div class="form-field">
+                    <label for="subcategory" class="form-label">فئة فرعية:</label>
+                    <select id="subcategory" class="form-select" required>
+                        <!-- سيتم إضافة الخيارات هنا باستخدام JavaScript -->
+                    </select>
+                </div>
+                
             <div class="form-field">
                 <label for="actionType" class="form-label">العمل:</label>
                 <select id="actionType" name="actionType" class="form-select" required>
@@ -311,12 +320,7 @@
                     <option value="sale">بيع</option>
                 </select>
             </div>
-            <div class="form-field">
-                <label for="subcategory" class="form-label">فئة فرعية:</label>
-                <select id="subcategory" name="subcategory"  class="form-select" required>>
-                    <!-- الخيارات ستتم إضافتها عبر JavaScript -->
-                </select>
-            </div>
+          
 
             <!-- حالة المنتج -->
             <div class="form-field">
@@ -476,6 +480,7 @@
     </div>
     </a>
     </div>
+    <script src="form.js"></script>
     <script>
         // قراءة الفئة من localStorage وتحديث حقل الفئة في النموذج
         const category = localStorage.getItem('selectedCategory');

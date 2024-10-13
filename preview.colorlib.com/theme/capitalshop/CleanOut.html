@@ -201,7 +201,6 @@ p {
             text-decoration: none;
         }
 
-     
         .popup-overlay {
             position: fixed;
             top: 0;
@@ -217,51 +216,56 @@ p {
 
         .popup {
             position: fixed;
-            top: 50%;
             left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
-            width: 500px;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            text-align: center;
+            width: 400px; /* يمكن تغيير العرض حسب الحاجة */
+            padding: 30px; /* تغيير الحشوة */
+            background-color: #fff; /* لون الخلفية */
+            border: 1px solid #ccc; /* حدود */
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* ظل */
             z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+            display: none; /* إخفاء النافذة بشكل افتراضي */
+            border-radius: 10px; /* زوايا دائرية */
         }
 
-        .popup.show, .popup-overlay.show {
-            opacity: 1;
-            visibility: visible;
+        .popup-content {
+            text-align: center;
         }
 
-        .popup h2 {
-            font-size: 2.2rem;
-            color: #333;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .popup p {
-            font-size: 1.3rem;
-            color: #555;
-            margin-bottom: 25px;
-        }
-
-        .popup button {
-            padding: 15px 40px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 8px;
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 20px;
+            color: #888; /* لون رمز الإغلاق */
         }
 
-        .popup button:hover {
-            background-color: #218838;
+        .close:hover {
+            color: #ff0000; /* تغيير اللون عند التمرير */
+        }
+
+        /* تنسيق زر تسجيل الدخول */
+        button {
+            padding: 10px 20px;
+            background-color: #28a745; /* لون الزر */
+            color: white; /* لون النص */
+            border: none; /* لا حدود */
+            border-radius: 5px; /* زوايا دائرية */
+            cursor: pointer; /* تغيير المؤشر */
+            font-size: 16px; /* حجم الخط */
+            margin-top: 20px; /* إضافة مسافة من الأعلى */
+        }
+
+        button:hover {
+            background-color: #218838; /* لون الزر عند التمرير */
+        }
+
+        /* تنسيق النص داخل النافذة */
+        p {
+            font-size: 1.2rem;
+            color: #555; /* لون النص */
         }
        </style>
     
@@ -413,9 +417,10 @@ p {
                             <div class="eco-message-container" style="margin-bottom: 20px;">
                                 <p style="font-size: 1.5rem; line-height: 1.8; text-align: right;">أرسل لنا منتجاتك غير المستخدمة وسنقوم بعرضها للبيع من أجلك! تواصل معنا الآن لبيع منتجك وكسب المال بكل سهولة.</p>
                             </div>
-                            <div class="content-wrapper" onclick="showPopup()">
-                                <a href="javascript:void(0)" class="btn btn-primary">ابدأ الآن</a>
+                            <div class="content-wrapper">
+                                <a href="javascript:void(0)" class="btn btn-primary" onclick="checkUserID()">ابدأ الآن</a>
                             </div>
+                            
                         </div>
                     
                         <!-- النصف الخاص بالصورة -->
@@ -811,30 +816,44 @@ p {
     </a>
     </div>
  
-    <div class="popup-overlay" id="popupOverlay"></div>
-    <div class="popup" id="loginPopup">
-        <h2>تسجيل الدخول مطلوب</h2>
-        <p>لتتمكن من إتمام عملية البيع، يُرجى تسجيل الدخول أو إنشاء حساب جديد.</p>
-        <button onclick="closePopup()">تسجيل الدخول</button>
+    <!-- النافذة المنبثقة التي ستظهر إذا لم يكن المستخدم مسجلاً -->
+<div id="loginPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p>عليك تسجيل الدخول للمتابعة. يرجى التوجه إلى صفحة تسجيل الدخول.</p>
+        <button onclick="redirectToLogin()">تسجيل الدخول</button>
     </div>
-    
-    <script>
-        function showPopup() {
-            document.getElementById("popupOverlay").classList.add("show");
-            document.getElementById("loginPopup").classList.add("show");
-        }
-    
-        function closePopup() {
-            document.getElementById("popupOverlay").classList.remove("show");
-            document.getElementById("loginPopup").classList.remove("show");
-            window.location.href="login.html";
-        }
-    
-        // عرض البوب أب عند الضغط على الـ div
-        document.querySelector(".content-wrapper").addEventListener("click", function() {
-            showPopup();
-        });
-    </script>
+</div>
+
+<script>
+    // دالة للتحقق من userID في localStorage
+    function checkUserID() {
+    console.log("checkUserID called"); // تأكد من أن الدالة قد تم استدعاؤها
+    const userID = localStorage.getItem('UserId');
+
+    if (userID) {
+        window.location.href = 'cardsell.html'; 
+    } else {
+        showPopup();
+    }
+}
+
+    // دالة لإظهار النافذة المنبثقة
+    function showPopup() {
+        document.getElementById('loginPopup').style.display = 'block';
+    }
+
+    // دالة لإغلاق النافذة المنبثقة
+    function closePopup() {
+        document.getElementById('loginPopup').style.display = 'none';
+    }
+
+    // دالة للتوجيه إلى صفحة تسجيل الدخول
+    function redirectToLogin() {
+        window.location.href = 'login.html'; // استبدل 'loginPage.html' بصفحة تسجيل الدخول
+    }
+</script>
+
     <script src="Content/vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="Content/vendor/animsition/js/animsition.min.js"></script>
     <script src="Content/vendor/bootstrap/js/popper.js"></script>
