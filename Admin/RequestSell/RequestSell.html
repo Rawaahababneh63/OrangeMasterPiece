@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../vendors/images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../vendors/images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../vendors/images/favicon-16x16.png" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+		
+	<!-- CSS -->
+	 
+	<link rel="stylesheet" href="../assets/css/theme.min.css">
+    <link href="../assets/libs/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="../assets/libs/%40yaireo/tagify/dist/tagify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	  <!-- Favicon icon-->
+	  <link rel="shortcut icon" type="image/x-icon" href="https://dashui.codescandy.com/dashuipro/assets/images/favicon/favicon.ico" />
+
+	  <!-- Libs CSS -->
+	  <link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+	  <link href="../assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+	  <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+  
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+		crossorigin="anonymous"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-GBZ3SGGX85");
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+	</script>
+	 <!-- Google tag (gtag.js) -->
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+	 <script>
+		 window.dataLayer = window.dataLayer || [];
+ 
+		 function gtag() {
+			 dataLayer.push(arguments);
+		 }
+		 gtag('js', new Date());
+		 gtag('config', 'G-M8S4MT3EYG');
+	 </script>
+	<!-- End Google Tag Manager -->
+	 <style>
+		 .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Adjusting form elements for better design */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+		.btn{
+			
+		}
+        .btn-custom {
+			width: 1px !important;
+            background-color: #5a67d8;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #434190;
+        }
+
+        /* Responsiveness for smaller screens */
+        @media (max-width: 768px) {
+            .form-control {
+                width: 100%;
+            }
+
+            .btn-custom {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .table {
+                font-size: 14px;
+            }
+        }
+	html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.pd-ltr-20 {
+    max-width: 600px;
+    width: 100%;
+}
+
+#form {
+    background-color: #f8f9fa;
+    height: 100%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+}
+
+button {
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn {
+    padding: 5px 10px !important; /* تقليل الحشوة */
+    font-size: 0.9rem; /* حجم خط أصغر */
+    width: auto !important; /* عرض تلقائي */
+    display: inline-block !important; /* لضمان قرب الأزرار من بعضها */
+}
+/* قاعدة لتنسيق الجدول */
+.table {
+    width: 100%; /* تأكد من أن الجدول يأخذ كامل عرض الحاوية */
+    border-collapse: collapse; /* دمج الحدود */
+    margin-top: 20px; /* هامش علوي للجدول */
+}
+
+/* تنسيق رأس الجدول */
+.table thead th {
+    background-color: #5a67d8; /* لون خلفية لرأس الجدول */
+    color: white; /* لون النص */
+    padding: 10px; /* حشوة داخل رأس الجدول */
+    text-align: left; /* محاذاة النص لليسار */
+}
+
+/* تنسيق خلايا الجدول */
+.table tbody td {
+    padding: 8px; /* حشوة داخل الخلايا */
+    border: 1px solid #dee2e6; /* حدود للخلايا */
+    font-size: 0.9rem; /* حجم خط أصغر */
+}
+
+/* تنسيق الأزرار داخل الجدول */
+.table tbody .btn {
+    padding: 5px 8px; /* تقليل حشوة الأزرار */
+    font-size: 0.8rem; /* حجم خط أصغر للأزرار */
+}
+
+/* تحسين الأزرار */
+.btn-custom {
+    background-color: #5a67d8; /* لون خلفية الأزرار */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 5px; /* زوايا مدورة */
+    cursor: pointer; /* تغيير شكل المؤشر */
+}
+
+.btn-custom:hover {
+    background-color: #434190; /* لون خلفية الأزرار عند التمرير */
+}
+
+/* لجعل الأزرار قريبة من بعضها */
+.table tbody .btn {
+    margin-right: 5px; /* هامش يمين للأزرار */
+}
+
+/* تحسين جدول الهاتف المحمول */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.8rem; /* حجم خط أصغر عند الشاشات الصغيرة */
+    }
+}
+#rejectModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        #modalOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+	 </style>
+</head>
+
+<body>
+
+
+	<div class="header" >
+		<div class="header-left">
+			<div class="menu-icon bi bi-list"></div>
+			<div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+		
+		</div>
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+					
+					</a>
+				</div>
+			</div>
+	
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						
+						<span class="user-name">Rawa'ah Ababneh</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+					
+						<a class="dropdown-item" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<a href="../index1.html">
+				<img src="../vendors/images/Smart1.png" alt="" class="dark-logo" />
+				<img src="../vendors/images/Smart.png"  class="light-logo" />
+			</a>
+			
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li class="dropdown">
+						<a href="../index1.html" class="dropdown-toggle  no-arrow">
+							<span class="micon bi bi-house"></span><span class="mtext">Home</span>
+						</a>
+					</li>
+						
+				
+					
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">Category
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Category/AllCategory.html">ALL Category</a></li>
+						
+							
+							
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">SubCategory
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../SubCategory/SubCategory.html">SubCategory By CategoryId</a></li>
+							<li><a href="../SubCategory/AllSubCategory.html">ALL SubCategory</a></li>
+						
+							
+							
+						</ul>
+					</li>
+
+                    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">Product
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Product/allProduct.html">ALLproduct</a></li>
+							<li><a href="../Product/addProduct.html">Add product</a></li>
+							<li><a href="../Product/applayDisount.html">Applay Discount</a></li>
+						</ul>
+
+					</li>
+
+
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Review </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Product/ReviewUpdat.html">Follow up width review</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                          <span class="micon bi bi-file-earmark-text"></span
+                          ><span class="mtext">Voucher </span>
+                        </a>
+                        <ul class="submenu">
+                          <li><a href="../VoucherRawaah/Voucher.html">ALL Voucher</a></li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Orders </span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Order/AllOrder.html">ALL Order</a></li>
+							<li><a href="../Order/GetOrder.html">Search By Email</a></li>
+						</ul>
+					</li>
+				    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Contact </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Contact/Contact Us.html">ALL Contact</a></li>
+						  <li><a href="../Contact/ReplyAdmin.html">Reply Contact</a></li>
+						</ul>
+					  </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+
+	<main id="main-wrapper" class="main-wrapper">
+     
+        <!-- Page Content -->
+        <div id="app-content">
+            <!-- Container fluid -->
+            <div class="app-content-area">
+                <!-- Voucher List Section -->
+
+                <!-- <h2>Voucher</h2>
+
+                <button class="btn btn-info ms-2" onclick="showModal()">Send Voucher To All Users</button>
+                <button class="btn btn-warning ms-2" onclick="showModal1()">Send Voucher To One User</button>
+                <button class="btn btn-info ms-2 btn-custom" onclick="showModal2()">+ Add Voucher</button>
+               -->
+    <h1>Sale Requests</h1>
+    <table class="table table-striped mt-3" >
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Requested Price</th>
+                <th>Request Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="GetSaleRequests"></tbody>
+    </table>
+
+
+                <!-- Add Voucher Form Section -->
+                <div class="modal fade" id="addVoucherModal" tabindex="-1" aria-labelledby="addVoucherModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addVoucherModalLabel">Add Voucher</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form Section inside modal -->
+                                <form id="AddVoucher">
+                                    <div class="mb-3">
+                                        <label for="productPrice" class="form-label">Voucher Code</label>
+                                        <input type="text" class="form-control" id="productPrice" name="Code" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDescription" class="form-label">Discount</label>
+                                        <input type="number" class="form-control" id="productDescription" name="DiscountAmount" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDiscount" class="form-label">Expiry Date</label>
+                                        <input type="date" class="form-control" id="productDiscount" name="ExpiryDate" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-custom" onclick="addVoucher()">Add Voucher</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edit Voucher Form Section -->
+                <div class="modal fade" id="editVoucherModal" tabindex="-1" aria-labelledby="editVoucherModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editVoucherModalLabel">Edit Voucher</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="EditSaleRequestForm" onsubmit="EditSaleRequest(event)">
+                                    <div class="mb-3">
+                                        <label for="productName" class="form-label">اسم المنتج</label>
+                                        <input type="text" class="form-control" id="productName" name="ProductName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="requestedPrice" class="form-label">السعر المطلوب</label>
+                                        <input type="number" class="form-control" id="requestedPrice" name="RequestedPrice" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="requestDate" class="form-label">تاريخ الطلب</label>
+                                        <input type="date" class="form-control" id="requestDate" name="RequestDate" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userName" class="form-label">اسم المستخدم</label>
+                                        <input type="text" class="form-control" id="userName" name="UserName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userEmail" class="form-label">البريد الإلكتروني</label>
+                                        <input type="email" class="form-control" id="userEmail" name="UserEmail" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userPhone" class="form-label">رقم الهاتف</label>
+                                        <input type="tel" class="form-control" id="userPhone" name="UserPhone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="status" class="form-label">الحالة</label>
+                                        <select class="form-control" id="status" name="Status" required>
+                                            <option value="Pending">قيد الانتظار</option>
+                                            <option value="Approved">موافق عليه</option>
+                                            <option value="Rejected">مرفوض</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-custom">تعديل الطلب</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="sendEmailModal" tabindex="-1" aria-labelledby="sendEmailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendEmailModalLabel">Send Email to All Users</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="sendEmailForm" onsubmit="sendemail()">
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="body" class="form-label">Body</label>
+                            <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Send Emails</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sendVoucherModal" tabindex="-1" aria-labelledby="sendVoucherModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendVoucherModalLabel">Send Voucher to One User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="sendVoucherForm" onsubmit="sendemail1()">
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">User Email</label>
+                            <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="voucherCode" class="form-label">Voucher Code</label>
+                            <input type="text" class="form-control" id="voucherCode" name="voucherCode" required>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Send Voucher</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalOverlay" onclick="closeRejectModal()"></div>
+    <div id="rejectModal">
+        <h3>Rejection Reason</h3>
+        <textarea id="rejectionReason" placeholder="Enter rejection reason"></textarea>
+        <button id="submitRejection" onclick="submitRejection()">Reject Request</button>
+        <button onclick="closeRejectModal()">Cancel</button>
+    </div>
+    
+    <script>
+        let currentRequestId; // تعريف المتغير عالميًا
+    
+        async function saleRequestGet() {
+            const url = "https://localhost:44332/api/salerequests";
+            let response = await fetch(url);
+            
+            if (!response.ok) {
+                console.error('Error fetching data:', response.statusText);
+                return;
+            }
+            
+            let data = await response.json();
+            console.log(data);
+        
+            let saleRequestTable = document.getElementById('GetSaleRequests');
+            saleRequestTable.innerHTML = '';
+        
+            data.forEach(element => {
+                saleRequestTable.innerHTML += `
+                <tr>
+                    <td>${element.requestId}</td>
+                    <td>${element.userName || 'غير متوفر'}</td>
+                    <td>${element.userEmail || 'غير متوفر'}</td>
+                    <td>${element.userPhone || 'غير متوفر'}</td>
+                    <td>${element.userAddress || 'غير متوفر'}</td>
+                    <td>${element.productName || 'غير متوفر'}</td>
+                    <td>${element.productDescription || 'غير متوفر'}</td>
+                    <td>${element.requestedPrice || 'غير متوفر'}</td>
+                    <td>${element.requestDate}</td>
+                    <td>${element.status}</td>
+                    <td>
+                       
+                        <button class="btn btn-sm btn-danger" onclick="deleteSaleRequest(${element.requestId})">Delete</button>
+                        <button class="btn btn-sm btn-success" onclick="changeSaleRequestStatus(${element.requestId}, 'approve')">Approve</button>
+                        <button class="btn btn-sm btn-warning" onclick="openRejectModal(${element.requestId})">Reject</button>
+                    </td>
+                </tr>
+                `;
+            });
+        }
+    
+        // استدعاء الدالة لجلب بيانات الطلبات
+        saleRequestGet();
+    
+        async function changeSaleRequestStatus(requestId, newStatus, rejectionReason = '') {
+            debugger
+            const url = `https://localhost:44332/api/Voucher/change-status/${requestId}`;
+    
+            const statusChangeRequest = {
+                Status: newStatus,
+                RejectionReason: newStatus === 'reject' ? rejectionReason : null // اجعلها null إذا كانت الحالة approve
+            };
+    
+            try {
+                let response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(statusChangeRequest),
+                });
+    
+                if (response.ok) {
+                    alert(`Request status updated to: ${newStatus}`);
+                    saleRequestGet(); // Reload the table after updating the status
+                } else {
+                    let errorData = await response.json();
+                    console.error('Error:', errorData);
+                    alert(`Error updating request status: ${errorData.message || response.statusText} (Status code: ${response.status})`);
+                }
+            } catch (error) {
+                console.error('Network or server error:', error);
+                alert('Failed to connect to the server.');
+            }
+        }
+    
+        // فتح نافذة الرفض
+        function openRejectModal(requestId) {
+            currentRequestId = requestId; // حفظ معرف الطلب الحالي
+            document.getElementById('rejectModal').style.display = 'block';
+        }
+    
+        // إغلاق نافذة الرفض
+        function closeRejectModal() {
+            document.getElementById('rejectModal').style.display = 'none';
+        }
+    
+        // إرسال الرفض
+        function submitRejection() {
+            const rejectionReason = document.getElementById('rejectionReason').value;
+    
+            if (!rejectionReason) {
+                alert("Please provide a reason for rejection.");
+                return;
+            }
+    
+            changeSaleRequestStatus(currentRequestId, 'reject', rejectionReason); // تمرير سبب الرفض
+            closeRejectModal();
+        }
+    
+        // قبول الطلب
+        function approveSaleRequest(requestId) {
+            changeSaleRequestStatus(requestId, 'approve'); // تمرير القيمة 'approve'
+        }
+   
+    
+//   async function saleRequestGet() {
+//     const url = "https://localhost:44332/api/salerequests";
+//     let response = await fetch(url);
+    
+//     if (!response.ok) {
+//         console.error('Error fetching data:', response.statusText);
+//         return;
+//     }
+    
+//     let data = await response.json();
+//     console.log(data); // للتحقق من البيانات المسترجعة
+
+//     let saleRequestTable = document.getElementById('GetSaleRequests');
+//     saleRequestTable.innerHTML = ''; // مسح الجدول قبل إضافة البيانات الجديدة
+
+//     data.forEach(element => {
+//         saleRequestTable.innerHTML += `
+//         <tr>
+//             <td>${element.requestId}</td>
+//             <td>${element.userName || 'غير متوفر'}</td>
+//             <td>${element.userEmail || 'غير متوفر'}</td>
+//             <td>${element.userPhone || 'غير متوفر'}</td>
+//             <td>${element.userAddress || 'غير متوفر'}</td>
+//             <td>${element.productName || 'غير متوفر'}</td>
+//             <td>${element.productDescription || 'غير متوفر'}</td>
+//             <td>${element.requestedPrice || 'غير متوفر'}</td>
+//             <td>${element.requestDate}</td>
+//             <td>${element.status}</td>
+//             <td>
+//                 <button class="btn btn-sm btn-primary" onclick="editSaleRequest(${element.requestId})">Edit Request</button>
+//                 <button class="btn btn-sm btn-danger" onclick="deleteSaleRequest(${element.requestId})">Delete</button>
+//                 <button class="btn btn-sm btn-success" onclick="changeSaleRequestStatus(${element.requestId}, 'approve')">Approve</button>
+//                 <button class="btn btn-sm btn-warning" onclick="changeSaleRequestStatus(${element.requestId}, 'reject')">Reject</button>
+//             </td>
+//         </tr>
+//         `;
+//     });
+// }
+
+// // استدعاء الدالة لجلب بيانات الطلبات
+// saleRequestGet();
+// async function changeSaleRequestStatus(requestId, newStatus, rejectionReason = null) {
+//     // استخدام المسار الصحيح لتغيير حالة الطلب
+//     const url = `https://localhost:44332/api/Voucher/change-status/${requestId}`; // تأكد من استخدام المسار الصحيح
+    
+//     // إنشاء كائن الحالة
+//     const statusChangeRequest = {
+//         Status: newStatus,
+//         RejectionReason: rejectionReason // تمرير سبب الرفض
+//     };
+
+//     try {
+//         let response = await fetch(url, {
+//             method: 'PUT',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             // إرسال الحالة الجديدة كـ JSON في الـ body
+//             body: JSON.stringify(statusChangeRequest), // إرسال الكائن بدلاً من قيمة الحالة فقط
+//         });
+
+//         if (response.ok) {
+//             alert(`تم تحديث حالة الطلب إلى: ${newStatus}`);
+//             saleRequestGet(); // إعادة تحميل البيانات لتحديث الجدول
+//         } else {
+//             let errorData = await response.json();
+//             console.error('Error:', errorData);
+//             alert(`حدث خطأ في تحديث حالة الطلب: ${response.statusText} (كود الحالة: ${response.status})`); // إضافة كود الحالة
+//         }
+//     } catch (error) {
+//         console.error('Network or server error:', error);
+//         alert('حدث خطأ في الاتصال بالخادم.');
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        async function deleteSaleRequest(id) {
+            const urlDelete = `https://localhost:44332/api/SaleRequests/${id}`;
+            await fetch(urlDelete, { method: "DELETE" });
+            alert("deleteSaleRequest  deleted successfully");
+            window.location.reload();
+        }
+
+        // async function addVoucher() {
+        //     event.preventDefault();
+        //     const url = "https://localhost:44332/api/Voucher/AddVoucheraa";
+        //     var form = document.getElementById("AddVoucher");
+        //     var formData = new FormData(form);
+        //     let response = await fetch(url, {
+        //         method: "POST",
+        //         body: formData,
+        //     });
+
+        //     if (response.ok) {
+        //         alert("Voucher added successfully");
+        //         var myModalEl = document.getElementById('addVoucherModal');
+        //         var modal = bootstrap.Modal.getInstance(myModalEl);
+        //         modal.hide();
+        //     } else {
+        //         alert("Failed to add voucher");
+        //     }
+        //     window.location.reload();
+        // }
+
+        // function StoreIDVoucher(X) {
+        //     localStorage.setItem('RequestSell', X);
+        //     var myModal = new bootstrap.Modal(document.getElementById('editVoucherModal'), {
+        //         keyboard: false
+        //     });
+        //     myModal.show();
+        // }
+
+        // async function EditVoucher() {
+        //     debugger
+        //     event.preventDefault();
+        //     const RequestSell = localStorage.getItem('RequestSell');
+        //     const url = `https://localhost:44332/api/SaleRequests/change-status/${RequestSell}`;
+        //     var form = document.getElementById("EditSaleRequestForm");
+        //     var formData = new FormData(form);
+
+        //     let response = await fetch(url, {
+        //         method: "PUT",
+        //         body: formData,
+        //     });
+
+        //     if (response.ok) {
+        //         alert("Voucher updated successfully");
+        //         var myModalEl = document.getElementById('editVoucherModal');
+        //         var modal = bootstrap.Modal.getInstance(myModalEl);
+        //         modal.hide();
+        //         location.reload();
+        //     } else {
+        //         alert("Failed to update voucher");
+        //     }
+        // }
+
+        // function showModal() {
+        //     var myModal = new bootstrap.Modal(document.getElementById('sendEmailModal'), {
+        //         keyboard: false
+        //     });
+        //     myModal.show();
+        // }
+
+        // function showModal1() {
+        //     var myModal = new bootstrap.Modal(document.getElementById('sendVoucherModal'), {
+        //         keyboard: false
+        //     });
+        //     myModal.show();
+        // }
+
+        // function showModal2() {
+        //     var myModal = new bootstrap.Modal(document.getElementById('addVoucherModal'), {
+        //         keyboard: false
+        //     });
+        //     myModal.show();
+        // }
+
+        // async function sendemail() {
+        //     const url = "https://localhost:44332/api/Voucher/SendEmailALLUserRememberMe";
+        //     var form = document.getElementById("sendEmailForm");
+        //     event.preventDefault();
+        //     var formData = new FormData(form);
+        //     let response = await fetch(url, {
+        //         method: "POST",
+        //         body: formData,
+        //     });
+        //     alert("Emails sent successfully");
+        // }
+
+        // async function sendemail1() {
+        //     event.preventDefault();
+        //     var userEmail = document.getElementById("userEmail").value;
+        //     var voucherCode = document.getElementById("voucherCode").value;
+        //     const url = ` https://localhost:44332/api/Voucher/send-voucher/${userEmail}?voucherCode=${voucherCode}`;
+    
+        //     let response = await fetch(url, {
+        //         method: "POST"
+        //     });
+
+        //     if (response.ok) {
+        //         alert("Voucher sent successfully");
+        //     } else {
+        //         alert("Failed to send voucher");
+        //     }
+        // }
+    </script>
+
+
+	<!-- js -->
+	<script src="../vendors/scripts/core.js"></script>
+	<script src="../vendors/scripts/script.min.js"></script>
+	<script src="../vendors/scripts/process.js"></script>
+	<script src="../vendors/scripts/layout-settings.js"></script>
+	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="../src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="../vendors/scripts/dashboard.js"></script>
+	<script src="UpdataCategory.js"></script>
+	    <!-- Additional Scripts -->
+		<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+		<script>
+	
+			function logout() {
+					localStorage.removeItem("jwtToken");
+					localStorage.removeItem("UserId");
+					window.location.href = "../../index_2.html";
+				  }
+			</script>
+	
+		
+</body>
+
+</html>
