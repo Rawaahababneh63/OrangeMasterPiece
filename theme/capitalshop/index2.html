@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التبرع أو البيع</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            direction: rtl; /* لجعل النص يظهر من اليمين لليسار */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px; /* تقليل المسافة بين العنوان والعبارة */
+            font-weight: 600;
+        }
+        .tagline {
+            text-align: center;
+            color: #777;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-style: italic; /* جعل العبارة مائلة */
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 16px;
+        }
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #000; /* اللون الأسود */
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .submit-btn:hover {
+            background-color: #dc3545; /* اللون الأحمر */
+        }
+        .image-preview {
+            margin-top: 10px;
+            display: none;
+            text-align: center;
+        }
+        .image-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-check {
+            margin: 10px 0;
+        }
+        .form-check label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>نموذج التبرع أو البيع</h1>
+    <p class="tagline">ساعدنا في منح حياة جديدة لملابسك!</p> <!-- عبارة جميلة -->
+    <form id="sell-product-form">
+        <div class="form-field">
+            <label for="name" class="form-label">اسمك:</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+        <div class="form-field">
+            <label for="email" class="form-label">بريدك الإلكتروني:</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+        <div class="form-field">
+            <label for="phone" class="form-label">رقم الهاتف:</label>
+            <input type="tel" id="phone" name="phone" class="form-input" required>
+        </div>
+        <div class="form-field">
+            <label for="location" class="form-label">مكان السكن:</label>
+            <input type="text" id="location" name="location" class="form-input" required>
+        </div>
+        <div class="form-field">
+            <label for="category" class="form-label">فئة:</label>
+            <select id="category" name="category" class="form-select" required>
+                <option value="" disabled selected>اختر الفئة</option>
+                <option value="ملابس النساء">ملابس النساء</option>
+                <option value="ملابس الأطفال">ملابس الأطفال</option>
+                <option value="ملابس الرجال">ملابس الرجال</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="actionType" class="form-label">العمل:</label>
+            <select id="actionType" name="actionType" class="form-select" required>
+                <option value="" disabled selected>نوع النشاط</option>
+                <option value="donation">تبرع</option>
+                <option value="sale">بيع</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label class="form-label">حالة المنتج:</label>
+            <div class="form-check">
+                <input type="radio" id="good" name="condition" value="good" required>
+                <label for="good">جيد</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="veryGood" name="condition" value="veryGood">
+                <label for="veryGood">جيد جدًا</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="excellent" name="condition" value="excellent">
+                <label for="excellent">ممتاز</label>
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="color" class="form-label">لون المنتج:</label>
+            <input type="text" id="color" name="color" class="form-input" required>
+        </div>
+        <div class="form-field">
+            <label for="expectedPrice" class="form-label">السعر المتوقع:</label>
+            <input type="number" id="expectedPrice" name="expectedPrice" class="form-input" required>
+        </div>
+        <div class="form-field">
+            <label for="productImage" class="form-label">صورة المنتج:</label>
+            <input type="file" id="productImage" name="productImage" class="form-input" required accept="image/*" onchange="previewImage(event)">
+            <div class="image-preview" id="imagePreview">
+                <h3>معاينة الصورة:</h3>
+                <img id="preview" src="" alt="صورة المنتج">
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="details" class="form-label">تفاصيل:</label>
+            <textarea id="details" name="details" class="form-textarea" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">إرسال</button>
+    </form>
+</div>
+
+<script>
+    function previewImage(event) {
+        const preview = document.getElementById('preview');
+        const imagePreview = document.getElementById('imagePreview');
+        const file = event.target.files[0];
+        
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                imagePreview.style.display = 'block'; // Show the image preview
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+</body>
+</html>

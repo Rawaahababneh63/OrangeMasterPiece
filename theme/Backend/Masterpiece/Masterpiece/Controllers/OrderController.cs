@@ -15,14 +15,14 @@ namespace Masterpiece.Controllers
         private readonly MyDbContext _db;
         private readonly IConverter _converter;
 
-        public OrderController(MyDbContext db,IConverter converter)
+        public OrderController(MyDbContext db, IConverter converter)
         {
             _db = db;
-              _converter = converter;       
+            _converter = converter;
         }
-      
 
-      
+
+
 
         [HttpGet("download-order/")]
         public IActionResult DownloadOrder()
@@ -67,49 +67,57 @@ namespace Masterpiece.Controllers
             return Ok();
         }
 
-
         [HttpPost("CreateOrder/{id:int}")]
         public IActionResult CreateOrder(int id)
         {
-            // Get the most recent payment for the user
+            // 1. تحقق من وجود الدفع للمستخدم
             var payment = _db.Payments
-                                    .Where(p => p.UserId == id)
-                                    .OrderByDescending(p => p.PaymentDate)
-                                    .FirstOrDefault();
+                              .Where(p => p.UserId == id)
+                              .OrderByDescending(p => p.PaymentDate)
+                              .FirstOrDefault();
 
             if (payment == null)
             {
+                Console.WriteLine($"No payments found for user {id}"); // سجل رسالة الخطأ
                 return NotFound("No payments found for this user.");
             }
-            var cartUSer = _db.Carts.Where(p => p.UserId == id).FirstOrDefault();
 
-            // Get cart items for the user
-            var cartItemsForUser = _db.CartItems.Where(ci => ci.CartId == cartUSer.CartId).ToList();
+            // 2. تحقق من وجود سلة المشتريات
+            var cartUser = _db.Carts.Where(p => p.UserId == id).FirstOrDefault();
+            if (cartUser == null)
+            {
+                Console.WriteLine($"No cart found for user {id}"); // سجل رسالة الخطأ
+                return NotFound("No cart found for this user.");
+            }
+
+            // 3. احصل على عناصر السلة
+            var cartItemsForUser = _db.CartItems.Where(ci => ci.CartId == cartUser.CartId).ToList();
             if (cartItemsForUser == null || cartItemsForUser.Count == 0)
             {
+                Console.WriteLine($"No cart items found for user {id}"); // سجل رسالة الخطأ
                 return NotFound("No cart items found for this user.");
             }
 
-            // Create the new order
+            // 4. إنشاء الطلب الجديد
             var order = new Models.Order
             {
                 UserId = payment.UserId,
                 TransactionId = payment.TransactionId,
-                Status = (payment.PaymentStatus == "Approved") ? "Approved" : "Not Approved"
- ,  // 1 = Approved, 0 = Not Approved
-                Amount = payment.Amount
+                Status = (payment.PaymentStatus == "Approved") ? "Approved" : "Not Approved",
+                Amount = payment.Amount,
+                Date = DateOnly.FromDateTime(DateTime.Now)
             };
 
-            // Add the order to the Orders table and save it to generate the OrderId
+            // 5. إضافة الطلب إلى جدول الطلبات
             _db.Orders.Add(order);
-            _db.SaveChanges();  // Save here to get the generated OrderId
+            _db.SaveChanges();  // حفظ هنا للحصول على OrderId
 
-            // Create OrderItems from CartItems and associate them with the order
+            // 6. إنشاء عناصر الطلب من عناصر السلة
             foreach (var cartItem in cartItemsForUser)
             {
                 var orderItem = new OrderItem
                 {
-                    OrderId = order.OrderId,  // Use the generated OrderId
+                    OrderId = order.OrderId,  // استخدم OrderId الناتج
                     ProductId = cartItem.ProductId,
                     Quantity = cartItem.Quantity
                 };
@@ -117,13 +125,13 @@ namespace Masterpiece.Controllers
                 _db.OrderItems.Add(orderItem);
             }
 
-            // Remove the cart items after processing
+            // 7. إزالة عناصر السلة بعد المعالجة
             _db.CartItems.RemoveRange(cartItemsForUser);
 
-            // Save changes to persist OrderItems and remove CartItems
+            // 8. حفظ التغييرات لإثبات OrderItems وإزالة CartItems
             _db.SaveChanges();
 
-            // Map to DTOs before returning the result
+            // 9. إنشاء DTO للنتيجة
             var orderDto = new OrderDto
             {
                 OrderId = order.OrderId,
@@ -131,6 +139,7 @@ namespace Masterpiece.Controllers
                 TransactionId = order.TransactionId,
                 Status = order.Status,
                 Amount = (int)order.Amount,
+                Date = order.Date,
                 OrderItems = cartItemsForUser.Select(ci => new OrderItemDto
                 {
                     ProductId = (int)ci.ProductId,
@@ -138,8 +147,10 @@ namespace Masterpiece.Controllers
                 }).ToList()
             };
 
-            return Ok(orderDto);  // Return the DTO instead of the entity
+            return Ok(orderDto);  // إرجاع DTO بدلاً من الكيان
         }
+
+
 
 
 
@@ -337,7 +348,6 @@ namespace Masterpiece.Controllers
             return html;
         }
 
-
         [HttpPost("CreateOrder")]
         public IActionResult CreateOrder([FromBody] OrderDto orderDTO)
         {
@@ -345,9 +355,9 @@ namespace Masterpiece.Controllers
             {
                 UserId = orderDTO.UserId,
                 Amount = orderDTO.Amount,
-          
                 Status = "Completed",
                 TransactionId = orderDTO.TransactionId,
+                Date = DateOnly.FromDateTime(DateTime.Now) // تعيين تاريخ الطلب إلى التاريخ الحالي
             };
 
             _db.Orders.Add(newOrder);
@@ -367,15 +377,38 @@ namespace Masterpiece.Controllers
                 _db.OrderItems.Add(item);
                 _db.CartItems.Remove(cartItem);
                 _db.SaveChanges();
-
             }
 
-
-
-
-
-            return Ok(newOrder);
-
+            return Ok(newOrder); // أو أي استجابة تناسب احتياجاتك
         }
+        ////////////////////////////////////////////////////for admin cycle
+
+        [HttpGet("/AllOrders/")]
+        public IActionResult GetAllOrders()
+        {
+            var orders = _db.Orders.Join(_db.Users,
+                 o => o.OrderId,
+                 u => u.UserId,
+                 (o, u) => new {
+                     id = o.OrderId,
+                     Username = u.UserName,
+                     Email = u.Email,
+                     Status = o.Status,
+                     TotalAmount = o.Amount,
+                     OrderDate = o.Date
+
+
+                 }).OrderBy(r =>
+                 r.Status == "Pending" ? 0 :
+                 r.Status == "Shipped" ? 1 :
+                 r.Status == "Delivered" ? 2 :
+                 3).ToList();
+
+            return Ok(orders);
+        }
+
+
+
+
     }
 }

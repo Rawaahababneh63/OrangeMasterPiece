@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بروفايل المستخدم</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            color: #040404;
+            text-align: right; /* محاذاة النص إلى اليمين */
+            background-color: #ffffff;
+            direction: rtl; /* تغيير اتجاه الكتابة */
+        }
+        .main-body {
+            padding: 20px;
+        }
+        .card {
+            background-color: #fdfdfd;
+            border: none;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+        }
+        .card-body {
+            padding: 1rem;
+            height: auto;
+        }
+        .sidebar {
+            height: 90vh;
+            background-color: #2c2c2c;
+            padding: 10px;
+            border-radius: .25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        .sidebar img {
+            width: 80% !important;
+            height: auto !important;
+            border-radius: .25rem;
+        }
+        .table th {
+            background-color: #000000;
+            color: white;
+            font-size: 14px;
+        }
+        .table td {
+            font-size: 14px;
+            color: #040404;
+        }
+        .btn-info {
+            background-color: #100f0f;
+            border: none;
+            color: #fdfdfd;
+        }
+        .btn-info:hover {
+            background-color: #ac0000;
+        }
+    </style>
+</head>
+<body>
+
+                <div class="container-fluid">
+                    <div class="main-body" id="container">
+                        <!-- بيانات المستخدم ستظهر هنا -->
+                    </div>
+                </div>
+<!-- //////////////////////////////////////////////////////// -->
+
+                <div class="tab-pane fade">
+                    <h3>الطلبات</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>الاسم</th>
+                                    <th>الإجمالي</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>الحالة</th>
+                                    <th>عرض</th>
+                                </tr>
+                            </thead>
+                            <tbody id="container11">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ///////////////////////////////////////////////////////////////////// -->
+                <div class="tab-pane fade" >
+                    <h3>التحميلات</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>المنتج</th>
+                                    <th>السعر</th>
+                                    <th>العلامة التجارية</th>
+                                    <th>الكمية</th>
+                                    <th>تحميل</th>
+                                </tr>
+                            </thead>
+                            <tbody id="downloadsTable">
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-8">
+                   
+                    <!-- جدول الطلبات -->
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h6 class="mb-3">طلبات المستخدم</h6>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>رقم الطلب</th>
+                                        <th>المبلغ الإجمالي</th>
+                                        <th>التاريخ</th>
+                                        <th>اسم المنتج</th>
+                                        <th>الكمية</th>
+                                        <th>السعر</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1001</td>
+                                        <td>50 JOD</td>
+                                        <td>2024-01-10</td>
+                                        <td>تي شيرت</td>
+                                        <td>2</td>
+                                        <td>25 JOD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1002</td>
+                                        <td>100 JOD</td>
+                                        <td>2024-01-15</td>
+                                        <td>بنطال جينز</td>
+                                        <td>1</td>
+                                        <td>100 JOD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1003</td>
+                                        <td>75 JOD</td>
+                                        <td>2024-02-01</td>
+                                        <td>جاكيت</td>
+                                        <td>1</td>
+                                        <td>75 JOD</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="alert alert-info" style="display: none;">
+                                لا توجد طلبات لهذا المستخدم.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تتبع الطلبات -->
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h6 class="mb-3">تتبع الطلبات</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    الطلب 1001
+                                    <span class="badge bg-success">موافق عليه</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    الطلب 1002
+                                    <span class="badge bg-warning">قيد المراجعة</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    الطلب 1003
+                                    <span class="badge bg-danger">مرفوض</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        async function GetUserData() {
+            const UserId = localStorage.getItem("UserId");
+            const url = `https://localhost:44332/api/Users/${UserId}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                displayUserData(result);
+            } catch (error) {
+                console.error('حدث خطأ:', error);
+                alert('حدث خطأ أثناء استرجاع بيانات المستخدم.');
+            }
+        }
+
+        function displayUserData(user) {
+            const container = document.getElementById('container');
+            container.innerHTML = `
+                <div class="row gutters-sm">
+                    <div class="col-md-4 mb-3">
+                        <div class="sidebar text-center" id="userSidebar">
+                            <div class="d-flex flex-column align-items-center">
+                                <img id="userImage" src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${user.image}" alt="Admin">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-3">User Information</h6>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Full Name</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" id="userName">
+                                        ${user.firstName} ${user.lastName}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Username</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" id="userUsername">
+                                        ${user.userName}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Email</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" id="userEmail">
+                                        ${user.email}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Phone</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" id="userPhone">
+                                        ${user.phoneNumber}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Address</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" id="userAddress">
+                                        ${user.address}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Gender</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" id="userGender">
+                                        ${user.gender}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a class="btn btn-info" href="EditProfile.html">Edit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        GetUserData();
+    </script>
+</body>
+</html>

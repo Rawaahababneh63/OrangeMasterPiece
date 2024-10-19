@@ -84,37 +84,234 @@ namespace Masterpiece.Controllers
         }
 
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await _db.Users.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromForm] UserUpdateModel updateUser)
+        {
+
+            var user = await _db.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+
+            bool isUpdated = false;
+
+
+            if (!string.IsNullOrEmpty(updateUser.FirstName) && updateUser.FirstName != user.FirstName)
+            {
+                user.FirstName = updateUser.FirstName;
+                isUpdated = true;
+            }
+
+            if (!string.IsNullOrEmpty(updateUser.LastName) && updateUser.LastName != user.LastName)
+            {
+                user.LastName = updateUser.LastName;
+                isUpdated = true;
+            }
+
+            if (!string.IsNullOrEmpty(updateUser.UserName) && updateUser.UserName != user.UserName)
+            {
+                user.UserName = updateUser.UserName;
+                isUpdated = true;
+            }
+
+            if (!string.IsNullOrEmpty(updateUser.Email) && updateUser.Email != user.Email)
+            {
+                user.Email = updateUser.Email;
+                isUpdated = true;
+            }
+
+            if (!string.IsNullOrEmpty(updateUser.PhoneNumber) && updateUser.PhoneNumber != user.PhoneNumber)
+            {
+                user.PhoneNumber = updateUser.PhoneNumber;
+                isUpdated = true;
+            }
+
+            if (!string.IsNullOrEmpty(updateUser.Address) && updateUser.Address != user.Address)
+            {
+                user.Address = updateUser.Address;
+                isUpdated = true;
+            }
 
 
 
-        //[HttpGet("GetALLUsersaa")]
-        //public IActionResult GetAllUser()
-        //{  var users = _db.Users.ToList();
-        //    return Ok(users);
-        //}
+            if (!string.IsNullOrEmpty(updateUser.Gender) && updateUser.Gender != user.Gender)
+            {
+                user.Gender = updateUser.Gender;
+                isUpdated = true;
+            }
 
-        //[HttpGet("login")]
-        //public IActionResult Login()
-        //{
-        //    var props = new AuthenticationProperties { RedirectUri = "account/signin-google" };
-        //    return Challenge(props, GoogleDefaults.AuthenticationScheme);
-        //}
-        //[HttpGet("signin-google")]
-        //public async Task<IActionResult> GoogleLogin()
-        //{
-        //    var response = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        //    if (response.Principal == null) return BadRequest();
 
-        //    var name = response.Principal.FindFirstValue(ClaimTypes.Name);
-        //    var givenName = response.Principal.FindFirstValue(ClaimTypes.GivenName);
-        //    var email = response.Principal.FindFirstValue(ClaimTypes.Email);
-        //    Do something with the claims
-        //     var user = await UserService.FindOrCreate(new { name, givenName, email });
+            if (updateUser.Image != null)
+            {
+                user.Image = updateUser.Image.FileName;
+                var ImagesFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+                if (!Directory.Exists(ImagesFolder))
+                {
+                    Directory.CreateDirectory(ImagesFolder);
+                }
+                var imageFile = Path.Combine(ImagesFolder, updateUser.Image.FileName);
 
-        //    return Ok();
-        //}
+
+                using (var stream = new FileStream(imageFile, FileMode.Create))
+                {
+                    await updateUser.Image.CopyToAsync(stream);
+                }
+                isUpdated = true;
+            }
+
+
+            if (!isUpdated)
+            {
+                return Ok(user);
+            }
+
+            try
+            {
+                await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+
+
+        private bool UserExists(long id)
+        {
+            return _db.Users.Any(e => e.UserId == id);
+
+
+        }
+
+
+
+
+        [HttpGet("GetALLUsersaa")]
+        public IActionResult GetAllUserNow()
+        {
+            var users = _db.Users.ToList();
+            return Ok(users);
+        }
+
+        ///////////////////////for get all user information
+        ///
+
+        [HttpGet("UserDetails/{userId}")]
+        public IActionResult GetUserDetails(int userId)
+        {
+            var user = _db.Users
+                .Where(u => u.UserId == userId)
+                .Select(u => new
+                {
+                    u.UserId,
+                    u.FirstName,
+                    u.LastName,
+                    u.UserName,
+                    u.Email,
+                    u.PhoneNumber,
+                    u.Address,
+                    u.Gender,
+                    u.Points,
+                    u.Image,
+                    Orders = u.Orders.Select(o => new
+                    {
+                        o.OrderId,
+                        o.Status,
+                        o.Amount,
+                        o.Date
+                    }).ToList(),
+                    CartItems = u.CartItems.Select(ci => new
+                    {
+                        ci.Product.Name,
+                        ci.Quantity,
+                        ci.Product.Price
+                    }).ToList(),
+                    Comments = u.Comments.Select(c => new
+                    {
+                        c.CommentId,
+                        c.Comment1,
+                        c.Date,
+                    }).ToList(),
+                 
+                    Payments = u.Payments.Select(p => new
+                    {
+                        p.PaymentId,
+                        p.Amount,
+                        p.PaymentDate,
+                        p.PaymentStatus
+                    }).ToList(),
+                    SaleRequests = u.SaleRequests.Select(sr => new
+                    {
+                        sr.RequestId,
+                        sr.Product,
+                        sr.RequestDate,
+                        sr.Status
+                    }).ToList()
+                })
+                .FirstOrDefault();
+
+            if (user == null)
+            {
+                return NotFound(new { message = "User not found" });
+            }
+
+            return Ok(user);
+        }
+
+
+
 
     }
-
 }
+
+
+
+
+
+
+
+//[HttpGet("login")]
+//public IActionResult Login()
+//{
+//    var props = new AuthenticationProperties { RedirectUri = "account/signin-google" };
+//    return Challenge(props, GoogleDefaults.AuthenticationScheme);
+//}
+//[HttpGet("signin-google")]
+//public async Task<IActionResult> GoogleLogin()
+//{
+//    var response = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+//    if (response.Principal == null) return BadRequest();
+
+//    var name = response.Principal.FindFirstValue(ClaimTypes.Name);
+//    var givenName = response.Principal.FindFirstValue(ClaimTypes.GivenName);
+//    var email = response.Principal.FindFirstValue(ClaimTypes.Email);
+//    Do something with the claims
+//     var user = await UserService.FindOrCreate(new { name, givenName, email });
+
+//    return Ok();
+//}
 

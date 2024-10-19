@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../vendors/images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../vendors/images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../vendors/images/favicon-16x16.png" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+		
+	<!-- CSS -->
+	 
+	<link rel="stylesheet" href="../assets/css/theme.min.css">
+    <link href="../assets/libs/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="../assets/libs/%40yaireo/tagify/dist/tagify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	  <!-- Favicon icon-->
+	  <link rel="shortcut icon" type="image/x-icon" href="https://dashui.codescandy.com/dashuipro/assets/images/favicon/favicon.ico" />
+
+	  <!-- Libs CSS -->
+	  <link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+	  <link href="../assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+	  <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+  
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+		crossorigin="anonymous"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-GBZ3SGGX85");
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+	</script>
+	 <!-- Google tag (gtag.js) -->
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+	 <script>
+		 window.dataLayer = window.dataLayer || [];
+ 
+		 function gtag() {
+			 dataLayer.push(arguments);
+		 }
+		 gtag('js', new Date());
+		 gtag('config', 'G-M8S4MT3EYG');
+	 </script>
+	<!-- End Google Tag Manager -->
+	 <style>
+	
+        /* تحديثات CSS كما في الشرح أعلاه */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #343a40;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            padding: 20px;
+            z-index: 1000; /* لضمان أن تبقى الـ sidebar فوق المحتوى */
+        }
+
+        .sidebar .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .sidebar .profile h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #ffb703;
+        }
+
+        .sidebar ul li a i {
+            margin-left: 10px;
+        }
+
+        .submenu {
+            display: none;
+            list-style-type: none;
+            padding-left: 15px;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+		body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: right;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+	
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="profile">
+            <img src="/Content/imges/women/7.jpg" alt="صورة الملف الشخصي">
+            <h3>أصيل عبابنة</h3>
+        </div>
+        <ul>
+			<li class="dropdown">
+                <a href="/AdminDashboard/index1.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+            </li>
+			
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-download"></i> الأقسام</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Category/AllCategory.html">عرض الأقسام</a></li>
+                    <li><a href="/AdminDashboard/Category/AddCategory.html">إضافة القسم</a></li>
+                    <li><a href="/AdminDashboard/Category/UpdataCategory.html">إضافة حذف قسم</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-download"></i> المنتجات</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Product/allProduct.html">عرض المنتجات</a></li>
+                    <li><a href="/AdminDashboard/Product/addProduct.html">إضافة منتج</a></li>
+                    <li><a href="/AdminDashboard/Product/addProduct.html">تعديل منتج</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-gift"></i> الطلبات</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Order/AllOrder.html">كل الطلبات</a></li>
+                    <li><a href="/AdminDashboard/Order/GetOrder.html">البحث بالبريد الإلكتروني</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-trophy"></i>عرض المستخدمين </a></li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-cog"></i> الدردشة</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Chat/AllChats.html">عرض الدردشات</a></li>
+                    <li><a href="/AdminDashboard/Chat/ReplyChat.html">الرد على الدردشات</a></li>
+                </ul>
+            </li>
+			<li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-ticket-alt"></i> التفاوض على السعر</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Voucher/showVoucher.html">عرض الطلبات التفاوض</a></li>          
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-ticket-alt"></i> القسائم</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Voucher/showVoucher.html">عرض القسائم</a></li>
+                    <li><a href="/AdminDashboard/Voucher/AddVoucher.html">إضافة قسيمة</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle"><i class="fas fa-comments"></i> التعليقات</a>
+                <ul class="submenu">
+                    <li><a href="/AdminDashboard/Comments/ShowComments.html">عرض التعليقات</a></li>
+                    <li><a href="/AdminDashboard/Comments/ReplyComments.html">الرد على التعليقات</a></li>
+                </ul>
+            </li>
+            <li><a href="/index.html"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a></li>
+        </ul>
+    </div>
+	<main id="main-wrapper" class="main-wrapper">
+
+        <!-- Page Content -->
+        <div id="app-content">
+            <!-- Container fluid -->
+            <div class="app-content-area">
+                <!-- Voucher List Section -->
+
+                <h2>Voucher</h2>
+
+                <button class="btn btn-info ms-2" onclick="showModal()">Send Voucher To All Users</button>
+                <button class="btn btn-warning ms-2" onclick="showModal1()">Send Voucher To One User</button>
+                <button class="btn btn-info ms-2 btn-custom" onclick="showModal2()">+ Add Voucher</button>
+                
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Code</th>
+                            <th>Discount</th>
+                            <th>Created At</th>
+                            <th>Expiry Date</th>
+                            <th>Used</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="GetVoucher">
+                        <!-- Voucher data will be loaded here -->
+                    </tbody>
+                </table>
+
+                <!-- Add Voucher Form Section -->
+                <div class="modal fade" id="addVoucherModal" tabindex="-1" aria-labelledby="addVoucherModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addVoucherModalLabel">Add Voucher</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form Section inside modal -->
+                                <form id="AddVoucher">
+                                    <div class="mb-3">
+                                        <label for="productPrice" class="form-label">Voucher Code</label>
+                                        <input type="text" class="form-control" id="productPrice" name="Code" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDescription" class="form-label">Discount</label>
+                                        <input type="number" class="form-control" id="productDescription" name="DiscountAmount" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDiscount" class="form-label">Expiry Date</label>
+                                        <input type="date" class="form-control" id="productDiscount" name="ExpiryDate" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-custom" onclick="addVoucher()">Add Voucher</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edit Voucher Form Section -->
+                <div class="modal fade" id="editVoucherModal" tabindex="-1" aria-labelledby="editVoucherModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editVoucherModalLabel">Edit Voucher</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="EditVoucherFormtttt">
+                                    <div class="mb-3">
+                                        <label for="productPrice" class="form-label">Voucher Code</label>
+                                        <input type="text" class="form-control" id="productPrice" name="Code" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDescription" class="form-label">Discount</label>
+                                        <input type="number" class="form-control" id="productDescription" name="DiscountAmount" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDiscount" class="form-label">Expiry Date</label>
+                                        <input type="date" class="form-control" id="productDiscount" name="ExpiryDate" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-custom" onclick="EditVoucher()">Edit Voucher</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="sendEmailModal" tabindex="-1" aria-labelledby="sendEmailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendEmailModalLabel">Send Email to All Users</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="sendEmailForm" onsubmit="sendemail()">
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="body" class="form-label">Body</label>
+                            <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Send Emails</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sendVoucherModal" tabindex="-1" aria-labelledby="sendVoucherModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendVoucherModalLabel">Send Voucher to One User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="sendVoucherForm" onsubmit="sendemail1()">
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">User Email</label>
+                            <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="voucherCode" class="form-label">Voucher Code</label>
+                            <input type="text" class="form-control" id="voucherCode" name="voucherCode" required>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Send Voucher</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script>
+        async function vouchertGet() {
+            const url = "https://localhost:44332/api/Voucher/GetVoucher";
+            let response = await fetch(url);
+            let data = await response.json();
+            let productTable = document.getElementById('GetVoucher');
+            data.forEach(element => {
+                productTable.innerHTML += `
+                <tr>
+                    <td>${element.voucherId}</td>
+                    <td>${element.code}</td>
+                    <td>${element.discountAmount}</td>
+                    <td>${element.createdAt}</td>
+                    <td>${element.expiryDate}</td>
+                    <td>${element.isUsed}</td>
+                    <td>
+                         <button class="btn btn-sm btn-primary" onclick="StoreIDVoucher(${element.voucherId})">Edit Voucher</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteVoucher(${element.voucherId})">Delete</button>
+                    </td>
+                </tr>
+                `;
+            });
+        }
+        vouchertGet();
+
+        async function deleteVoucher(id) {
+            const urlDelete = `https://localhost:44332/api/Voucher/${id}`;
+            await fetch(urlDelete, { method: "DELETE" });
+            alert("Voucher deleted successfully");
+            window.location.reload();
+        }
+
+        async function addVoucher() {
+            event.preventDefault();
+            const url = "https://localhost:44332/api/Voucher/AddVoucheraa";
+            var form = document.getElementById("AddVoucher");
+            var formData = new FormData(form);
+            let response = await fetch(url, {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.ok) {
+                alert("Voucher added successfully");
+                var myModalEl = document.getElementById('addVoucherModal');
+                var modal = bootstrap.Modal.getInstance(myModalEl);
+                modal.hide();
+            } else {
+                alert("Failed to add voucher");
+            }
+            window.location.reload();
+        }
+
+        function StoreIDVoucher(X) {
+            localStorage.setItem('voucherId', X);
+            var myModal = new bootstrap.Modal(document.getElementById('editVoucherModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+
+        async function EditVoucher() {
+            debugger
+            event.preventDefault();
+            const voucherId = localStorage.getItem('voucherId');
+            const url = `https://localhost:44332/api/Voucher/UpdateVoucher/${voucherId}`;
+            var form = document.getElementById("EditVoucherFormtttt");
+            var formData = new FormData(form);
+
+            let response = await fetch(url, {
+                method: "PUT",
+                body: formData,
+            });
+
+            if (response.ok) {
+                alert("Voucher updated successfully");
+                var myModalEl = document.getElementById('editVoucherModal');
+                var modal = bootstrap.Modal.getInstance(myModalEl);
+                modal.hide();
+                location.reload();
+            } else {
+                alert("Failed to update voucher");
+            }
+        }
+
+        function showModal() {
+            var myModal = new bootstrap.Modal(document.getElementById('sendEmailModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+
+        function showModal1() {
+            var myModal = new bootstrap.Modal(document.getElementById('sendVoucherModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+
+        function showModal2() {
+            var myModal = new bootstrap.Modal(document.getElementById('addVoucherModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+
+        async function sendemail() {
+            const url = "https://localhost:44332/api/Voucher/SendEmailALLUserRememberMe";
+            var form = document.getElementById("sendEmailForm");
+            event.preventDefault();
+            var formData = new FormData(form);
+            let response = await fetch(url, {
+                method: "POST",
+                body: formData,
+            });
+            alert("Emails sent successfully");
+        }
+
+        async function sendemail1() {
+            event.preventDefault();
+            var userEmail = document.getElementById("userEmail").value;
+            var voucherCode = document.getElementById("voucherCode").value;
+            const url = ` https://localhost:44332/api/Voucher/send-voucher/${userEmail}?voucherCode=${voucherCode}`;
+    
+            let response = await fetch(url, {
+                method: "POST"
+            });
+
+            if (response.ok) {
+                alert("Voucher sent successfully");
+            } else {
+                alert("Failed to send voucher");
+            }
+        }
+    </script>
+
+
+	<!-- js -->
+	<script src="../vendors/scripts/core.js"></script>
+	<script src="../vendors/scripts/script.min.js"></script>
+	<script src="../vendors/scripts/process.js"></script>
+	<script src="../vendors/scripts/layout-settings.js"></script>
+	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="../src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="../vendors/scripts/dashboard.js"></script>
+	<script src="UpdataCategory.js"></script>
+	    <!-- Additional Scripts -->
+		<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+		<script>
+	
+			function logout() {
+					localStorage.removeItem("jwtToken");
+					localStorage.removeItem("UserId");
+					window.location.href = "../../index_2.html";
+				  }
+			</script>
+	
+		
+</body>
+
+</html>

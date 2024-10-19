@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/2b2m7sanZw=",
+  "dgSpecHash": "4l+Bc2cS98s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orangee\\Desktop\\OrangeMasterPice\\OrangeMasterPiece\\preview.colorlib.com\\theme\\Backend\\Masterpiece\\Masterpiece\\Masterpiece.csproj",
+  "projectFilePath": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Backend\\Masterpiece\\Masterpiece\\Masterpiece.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orangee\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Orangee\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

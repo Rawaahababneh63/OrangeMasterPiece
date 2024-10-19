@@ -14,9 +14,14 @@
         public string Condition { get; set; }
         public string Brand { get; set; }
         public decimal? PriceWithDiscount { get; set; }
+
+        public decimal? MinPrice { get; set; }
+
+        public decimal? MaxPrice { get; set; }
         public DateTime Date { get; set; }
         public bool IsActive { get; set; }
         public bool IsDonation { get; set; }
+
         public int SubcategoryId { get; set; }  // معرف الفئة الفرعية
     }
 

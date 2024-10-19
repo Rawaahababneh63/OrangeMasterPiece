@@ -30,7 +30,15 @@ namespace Masterpiece.Controllers
             return NoContent();
         }
 
+        [HttpGet("CountAllCategory")]
+        public IActionResult CountAllCategory()
+        {
 
+            var categories = _db.Categories.ToList().Count;
+            return Ok(categories);
+
+
+        }
 
         [HttpGet("/Api/Categories/GetCategorysbyId/{id}")]
         public IActionResult Get(int id)
@@ -87,7 +95,6 @@ namespace Masterpiece.Controllers
             return Ok(data);
         }
 
-
         // PUT: api/Categories/{id}
         [HttpPut("{id}")]
         public IActionResult UpdateCategory(int id, [FromForm] CategoryDTO_Request category)
@@ -103,25 +110,36 @@ namespace Masterpiece.Controllers
                 return NotFound();
             }
 
-            existingCategory.CategoryName = category.CategoryName;
-            existingCategory.CategoryImage = category.CategoryImage.FileName;
-
-            var ImagesFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-
-            if (!Directory.Exists(ImagesFolder))
+   
+            if (!string.IsNullOrWhiteSpace(category.CategoryName))
             {
-                Directory.CreateDirectory(ImagesFolder);
+                existingCategory.CategoryName = category.CategoryName;
             }
 
-            var imageFile = Path.Combine(ImagesFolder, category.CategoryImage.FileName);
-            using (var stream = new FileStream(imageFile, FileMode.Create))
+  
+            if (category.CategoryImage != null)
             {
-                category.CategoryImage.CopyTo(stream);
+                var ImagesFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+
+                if (!Directory.Exists(ImagesFolder))
+                {
+                    Directory.CreateDirectory(ImagesFolder);
+                }
+
+                var imageFile = Path.Combine(ImagesFolder, category.CategoryImage.FileName);
+                using (var stream = new FileStream(imageFile, FileMode.Create))
+                {
+                    category.CategoryImage.CopyTo(stream);
+                }
+
+                existingCategory.CategoryImage = category.CategoryImage.FileName;
             }
+
             _db.SaveChanges();
 
-            return NoContent();
+            return Ok(existingCategory); 
         }
+
 
         // DELETE: api/Categories/{id}
         [HttpDelete("{id}")]

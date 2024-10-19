@@ -19,6 +19,11 @@ namespace Masterpiece.DTO
 
         public static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
         {
+            if (storedSalt == null)
+            {
+                throw new ArgumentNullException(nameof(storedSalt), "Salt cannot be null");
+            }
+
             using (var hmac = new System.Security.Cryptography.HMACSHA512(storedSalt))
             {
                 var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
@@ -26,5 +31,6 @@ namespace Masterpiece.DTO
             }
         }
 
-    }
+    
+}
 }

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>SecondLifeClothes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="Content/images/icons/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="Content/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/fonts/linearicons-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/MagnificPopup/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="Content/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/main.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/style.css">
+    <link rel="stylesheet" href="Content/css/AboutStyles.css">
+    <link rel="stylesheet" href="Content/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700" />
+    <link rel="stylesheet" href="Content/css/CleanOut.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.png">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/slicknav.css">
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="assets/css/animate.min.css">
+<link rel="stylesheet" href="assets/css/price_rangs.css">
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/css/themify-icons.css">
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/nice-select.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="Content/css/CleanOut.css">
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* خلفية فاتحة ومريحة للعين */
+    text-align: right; /* توجيه النص إلى اليمين */
+}
+
+.custom-form-container {
+    background-color: #ffffff; /* لون خلفية النموذج */
+    padding: 40px; /* حشوة داخلية أكبر */
+    border-radius: 20px; /* زوايا مدورة بشكل أكبر */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* ظل أعمق */
+    max-width: 600px; /* عرض أقصى */
+    width: 90%; /* عرض 90% */
+    margin: 50px auto; /* مركز النموذج مع هوامش علوية */
+    transition: transform 0.3s; /* تأثير حركة عند التحميل */
+}
+
+.custom-form-container:hover {
+    transform: translateY(-5px); /* حركة خفيفة للأعلى عند تمرير الماوس */
+}
+
+h1 {
+    text-align: center; /* وسط العنوان */
+    color: #333; /* لون العنوان */
+    font-size: 28px; /* حجم خط أكبر */
+    margin-bottom: 15px; /* فراغ أسفل العنوان */
+    font-weight: 700; /* سمك الخط */
+    position: relative; /* وضع نسبي */
+}
+
+h1::after { /* خط تحت العنوان */
+    content: '';
+    display: block;
+    width: 50px; /* عرض الخط */
+    height: 4px; /* ارتفاع الخط */
+    background-color: #dc3545; /* لون الخط */
+    margin: 10px auto; /* مركز الخط */
+}
+
+.custom-tagline {
+    text-align: center; /* وسط العبارة */
+    color: #777; /* لون النص */
+    font-size: 18px; /* حجم الخط */
+    margin-bottom: 20px; /* فراغ أسفل العبارة */
+    font-style: italic; /* خط مائل */
+}
+
+.custom-form-field {
+    margin-bottom: 20px; /* فراغ أسفل الحقل */
+}
+
+.custom-form-label {
+    direction: rtl;
+    display: block; /* عرض كتلة */
+    margin-bottom: 10px; /* زيادة الفراغ */
+    color: #555; /* لون التسمية */
+    font-size: 18px; /* حجم الخط أكبر */
+    font-weight: bold; /* جعل النص عريض */
+}
+
+.custom-form-input,
+.custom-form-select,
+.custom-form-textarea {
+    width: 100%; /* عرض كامل */
+    padding: 15px; /* حشوة داخلية أكبر */
+    border: 1px solid #ced4da; /* حدود خفيفة */
+    border-radius: 10px; /* زوايا مدورة */
+    font-size: 16px; /* حجم الخط */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل داخلي */
+    direction: rtl; /* تغيير اتجاه النص */
+    text-align: right; /* محاذاة النص لليمين */
+    transition: border-color 0.3s; /* تأثير عند تغيير الحدود */
+}
+
+.custom-form-input:focus,
+.custom-form-select:focus,
+.custom-form-textarea:focus {
+    border-color: #dc3545; /* تغيير لون الحدود عند التركيز */
+    outline: none; /* إزالة الإطار */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* ظل عند التركيز */
+}
+
+.custom-form-textarea {
+    resize: vertical; /* تغيير الحجم عمودياً فقط */
+}
+
+.custom-submit-btn {
+    display: block; /* عرض كتلة */
+    width: 100%; /* عرض كامل */
+    padding: 15px; /* حشوة داخلية أكبر */
+    background-color: #dc3545; /* لون الزر */
+    color: #fff; /* لون النص في الزر */
+    font-size: 18px; /* حجم خط الزر */
+    border: none; /* إزالة الحدود */
+    border-radius: 10px; /* زوايا مدورة */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: background-color 0.3s; /* تأثير عند تغيير لون الزر */
+}
+
+.custom-submit-btn:hover {
+    background-color: #c82333; /* لون الزر عند التمرير */
+}
+
+.custom-image-preview {
+    margin-top: 10px; /* فراغ أعلى */
+    text-align: center; /* وسط الصورة */
+}
+
+.custom-image-preview img {
+    max-width: 100%; /* عرض الصورة 100% */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border: 1px solid #ced4da; /* حدود خفيفة */
+    border-radius: 10px; /* زوايا مدورة */
+}
+
+.overlay {
+    display: none; /* الإخفاء */
+    position: fixed; /* ثابتة */
+    top: 0; /* من الأعلى */
+    left: 0; /* من اليسار */
+    width: 100%; /* عرض كامل */
+    height: 100%; /* ارتفاع كامل */
+    background-color: rgba(0, 0, 0, 0.5); /* لون خلفية مع شفافية */
+    z-index: 1000; /* فوق جميع العناصر */
+}
+
+    .popup-thank-you {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 30px rgba(0, 128, 0, 0.7);
+        z-index: 1000;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .popup-thank-you.show {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .popup-thank-you h3 {
+        font-size: 2rem;
+        color: #28a745;
+        margin-bottom: 10px;
+        animation: bounce 1s ease infinite alternate;
+    }
+
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .logo img  {
+    width: 165px;
+ 
+    position: relative;
+    top: 12px;
+}
+.custom-form-container {
+    /* أي أنماط إضافية ترغب بها هنا */
+}
+
+.form-with-border {
+    border-top: 2px solid black; /* إضافة حافة سوداء أعلى الفورم */
+    padding-top: 20px; /* إضافة فراغ بين الحافة وأعلى النموذج */
+}
+.custom-form-field {
+            margin: 15px 0;
+        }
+
+        .custom-form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .custom-form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="header-area">
+            <!-- الجزء الأول (Header-Top) -->
+            <div class="header-top d-none d-sm-block">
+                <div class="container1" style="margin-left: 3%;margin-right: 3%;">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-between flex-wrap align-items-center">
+                                <div class="header-info-left">
+                                    <ul>
+                                        <li><a href="CleanOut.html#faq">الأسئلة الشائعة</a></li>
+                                        <li><a href="About1.html">معلومات عنا</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right d-flex">
+                                    <ul class="order-list">
+                                        <li><a href="#">قائمة أمنياتي</a></li>
+                                        <li><a href="#">تتبع الطلب</a></li>
+                                    </ul>
+                                    <ul class="header-social">
+                                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- الجزء الثاني (Header-Bottom) -->
+            <div class="header-bottom text-center">
+                <p dir="rtl">تخفيضات تصل إلى 50%  أسرع ! العرض لفترة محدودة <a href="#" class="browse-btn">تسوق الآن</a></p>
+            </div>
+        
+            <!-- الجزء الثالث (Header-Mid) -->
+            <div class="header-mid header-sticky">
+                <div class="container1">
+                    <div class="menu-wrapper" style="margin: 0px;">
+                        <div class="logo1" style="margin-left: 1%">
+                            <a href="index.html"><img   src="assets/img/logo/logo.png" alt="الشعار"></a>
+                        </div>
+                        <div class="main-menu d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                
+                                    <li><a href="#">البيع</a>
+                                        <ul class="submenu">
+                                            <li style="text-align:center;"><a href="CleanOut.html">بيع معنا</a></li>
+                                            <li style="text-align:center;"><a href="blog.html">المدونة</a></li>
+                                            <li style="text-align:center;"><a href="blog-details.html">تفاصيل المدونة</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">تواصل معنا</a></li>
+                                    <li class="new"><a href="categories.html">الحفلات</a></li>
+                                    <li><a href="categories.html">الأطفال</a></li>
+                                    <li><a href="categories.html">رجال</a></li>
+                                    <li><a href="categories.html">نساء</a></li>
+                                    <li><a href="index.html">الرئيسية</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+    
+    
+    
+                        <div class=" main-menu d-none d-lg-block" style="margin-right: 4%">
+                            <nav  >
+                                <ul id="navigation">
+                                    <li>
+                                 
+    <!--                                   
+                                        <li>
+                                            <div class="nav-search search-switch hearer_icon">
+                                                <a id="search_1" href="javascript:void(0)">
+                                                    <span class="flaticon-search"></span>
+                                                </a>
+                                            </div>
+                                        </li> -->
+                                        <li class="cart"><a href="cart.html"><span class="flaticon-shopping-cart"></span></a></li>
+                                    <li>
+                                        <a href="#" id="userIcon"> <span class="flaticon-user"></span> <i class="fas fa-angle-down"></i></a>
+                                        <ul class="submenu"> <!-- قائمة المستخدم -->
+                                             <li style="text-align:center;" id="userAccount"><a href="UserDashboard.html">حسابي</a></li>
+                                        
+                                            <li style="text-align:center;"  id="login"><a href="login.html">حسابي/تسجيل</a></li>
+                                            <li style="text-align:center;"><a href="register.html">إنشاء حساب</a></li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                                    
+                                    </li>
+                                 
+                                </ul>
+                            </nav>
+                        </div>
+        
+                 
+        
+        
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="custom-form-container">
+        <h1>نموذج التبرع أو البيع</h1>
+        <p class="custom-tagline">ساعدنا في منح حياة جديدة لملابسك!</p>
+        <form id="sell-product-form" onsubmit="submitForm(event)">
+            <input type="hidden" id="userId" name="userId" value=""> <!-- حقل معرف المستخدم المخفي -->
+        
+            <div class="custom-form-field">
+                <label for="name" class="custom-form-label">اسمك:</label>
+                <input type="text" id="name" name="name" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="email" class="custom-form-label">بريدك الإلكتروني:</label>
+                <input type="email" id="email" name="email" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="phone" class="custom-form-label">رقم الهاتف:</label>
+                <input type="tel" id="phone" name="phone" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="location" class="custom-form-label">مكان السكن:</label>
+                <input type="text" id="location" name="location" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="productName" class="custom-form-label">اسم المنتج:</label>
+                <input type="text" id="productName" name="productName" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="category" class="custom-form-label">فئة:</label>
+                <select id="CategoryId" class="custom-form-select" name="CategoryId">
+                    <!-- سيتم إضافة الفئات الرئيسية هنا باستخدام JavaScript -->
+                </select>
+            </div>
+            <div class="custom-form-field">
+                <label for="subcategory" class="custom-form-label">فئة فرعية:</label>
+                <select id="subcategory" class="custom-form-select" name="subcategoryId" required>
+                    <!-- سيتم إضافة الخيارات هنا باستخدام JavaScript -->
+                </select>
+            </div>
+            <div class="custom-form-field">
+                <label for="actionType" class="custom-form-label">العمل:</label>
+                <select id="actionType" name="actionType" class="custom-form-select" required>
+                    <option value="" disabled selected>نوع النشاط</option>
+                    <option value="donation">تبرع</option>
+                    <option value="sale">بيع</option>
+                </select>
+            </div>
+            <div class="custom-form-field">
+                <label class="custom-form-label">حالة المنتج:</label>
+                <div class="custom-form-check">
+                    <input type="radio" id="good" name="condition" value="good" required>
+                    <label for="good">جيد</label>
+                </div>
+                <div class="custom-form-check">
+                    <input type="radio" id="veryGood" name="condition" value="veryGood">
+                    <label for="veryGood">جيد جدًا</label>
+                </div>
+                <div class="custom-form-check">
+                    <input type="radio" id="excellent" name="condition" value="excellent">
+                    <label for="excellent">ممتاز</label>
+                </div>
+            </div>
+            <div class="custom-form-field">
+                <label for="color" class="custom-form-label">لون المنتج:</label>
+                <input type="text" id="color" name="color" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="expectedPrice" class="custom-form-label">السعر المتوقع:</label>
+                <input type="number" id="expectedPrice" name="expectedPrice" class="custom-form-input" required>
+            </div>
+            <div class="custom-form-field">
+                <label for="productImage" class="custom-form-label">صورة المنتج:</label>
+                <input type="file" id="productImage" name="productImage" class="custom-form-input" required accept="image/*" onchange="previewImage(event)">
+                <div class="custom-image-preview" id="imagePreview">
+                    <h3>معاينة الصورة:</h3>
+                    <img id="preview" src="/Backend/Masterpiece/Masterpiece/Uploads/background.jpg" alt="صورة المنتج">
+                </div>
+            </div>
+            <div class="custom-form-field">
+                <label for="details" class="custom-form-label">تفاصيل:</label>
+                <textarea id="details" name="description" class="custom-form-textarea" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="custom-submit-btn">إرسال</button>
+        </form>
+    </div>
+    
+    <!-- Overlay for Popup -->
+    <div class="overlay"></div>
+    <!-- Popup for Thank You -->
+    <div class="popup-thank-you" id="thank-you-popup">
+        <h3>شكرًا لمساهمتك في حماية البيئة!</h3>
+        <p>تم إرسال تفاصيل المنتج الخاص بك بنجاح. سنتواصل معك قريبًا.</p>
+    </div>
+<BR>
+    <br>
+    <br><br>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wrapper gray-bg">
+            <div class="footer-area footer-padding">
+    
+                <!-- قسم الاشتراك في النشرة الإخبارية -->
+                <section class="subscribe-area">
+                    <div class="container">
+                        <div class="row justify-content-between subscribe-padding">
+                            <div class="col-xxl-2 col-xl-2 col-lg-4">
+                                <div class="footer-social">
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                           
+                            <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9">
+                                <div class="subscribe-caption">
+                                    <form action="#" style="display: flex;" >
+                                        <input type="text" placeholder="أدخل بريدك الإلكتروني">
+                                        <button class="subscribe-btn">اشترك</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4">
+                                <div class="subscribe-caption">
+                                    <h3>اشترك في النشرة الإخبارية</h3>
+                                    <p>اشترك في النشرة الإخبارية للحصول على خصم 5% على جميع المنتجات.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- قسم معلومات الفوتر -->
+                <div class="container">
+                    <div class="row justify-content-between">
+                      
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>تسوق للرجال</h4>
+                                    <ul>
+                                        <li><a href="#">أزياء الملابس</a></li>
+                                        <li><a href="#">شتاء</a></li>
+                                        <li><a href="#">صيف</a></li>
+                                        <li><a href="#">رسمية</a></li>
+                                        <li><a href="#">عادية</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle" >
+                                    <h4>تسوق للنساء</h4>
+                                    <ul>
+                                        <li><a href="#">أزياء الملابس</a></li>
+                                        <li><a href="#">شتاء</a></li>
+                                        <li><a href="#">صيف</a></li>
+                                        <li><a href="#">رسمية</a></li>
+                                        <li><a href="#">عادية</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>معلومات</h4>
+                                    <ul>
+                                        <li><a href="#">من نحن</a></li>
+                                        <li><a href="#">سياسة الخصوصية</a></li>
+                                        <li><a href="#">الشروط والأحكام</a></li>
+                                        <li><a href="#">اتصل بنا</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-20">
+                                    <div class="footer-logo mb-35">
+                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="شعار"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+    
+    <div id="back-top">
+    <a class="wrapper" title="Go to Top" href="#">
+    <div class="arrows-container">
+    <div class="arrow arrow-one">
+    </div>
+    <div class="arrow arrow-two">
+    </div>
+    </div>
+    </a>
+    </div>
+    <script>
+        // تعيين القيمة من localStorage إلى الحقل المخفي عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('UserId');
+            document.getElementById('userId').value = userId; // تعيين القيمة
+        });
+    </script>
+
+
+    
+<script src="form.js"></script>
+<script>
+    function previewImage(event) {
+        const preview = document.getElementById('preview');
+        const imagePreview = document.getElementById('imagePreview');
+        const file = event.target.files[0];
+        
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                imagePreview.style.display = 'block'; // Show the image preview
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+</body>
+</html>

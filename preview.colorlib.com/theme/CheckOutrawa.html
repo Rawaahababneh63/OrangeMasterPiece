@@ -754,47 +754,52 @@
 
   
 <script>
-    function loadOrderSummary() {
-        const cartItems = JSON.parse(localStorage.getItem('cartItems'));
-        const orderSummaryBody = document.getElementById('orderSummaryBody');
-        const totalAmountElement = document.getElementById('totalAmount');
-        let totalAmount = 0;
+function loadOrderSummary() {
+    const cartItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
+    const orderSummaryBody = document.getElementById('orderSummaryBody');
+    const totalAmountElement = document.getElementById('totalAmount');
+    let totalAmount = 0;
 
-        orderSummaryBody.innerHTML = '';  // مسح المحتوى السابق
+    orderSummaryBody.innerHTML = '';  // مسح المحتوى السابق
 
-        if (!Array.isArray(cartItems) || cartItems.length === 0) {
-            orderSummaryBody.innerHTML = '<tr><td colspan="3">لا توجد منتجات في الطلب.</td></tr>';
-            totalAmountElement.textContent = '0.00 JD';
-            return;
-        }
+    // تحقق مما إذا كانت قائمة العناصر غير فارغة
+    if (!Array.isArray(cartItems) || cartItems.length === 0) {
+        orderSummaryBody.innerHTML = '<tr><td colspan="4">لا توجد منتجات في الطلب.</td></tr>';
+        totalAmountElement.textContent = '0.00 JD';
+        localStorage.setItem('amountForPay', '0.00'); // تخزين 0 إذا لم يكن هناك عناصر
+        return;
+    }
 
-        cartItems.forEach(item => {
-            const productRow = `
-           <tr>
-                
-                <td class="product-name">${item.product.name}</td>
+    // إضافة كل عنصر في عربة التسوق إلى الجدول
+    cartItems.forEach(item => {
+        const productRow = `
+            <tr>
+                <td class="product-name">${item.name}</td>
                 <td class="product-image">
-                    <img src="/Backend/Masterpiece/Masterpiece/Uploads/${item.product.image}" alt="${item.product.name}" style="width: 50px; height: 50px;"/>
+                    <img src="assets/img/s-product/${item.image}" alt="${item.name}" style="width: 50px; height: 50px;"/>
                 </td>
                 <td class="product-quantity">${item.quantity}</td>
                 <td class="product-total">
-                    <span class="amount">${(item.product.price * item.quantity).toFixed(2)} JD</span>
+                    <span class="amount">${(item.price * item.quantity).toFixed(2)} JD</span>
                 </td>
             </tr>`;
-        
-            
-            orderSummaryBody.innerHTML += productRow;
-            totalAmount += (item.product.price * item.quantity); // حساب السعر الكلي
-        });
 
-        totalAmountElement.textContent = totalAmount.toFixed(2) + " JD"; // عرض السعر الكلي
-    }
+        orderSummaryBody.insertAdjacentHTML('beforeend', productRow); // إضافة الصف
+        totalAmount += (item.price * item.quantity); // حساب السعر الكلي
+    });
 
-    // استدعاء الدالة عند تحميل الصفحة
-    window.onload = loadOrderSummary;
-    function GoPayPal() {
+    totalAmountElement.textContent = totalAmount.toFixed(2) + " JD"; // عرض السعر الكلي
+    localStorage.setItem('amountForPay', totalAmount.toFixed(2)); // تخزين المبلغ الكلي
+}
+
+// استدعاء الدالة عند تحميل الصفحة
+window.onload = loadOrderSummary;
+
+function GoPayPal() {
     window.location.href = "/capitalshop/paypal.html"; // تأكد من أن المسار صحيح
 }
+
+
 </script>
 
 </body>

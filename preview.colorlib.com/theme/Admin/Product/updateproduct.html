@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../vendors/images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../vendors/images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../vendors/images/favicon-16x16.png" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+		crossorigin="anonymous"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-GBZ3SGGX85");
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
+<STYLE>
+	 body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+</STYLE>
+<body>
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon bi bi-list"></div>
+			<div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+		
+		</div>
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+					
+					</a>
+				</div>
+			</div>
+	
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						
+						<span class="user-name">Rawa'ah Ababneh</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+					
+						<a class="dropdown-item" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<a href="../index1.html">
+				<img src="../vendors/images/Smart1.png" alt="" class="dark-logo" />
+				<img src="../vendors/images/Smart.png"  class="light-logo" />
+			</a>
+			
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li class="dropdown">
+						<a href="../index1.html" class="dropdown-toggle  no-arrow">
+							<span class="micon bi bi-house"></span><span class="mtext">Home</span>
+						</a>
+					</li>
+						
+				
+					
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">Category
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Category/AllCategory.html">ALL Category</a></li>
+						
+							
+							
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">SubCategory
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../SubCategory/SubCategory.html">SubCategory By CategoryId</a></li>
+							<li><a href="../SubCategory/AllSubCategory.html">ALL SubCategory</a></li>
+						
+							
+							
+						</ul>
+					</li>
+
+                    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">Product
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Product/allProduct.html">ALLproduct</a></li>
+							<li><a href="../Product/addProduct.html">Add product</a></li>
+							<li><a href="../Product/applayDisount.html">Applay Discount</a></li>
+						</ul>
+
+					</li>
+
+                    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">News
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../News/News.html">News</a></li>
+							<li><a href="../News/UpdateNews.html"> UpdateNews</a></li>
+							
+						</ul>
+
+					</li>
+
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Review </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Product/ReviewUpdat.html">Follow up width review</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                          <span class="micon bi bi-file-earmark-text"></span
+                          ><span class="mtext">Voucher </span>
+                        </a>
+						<ul class="submenu">
+							<li><a href="../VoucherRawaah/Voucher.html">ALL Voucher</a></li>
+						  </ul>
+                    </li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Orders </span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Order/AllOrder.html">ALL Order</a></li>
+							<li><a href="../Order/GetOrder.html">Search By Email</a></li>
+						</ul>
+					</li>
+				    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Contact </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Contact/Contact Us.html">ALL Contact</a></li>
+						
+						</ul>
+					  </li>
+					  <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">RequestSell</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../RequestSell/RequestSell.html">RequestSell</a></li>
+						
+						</ul>
+					  </li>
+                      <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Costumers</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Costumer/AllUser.html">AllUser</a></li>
+					
+
+						</ul>
+					  </li>
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+    
+	<div class="main-container">
+    <div class="form-container">
+        <h1 class="text-center">Edit Product</h1>
+        <form id="form" enctype="multipart/form-data" onsubmit="updateProduct(event)">
+            <div class="mb-3">
+                <label for="CategoryId" class="form-label">Main Category</label>
+                <select class="form-select" id="CategoryId" name="categoryId" onchange="getSubcategoriesByCategory()" required>
+                    <option selected disabled>Select Main Category</option>
+                    <!-- Options will be filled from the database -->
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="SubCategoryId" class="form-label">Subcategory</label>
+                <select class="form-select" id="SubCategoryId" name="subCategoryId" required>
+                    <option selected disabled>Select Subcategory</option>
+                    <!-- Options will be filled from the database -->
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="ProductName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="ProductName" name="name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="Description" name="description" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Price" class="form-label">Price</label>
+                <input type="number" step="0.01" class="form-control" id="Price" name="price" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="StockQuantity" class="form-label">Stock Quantity</label>
+                <input type="number" class="form-control" id="StockQuantity" name="stockQuantity" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Brand" class="form-label">Brand</label>
+                <input type="text" class="form-control" id="Brand" name="brand" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Condition" class="form-label">Condition</label>
+                <select class="form-select" id="Condition" name="condition" required>
+                    <option selected disabled>Select Condition</option>
+                    <option value="New">New</option>
+                    <option value="VeryGood">Very Good</option>
+                    <option value="Good">Good</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="Image" class="form-label">Product Image</label>
+                <input type="file" class="form-control" id="Image" name="image" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Image1" class="form-label">Product Image 1</label>
+                <input type="file" class="form-control" id="Image1" name="image1" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Image2" class="form-label">Product Image 2</label>
+                <input type="file" class="form-control" id="Image2" name="image2" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Image3" class="form-label">Product Image 3</label>
+                <input type="file" class="form-control" id="Image3" name="image3" />
+            </div>
+
+            <div class="mb-3">
+                <label for="ClothColorId" class="form-label">Select Color</label>
+                <select id="ClothColorId" name="ClothColorId" class="form-select" required>
+                    <option value="" selected disabled>Select Color</option>
+                    <!-- الألوان ستضاف هنا -->
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="Discount" class="form-label">Discount (%)</label>
+                <input type="number" class="form-control" id="Discount" name="discount" min="0" max="100" />
+            </div>
+
+            <div class="mb-3">
+                <label for="minPrice" class="form-label">Min Price</label>
+                <input type="number" step="0.01" id="minPrice" name="minPrice" class="form-control" placeholder="Enter Min Price" />
+            </div>
+
+            <div class="mb-3">
+                <label for="maxPrice" class="form-label">Max Price</label>
+                <input type="number" step="0.01" id="maxPrice" name="maxPrice" class="form-control" placeholder="Enter Max Price" />
+            </div>
+
+            <div class="mb-3">
+                <label for="IsActive" class="form-label">Is Active</label>
+                <select class="form-select" id="IsActive" name="isActive" required>
+                    <option selected disabled>Select Status</option>
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="TypeProduct" class="form-label">Type Product</label>
+                <input type="text" class="form-control" id="TypeProduct" name="typeProduct" required />
+            </div>
+
+            <button type="submit" class="btn btn-success">Update Product</button>
+            <div class="error-message" id="errorMessage"></div>
+        </form>
+    </div>
+</div>
+
+	
+	<script>
+
+		function logout() {
+				localStorage.removeItem("jwtToken");
+				localStorage.removeItem("UserId");
+				window.location.href = "../../index_2.html";
+			  }
+		</script>
+	
+	<!-- js -->
+	<script src="../vendors/scripts/core.js"></script>
+	<script src="../vendors/scripts/script.min.js"></script>
+	<script src="../vendors/scripts/process.js"></script>
+	<script src="../vendors/scripts/layout-settings.js"></script>
+	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="../src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="../vendors/scripts/dashboard.js"></script>
+	<script src="UpdataProduct.js"></script>
+</body>
+
+</html>

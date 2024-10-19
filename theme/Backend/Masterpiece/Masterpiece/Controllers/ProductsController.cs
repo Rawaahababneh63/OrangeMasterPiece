@@ -296,14 +296,45 @@ namespace Masterpiece.Controllers
 
 
 
-
         [HttpGet("GetAllProducts")]
         public IActionResult GetAllProducts()
         {
-            var products = _db.Products.ToList();
-            if (!products.Any()) { return NotFound("No product found."); }
+            var products = _db.Products
+                .Include(p => p.ClothColor)  // لجلب بيانات اللون المرتبط
+                .Include(p => p.Subcategory) // لجلب بيانات الفئة الفرعية المرتبطة
+                .Select(p => new
+                {
+                    p.ProductId,
+                    p.Name,
+                    p.Description,
+                    p.Price,
+                    p.MinPrice,
+                    p.MaxPrice,
+                    p.TypeProduct,
+                    p.Condition,
+                    p.Brand,
+                    SubcategoryName = p.Subcategory != null ? p.Subcategory.SubcategoryName : "N/A", 
+                    ClothColor = p.ClothColor != null ? p.ClothColor.ColorName : "N/A", 
+                    p.StockQuantity,
+                    p.IsActive,
+                    p.IsDonation,
+                    p.Image,
+                    p.Image1,
+                    p.Image2,
+                    p.Image3,
+                    Discount = p.PriceWithDiscount.HasValue ? p.PriceWithDiscount.Value.ToString("C") : "—"
+                })
+                .ToList();
+
+            if (!products.Any())
+                return NotFound("No product found.");
+
             return Ok(products);
         }
+
+
+
+
         [HttpGet("GetProductByID/{id}")]
         public IActionResult GetProductByID(int id)
         {
@@ -601,13 +632,15 @@ namespace Masterpiece.Controllers
                 Condition = productDto.Condition,
                 Brand = productDto.Brand,
                 PriceWithDiscount = productDto.PriceWithDiscount,
-                Date = DateOnly.FromDateTime(DateTime.Now), // إضافة التاريخ الحالي
+                MaxPrice= productDto.MaxPrice,
+                MinPrice= productDto.MinPrice,
+                Date = DateOnly.FromDateTime(DateTime.Now), 
                 IsActive = productDto.IsActive,
                 IsDonation = productDto.IsDonation,
-                SubcategoryId = productDto.SubcategoryId // ربط المنتج بالفئة الفرعية
+                SubcategoryId = productDto.SubcategoryId 
             };
 
-            // تحديد مجلد الصور
+     
             var ImagesFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
 
             if (!Directory.Exists(ImagesFolder))
@@ -615,7 +648,20 @@ namespace Masterpiece.Controllers
                 Directory.CreateDirectory(ImagesFolder);
             }
 
-            // التعامل مع الصورة الأولى
+            if (productDto.Image != null)
+            {
+                var imageFile = Path.Combine(ImagesFolder, productDto.Image.FileName);
+                using (var stream = new FileStream(imageFile, FileMode.Create))
+                {
+                    await productDto.Image.CopyToAsync(stream);
+                }
+                product.Image = "/Uploads/" + productDto.Image.FileName; 
+            }
+            else
+            {
+                product.Image = null; 
+            }
+
             if (productDto.Image1 != null)
             {
                 var imageFile1 = Path.Combine(ImagesFolder, productDto.Image1.FileName);
@@ -626,7 +672,7 @@ namespace Masterpiece.Controllers
                 product.Image1 = "/Uploads/" + productDto.Image1.FileName;
             }
 
-            // التعامل مع الصورة الثانية
+         
             if (productDto.Image2 != null)
             {
                 var imageFile2 = Path.Combine(ImagesFolder, productDto.Image2.FileName);
@@ -637,7 +683,7 @@ namespace Masterpiece.Controllers
                 product.Image2 = "/Uploads/" + productDto.Image2.FileName;
             }
 
-            // التعامل مع الصورة الثالثة
+ 
             if (productDto.Image3 != null)
             {
                 var imageFile3 = Path.Combine(ImagesFolder, productDto.Image3.FileName);
@@ -724,17 +770,31 @@ namespace Masterpiece.Controllers
             return Ok();
         }
 
-
         [HttpPut("Product")]
         public IActionResult EditProduct(int id, [FromForm] ProductDTO products)
         {
+            // جلب المنتج بناءً على المعرف
             var EditProduct = _db.Products.FirstOrDefault(p => p.ProductId == id);
             if (EditProduct == null)
             {
                 return NotFound("Product not found.");
             }
 
-            // تحديث البيانات دون تعديل الصورة
+            var previousData = new
+            {
+                Name = EditProduct.Name,
+                Description = EditProduct.Description,
+                Price = EditProduct.Price,
+                Brand = EditProduct.Brand,
+                PriceWithDiscount = EditProduct.PriceWithDiscount,
+                SubcategoryId = EditProduct.SubcategoryId,
+                TypeProduct = EditProduct.TypeProduct,
+                Condition = EditProduct.Condition,
+                IsActive = EditProduct.IsActive,
+                IsDonation = EditProduct.IsDonation,
+                ClothColorId = EditProduct.ClothColorId,
+            };
+
             EditProduct.Name = products.Name;
             EditProduct.Description = products.Description;
             EditProduct.Price = products.Price;
@@ -745,13 +805,85 @@ namespace Masterpiece.Controllers
             EditProduct.Condition = products.Condition;
             EditProduct.IsActive = products.IsActive;
             EditProduct.IsDonation = products.IsDonation;
+            EditProduct.ClothColorId = products.ClothColorId;
+
+            // حفظ الصور
+            if (products.Image != null)
+            {
+                EditProduct.Image = SaveImage(products.Image);
+            }
+            if (products.Image1 != null)
+            {
+                EditProduct.Image1 = SaveImage(products.Image1);
+            }
+            if (products.Image2 != null)
+            {
+                EditProduct.Image2 = SaveImage(products.Image2);
+            }
+            if (products.Image3 != null)
+            {
+                EditProduct.Image3 = SaveImage(products.Image3);
+            }
 
             _db.Products.Update(EditProduct);
             _db.SaveChanges();
 
-            return Ok("Product updated successfully.");
+            return Ok(new
+            {
+                message = "Product updated successfully.",
+                previousData = previousData,
+                updatedProduct = new
+                {
+                    EditProduct.Name,
+                    EditProduct.Description,
+                    EditProduct.Price,
+                    EditProduct.Brand,
+                    EditProduct.PriceWithDiscount,
+                    EditProduct.SubcategoryId,
+                    EditProduct.TypeProduct,
+                    EditProduct.Condition,
+                    EditProduct.IsActive,
+                    EditProduct.IsDonation,
+                }
+            });
         }
 
+      
+        private string SaveImage(IFormFile image)
+        {
+         
+            var uploadsDirectory = "Uploads";
+            if (!Directory.Exists(uploadsDirectory))
+            {
+                Directory.CreateDirectory(uploadsDirectory);
+            }
+
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            var extension = Path.GetExtension(image.FileName);
+            if (!allowedExtensions.Contains(extension.ToLower()))
+            {
+                throw new Exception("Invalid image type.");
+            }
+
+          
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
+            var imagePath = Path.Combine(uploadsDirectory, uniqueFileName);
+
+    
+            try
+            {
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    image.CopyTo(stream);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error saving the image: " + ex.Message);
+            }
+
+            return $"/images/{uniqueFileName}";
+        }
 
 
 
@@ -760,8 +892,8 @@ namespace Masterpiece.Controllers
         public IActionResult GetRecommendedProducts(int categoryId)
         {
             var recommendedProducts = _db.Products
-                .Where(p => p.SubcategoryId == categoryId) // جلب المنتجات بناءً على معرف الفئة
-                .Take(5) // جلب 5 منتجات موصى بها فقط
+                .Where(p => p.SubcategoryId == categoryId) 
+                .Take(5) 
                 .ToList();
 
             if (recommendedProducts == null || !recommendedProducts.Any())
@@ -777,8 +909,8 @@ namespace Masterpiece.Controllers
         public async Task<IActionResult> GetDiscountedProducts(int categoryId)
         {
             var discountedProducts = await _db.Products
-                .Where(p => p.PriceWithDiscount < p.Price && p.SubcategoryId == categoryId) // جلب المنتجات المخفضة بناءً على الفئة
-                .Take(5) // جلب 5 منتجات فقط
+                .Where(p => p.PriceWithDiscount < p.Price && p.SubcategoryId == categoryId) 
+                .Take(5) 
                 .ToListAsync();
 
             if (discountedProducts == null || !discountedProducts.Any())
@@ -793,9 +925,9 @@ namespace Masterpiece.Controllers
         public async Task<IActionResult> GetNewArrivals(int categoryId)
         {
             var newArrivals = await _db.Products
-                .Where(p => p.SubcategoryId == categoryId) // جلب المنتجات بناءً على الفئة
-                .OrderByDescending(p => p.Date) // ترتيب المنتجات حسب تاريخ الإضافة
-                .Take(5) // جلب أحدث 5 منتجات فقط
+                .Where(p => p.SubcategoryId == categoryId) 
+                .OrderByDescending(p => p.Date) 
+                .Take(5) 
                 .ToListAsync();
 
             if (newArrivals == null || !newArrivals.Any())
@@ -821,12 +953,12 @@ namespace Masterpiece.Controllers
                 return NotFound("Subcategory 'عبايات' not found.");
             }
 
-            // جلب أول 5 منتجات فقط
+        
             var result = new
             {
                 SubcategoryName = subcategory.SubcategoryName,
                 Products = subcategory.Products
-                    .OrderBy(p => p.ProductId)  // ترتيب النتائج على حسب ProductId أو أي ترتيب آخر
+                    .OrderBy(p => p.ProductId)  
                     .Take(4)
                     .Select(p => new
                     {
@@ -860,7 +992,7 @@ namespace Masterpiece.Controllers
             }
 
             var uploadImageFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-            Directory.CreateDirectory(uploadImageFolder); // إنشاء المجلد إذا لم يكن موجودًا
+            Directory.CreateDirectory(uploadImageFolder); 
 
             async Task<string> SaveImageAsync(IFormFile imageFile, string existingImagePath)
             {
@@ -869,7 +1001,7 @@ namespace Masterpiece.Controllers
                     var fileName = Path.GetFileName(imageFile.FileName);
                     var imageFilePath = Path.Combine(uploadImageFolder, fileName);
 
-                    // تحقق من وجود ملف بنفس الاسم
+                 
                     if (System.IO.File.Exists(imageFilePath))
                     {
                         fileName = $"{Path.GetFileNameWithoutExtension(fileName)}_{DateTime.Now.Ticks}{Path.GetExtension(fileName)}";
@@ -881,9 +1013,9 @@ namespace Masterpiece.Controllers
                         await imageFile.CopyToAsync(stream);
                     }
 
-                    return $"/Uploads/{fileName}"; // إرجاع مسار الصورة
+                    return $"/Uploads/{fileName}"; 
                 }
-                return existingImagePath; // إرجاع المسار الحالي إذا لم تكن الصورة جديدة
+                return existingImagePath; 
             }
 
             try
@@ -981,19 +1113,174 @@ namespace Masterpiece.Controllers
         
             public ActionResult<IEnumerable<string>> GetUniqueBrands()
             {
-                // الحصول على أسماء البراندات الفريدة من جدول المنتجات
+          
                 var uniqueBrands = _db.Products
                                            .Select(p => p.Brand)
                                            .Distinct()
                                            .ToList();
 
-                if (! uniqueBrands.Any()) // إذا لم توجد أي براندات
+                if (! uniqueBrands.Any()) 
                 {
                     return NotFound("لا توجد براندات متاحة.");
                 }
 
-                return Ok(uniqueBrands); // إرجاع أسماء البراندات الفريدة
+                return Ok(uniqueBrands); 
             }
-        
+
+
+
+        [HttpPut("{id}/apply-discount")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult ApplyDiscount(int id, [FromBody] decimal discount)
+        {
+           
+            if (discount < 0 || discount > 100)
+            {
+                return BadRequest("Discount must be between 0 and 100.");
+            }
+
+       
+            var product = _db.Products.FirstOrDefault(p => p.ProductId == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+     
+            product.PriceWithDiscount = discount;
+
+
+            _db.SaveChanges();
+
+            return Ok(new
+            {
+                message = "Discount applied successfully",
+                productId = product.ProductId,
+                discount = product.PriceWithDiscount
+            });
+        }
+
+        [HttpGet("discounted")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetDiscountedProducts()
+        {
+            var discountedProducts = _db.Products
+                .Where(p => p.PriceWithDiscount > 0)
+                .Select(product => new
+                {
+                    id = product.ProductId,
+                    productName = product.Name,
+                    description = product.Description,
+                    price = product.Price,
+                    stockQuantity = product.StockQuantity,
+                    image = product.Image,
+                    discount = product.PriceWithDiscount,
+                    categoryName = product.Subcategory.SubcategoryName,
+                    reviews = product.Comments.Select(review => new
+                    {
+                        reviewRate = review.Rating,
+                        comment = review.Comment1,
+                        status = review.Status
+                    }).ToList()
+                })
+                .ToList();
+            if (discountedProducts.Count == 0)
+                return NotFound();
+
+
+            return Ok(discountedProducts);
+        }
+
+
+        [HttpGet("CountOfAllProduct")]
+        public IActionResult GCountOfAllProduct()
+        {
+
+            var products = _db.Products.ToList().Count;
+            return Ok(products);
+
+
+        }
+
+
+        [HttpPut("/Admin/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult UpdateReviewStatus(int id, [FromBody] ProductRequestAdminDTO dto)
+        {
+            if (dto == null || string.IsNullOrWhiteSpace(dto.Status))
+            {
+                return BadRequest("Invalid Status data.");
+            }
+
+            var review = _db.Comments.FirstOrDefault(r => r.CommentId == id);
+            if (review == null)
+            {
+                return NotFound();
+            }
+
+            review.Status = dto.Status;
+
+                _db.Comments.Update(review);
+            _db.SaveChanges();
+
+            return Ok(review);
+        }
+
+        [HttpGet("/Reviews/{productId}")]
+        //[Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetApprovedReviews(int productId)
+        {
+            var approvedReviews = _db.Comments
+      .Join(_db.Users,
+          review => review.UserId,
+          user => user.UserId,
+          (review, user) => new { review, user })
+      .Join(_db.Products,
+          combined => combined.review.ProductId,
+          product => product.ProductId,
+          (combined, product) => new
+          {
+              id = combined.review.CommentId,
+              user = combined.user.UserName,
+              productName = product.Name,
+              categoryName = product.Subcategory.SubcategoryName,
+              comment = combined.review.Comment1,
+              rating = combined.review.Rating,
+              status = combined.review.Status,
+              productId = combined.review.ProductId
+
+          })
+      .Where(r => r.status == "Approved" && r.productId == productId)
+      .ToList();
+
+
+            return Ok(approvedReviews);
+        }
+
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult DeleteReview(int id)
+        {
+            var review = _db.Comments.FirstOrDefault(a => a.CommentId == id);
+            if (review == null)
+            {
+                return NotFound();
+            }
+
+            _db.Comments.Remove(review);
+            _db.SaveChanges();
+
+            return Ok(review);
+        }
     }
 }

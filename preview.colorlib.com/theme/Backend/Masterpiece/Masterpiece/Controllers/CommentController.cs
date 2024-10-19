@@ -120,8 +120,41 @@ namespace Masterpiece.Controllers
             return Ok(commentDTOs);
         }
 
-    
 
+
+        [HttpGet("/GetAllReview/")]
+        public IActionResult GetAllReview()
+        {
+            var reviews = _db.Comments
+                .Join(_db.Users,
+                    review => review.UserId,
+                    user => user.UserId,
+                    (review, user) => new { review, user })
+                .Join(_db.Products,
+                    combined => combined.review.ProductId,
+                    product => product.ProductId,
+                    (combined, product) => new
+                    {
+                        id = combined.review.CommentId,
+                        user = combined.user.UserName,
+                        productName = product.Name,
+                        categoryName = product.Subcategory.SubcategoryName,
+                        comment = combined.review.Comment1,
+                        rating = combined.review.Rating,
+                        status = combined.review.Status,
+                        productId = combined.review.ProductId
+                    })
+                .OrderBy(r =>
+
+                    r.status == "Pending" ? 0 :
+                    r.status == "Approved" ? 1 :
+                    r.status == "Declined" ? 2 :
+                    3
+                )
+                .ToList();
+
+            return Ok(reviews);
+        }
 
     }
 }

@@ -45,6 +45,8 @@ public partial class Product
 
     public decimal? MaxPrice { get; set; }
 
+    public int StockQuantity { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual Color? ClothColor { get; set; }

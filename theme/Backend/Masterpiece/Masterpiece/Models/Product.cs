@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace Masterpiece.Models;
 
@@ -12,7 +11,7 @@ public partial class Product
 
     public string? Description { get; set; }
 
-    public string Image { get; set; }
+    public string? Image { get; set; }
 
     public decimal Price { get; set; }
 
@@ -23,7 +22,7 @@ public partial class Product
     public string? TypeProduct { get; set; }
 
     public string? Condition { get; set; }
-    [JsonIgnore]
+
     public string? Brand { get; set; }
 
     public decimal? PriceWithDiscount { get; set; }
@@ -46,8 +45,10 @@ public partial class Product
 
     public decimal? MaxPrice { get; set; }
 
+    public int StockQuantity { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
-     [JsonIgnore] 
+
     public virtual Color? ClothColor { get; set; }
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();

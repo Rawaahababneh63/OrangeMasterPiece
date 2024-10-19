@@ -1,0 +1,1508 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/dorno/dorno/shop-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Sep 2024 19:54:28 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.png">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/price_rangs.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="Content/css/CleanOut.css">
+    <link rel="stylesheet" href="DornoStyle/assets/css/style.css">
+
+    <link rel="stylesheet" href="DornoStyle/assets/css/slick.css">
+    <!-- مكابة لاضافة خط كايرو وخط اخر لكل التيمبلت -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- /// -->
+  
+    <!-- contact -->
+        <!-- الروابط الصحيحة لـ Bootstrap و jQuery -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css" rel="stylesheet">
+   
+    
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+ 
+
+.product__item {
+    border: 1px solid #ddd; /* إطار حول الكارت */
+    border-radius: 5px; /* زوايا مستديرة */
+    overflow: hidden; /* إخفاء العناصر الزائدة */
+    margin-bottom: 20px; /* مسافة بين الكروت */
+    transition: box-shadow 0.3s ease; /* تأثير عند التمرير */
+}
+
+.product__item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل عند التمرير */
+}
+
+.product__item__pic {
+    height: 200px; /* ارتفاع الصورة */
+    background-size: cover; /* ملء الخلفية */
+    background-position: center; /* وضع الصورة في الوسط */
+}
+
+.product__item__text {
+    padding: 15px; /* padding داخل الكارت */
+    text-align: center; /* محاذاة النص في المنتصف */
+}
+
+.rating {
+    margin: 10px 0; /* مسافة بين التقييم والنص */
+}
+
+.product__item__pic {
+    height: 200px; /* ارتفاع ثابت للصورة */
+    background-size: cover; /* ملء الخلفية بشكل كامل */
+    background-position: center; /* وضع الصورة في المركز */
+    display: flex; /* استخدام flexbox لجعل المحتوى في المنتصف */
+    align-items: center; /* محاذاة العمودي */
+    justify-content: center; /* محاذاة الأفقي */
+}
+.content1{
+   
+   color: #ff2020;
+   margin-bottom: 12px;
+   font-family: 'Cairo';
+   animation-delay: 0.2s;
+   width: 159%;
+   position: relative;
+   right: 8pc;
+}
+.mdi {
+           font-size: 50px;
+       }
+
+       .padding {
+           padding: 8rem !important;
+       }
+
+       /* تنسيق الزر داخل النافذة */
+       .btn-outline-light {
+           border-radius: 50px;
+           width: 100%;
+       }
+        /* إضافة المسافات حول الفورم */
+        .modal-body {
+
+           padding:3rem; /* يمكنك تعديل المسافة كما تريد */
+       }
+       /* التوعية */
+       * before footer section  */
+.container-custom {
+   background-color: #f8f9fa; /* لون رمادي فاتح */
+   padding: 2rem;
+   border-radius: 8px;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+  .container-custom {
+           background-color: #f8f9fa; /* لون رمادي فاتح */
+           padding: 2rem;
+           border-radius: 8px;
+           width: 100%;
+           box-sizing: border-box;
+       }
+
+       .section-header4 {
+           font-size: 3rem;
+           font-weight: bold;
+           margin-bottom: 2rem;
+           text-align: center;
+       }
+       .section-header {
+           font-size: .9rem;
+           font-weight: bold;
+           margin-bottom: 2rem;
+           text-align: center;
+       }
+
+       .content4 h3 {
+           font-size: 1.25rem;
+           margin-bottom: 1rem;
+           font-weight: bold;
+       }
+
+       .content4 p {
+           color: #6c757d;
+           font-size: 1rem;
+       }
+
+       .btn-custom4:hover {
+           background-color: #000;
+           color: #fff;
+       }
+
+       .icon4 {
+           font-size: 2.5rem;
+           color: #30D5C8;
+           margin-bottom: 1rem;
+       }
+
+       button.btn.btn-custom4.btn-lg {
+           position: relative;
+           left: 43%;
+           border: 1px solid black;
+           font-size: 18px;
+           font-weight: 400;
+       }
+/* ضبط الألوان */
+.product__item__text h6,
+.product__item__text .add-cart,
+.product__item__text h5 {
+   color: #000; /* تغيير لون النص إلى الأسود */
+}
+
+/* ضبط لون الخلفية */
+.product__item__pic {
+   background-color: #f7f7f7; /* خلفية رمادية فاتحة للمنتج */
+}
+
+/* تحسين الصورة والخلفية */
+.product__item__pic {
+   background-size: cover;
+   background-position: center;
+   height: 350px; /* يمكنك تعديل الارتفاع إذا لزم الأمر */
+}
+
+/* تحسين النصوص */
+.product__item__text .rating i {
+   color: #FFD700; /* لون النجوم الذهبي */
+}
+/* ضبط منتجات الصورة */
+/*---------------------
+ Product
+-----------------------*/
+
+.product {
+   padding-top: 0;
+   padding-bottom: 60px;
+}
+
+.filter__controls {
+   text-align: center;
+   margin-bottom: 45px;
+}
+
+.filter__controls li {
+   color: #b7b7b7;
+   font-size: 24px;
+   font-weight: 700;
+   list-style: none;
+   display: inline-block;
+   margin-right: 88px;
+   cursor: pointer;
+}
+
+.filter__controls li:last-child {
+   margin-right: 0;
+}
+
+.filter__controls li.active {
+   color: #111111;
+}
+
+.product__item {
+   overflow: hidden;
+   margin-bottom: 40px;
+}
+
+.product__item.sale .product__item__pic .label {
+   color: #ffffff;
+   background: #111111;
+}
+
+.product__item.sale .product__item__text .rating i {
+   color: #f7941d;
+}
+
+.product__item.sale .product__item__text .rating i:nth-last-child(1) {
+   color: #b7b7b7;
+}
+
+.product__item:hover .product__item__pic .product__hover {
+   right: 20px;
+   opacity: 1;
+}
+
+.product__item:hover .product__item__text a {
+   top: 22px;
+   opacity: 1;
+   visibility: visible;
+}
+
+.product__item:hover .product__item__text h6 {
+   opacity: 0;
+}
+
+.product__item:hover .product__item__text .product__color__select {
+   opacity: 1;
+}
+
+.product__item__pic {
+   height: 260px;
+   position: relative;
+   background-position: center center;
+}
+
+.product__item__pic .label {
+   color: #111111;
+   font-size: 11px;
+   font-weight: 700;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   display: inline-block;
+   padding: 4px 15px 2px;
+   background: #ffffff;
+   position: absolute;
+   left: 0;
+   top: 20px;
+}
+
+.product__item__pic .product__hover {
+   position: absolute;
+   right: -200px;
+   top: 20px;
+   -webkit-transition: all, 0.8s;
+   -o-transition: all, 0.8s;
+   transition: all, 0.8s;
+}
+
+.product__item__pic .product__hover li {
+   list-style: none;
+   margin-bottom: 10px;
+   position: relative;
+}
+
+.product__item__pic .product__hover li:hover span {
+   opacity: 1;
+   visibility: visible;
+}
+
+.product__item__pic .product__hover li span {
+   color: #ffffff;
+   background: #111111;
+   display: inline-block;
+   padding: 4px 10px;
+   font-size: 12px;
+   position: absolute;
+   left: -78px;
+   top: 5px;
+   z-index: 1;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: all, 0.3s;
+   -o-transition: all, 0.3s;
+   transition: all, 0.3s;
+}
+
+.product__item__pic .product__hover li span:after {
+   position: absolute;
+   right: -2px;
+   top: 5px;
+   height: 15px;
+   width: 15px;
+   background: #111111;
+   content: "";
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+   z-index: -1;
+}
+
+.product__item__pic .product__hover li img {
+   background: #ffffff;
+   padding: 10px;
+   display: inline-block;
+}
+
+.product__item__text {
+   padding-top: 25px;
+   position: relative;
+}
+
+.product__item__text a {
+   font-size: 15px;
+   color: #e53637;
+   font-weight: 700;
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: all, 0.3s;
+   -o-transition: all, 0.3s;
+   transition: all, 0.3s;
+}
+
+.product__item__text h6 {
+   color: #111111;
+   font-size: 15px;
+   font-weight: 600;
+   margin-bottom: 5px;
+   -webkit-transition: all, 0.3s;
+   -o-transition: all, 0.3s;
+   transition: all, 0.3s;
+}
+
+.product__item__text .rating {
+   margin-bottom: 6px;
+}
+
+.product__item__text .rating i {
+   font-size: 14px;
+   color: #b7b7b7;
+   margin-right: -5px;
+}
+
+.product__item__text h5 {
+   color: #0d0d0d;
+   font-weight: 700;
+}
+
+.product__item__text .product__color__select {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   opacity: 0;
+   -webkit-transition: all, 0.5s;
+   -o-transition: all, 0.5s;
+   transition: all, 0.5s;
+}
+
+.product__item__text .product__color__select label {
+   display: inline-block;
+   height: 12px;
+   width: 12px;
+   background: #5e64d1;
+   border-radius: 50%;
+   margin-bottom: 0;
+   margin-right: 5px;
+   position: relative;
+   cursor: pointer;
+}
+
+.product__item__text .product__color__select label.black {
+   background: #404a47;
+}
+
+.product__item__text .product__color__select label.grey {
+   background: #d5a667;
+}
+
+.product__item__text .product__color__select label.active:after {
+   opacity: 1;
+}
+
+.product__item__text .product__color__select label:after {
+   position: absolute;
+   left: -3px;
+   top: -3px;
+   height: 18px;
+   width: 18px;
+   border: 1px solid #b9b9b9;
+   content: "";
+   border-radius: 50%;
+   opacity: 0;
+}
+
+.product__item__text .product__color__select label input {
+   position: absolute;
+   visibility: hidden;
+}
+.add-cart{
+   font-size: 15px;
+   color: #e53637;
+   font-weight: 700;
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: all, 0.3s;
+   -o-transition: all, 0.3s;
+   transition: all, 0.3s;
+}
+.latest-items {
+   padding-top: 95px;
+   padding-bottom: 100px;
+   text-align: center;
+}
+/* تنسيق البراند */
+.widget_list {
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.widget_list h3 {
+    margin-bottom: 10px; /* إضافة مسافة أسفل العنوان */
+    font-size: 1.5rem; /* حجم خط العنوان */
+    font-weight: bold; /* جعل العنوان بخط عريض */
+}
+
+.widget_list ul {
+    list-style: none; /* إزالة العلامات النقطية */
+    padding: 0; /* إزالة الحشو */
+    margin: 0; /* إزالة الهوامش */
+}
+
+.widget_list li {
+    margin-bottom: 8px; /* إضافة مسافة بين العناصر */
+}
+
+.widget_list li a {
+    text-decoration: none; /* إزالة الخط السفلي */
+    color: #333; /* لون النص */
+    transition: color 0.3s; /* تأثير عند تغيير اللون */
+}
+
+.widget_list li a:hover {
+    color: #007bff; /* تغيير لون النص عند التمرير */
+}
+#products-container.grid-3 .product {
+    width: 33.33%; /* عرض 3 عناصر في الصف */
+}
+
+#products-container.grid-4 .product {
+    width: 25%; /* عرض 4 عناصر في الصف */
+}
+
+#products-container.list .product {
+    width: 100%; /* عرض عنصر واحد في الصف */
+}
+/* تنسيق زر الاوان */
+/* تنسيق الزر */
+/* تنسيق القائمة المنسدلة */
+#colorFilter {
+    width: 100%; /* يجعل الزر بعرض كامل الحاوية */
+    padding: 10px; /* مساحة داخلية للزر */
+    font-size: 16px; /* حجم خط أكبر */
+    border: 2px solid #4CAF50; /* لون الحد */
+    border-radius: 5px; /* زوايا دائرية */
+    background-color: #fff; /* لون خلفية الزر */
+    color: #333; /* لون النص */
+    cursor: pointer; /* يغير شكل المؤشر عند المرور فوق الزر */
+    transition: background-color 0.3s ease; /* تأثير انتقال عند تغيير اللون */
+}
+
+/* تحسين مظهر الخيارات */
+#colorFilter option {
+    padding: 10px; /* مساحة داخلية للخيار */
+}
+/* فلترة البراند  */
+
+/* تنسيق الزر */
+.dropdown .dropbtn {
+    background-color: #4CAF50; /* لون خلفية الزر */
+    color: white; /* لون النص */
+    padding: 10px; /* حشوة الزر */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التحويم */
+    width: 100%; /* عرض 100% */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+/* قائمة العناصر المنسدلة */
+.dropdown-content {
+    display: none; /* إخفاء القائمة افتراضيًا */
+    position: absolute; /* جعلها مطابقة للمحتوى */
+    background-color: #f9f9f9; /* لون الخلفية */
+    min-width: 200px; /* عرض الحد الأدنى */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ظل */
+    z-index: 1; /* ترتيب العناصر */
+    list-style-type: none; /* إزالة النقاط */
+    padding: 0; /* إزالة الحشوات */
+    margin: 0; /* إزالة الهوامش */
+}
+
+/* تنسيق عناصر القائمة */
+.dropdown-content a {
+    color: black; /* لون النص */
+    padding: 12px 16px; /* حشوة */
+    text-decoration: none; /* إزالة التسطير */
+    display: block; /* جعل كل عنصر في صف */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+/* تغيير لون الخلفية عند التحويم */
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* لون خلفية عند التحويم */
+}
+
+/* إظهار القائمة عند النقر */
+.dropdown:hover .dropdown-content {
+    display: block; /* إظهار القائمة عند التحويم على الزر */
+}
+/* فلترة السعر  */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* يسمح بتوزيع العناصر في عدة أسطر */
+}
+
+.single_product {
+    flex: 1 1 30%; /* يحدد عرض الكاردات */
+    margin: 10px; /* مسافة بين الكاردات */
+}
+
+.product_thumb {
+    position: relative; /* لضمان وضع العلامات بشكل صحيح */
+}
+
+.label_product {
+    position: absolute; /* لتحديد مكان العلامات */
+    top: 10px;
+    left: 10px;
+}
+
+/* للكود الاضافة لسلة والبرودكت ديتالز */
+/* .add_to_cart {
+    display: flex; */
+    /* justify-content: space-between; توزيع الأزرار بشكل متساوٍ */
+    /* margin-top: 10px; مسافة بين السعر والأزرار */
+/* } */
+
+.add_to_cart {
+    margin-top: 10%; /* تباعد أعلى للأزرار */
+}
+
+.product_content {
+    padding-bottom: 20px; /* إضافة مساحة أسفل المحتوى */
+}
+.btn-quick-view {
+    display: inline-block; /* تأكد من أن الزر يظهر كعنصر كتلي */
+    padding: 10px 15px; /* مساحة داخلية */
+    background-color: #007bff; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border-radius: 5px; /* زوايا دائرية */
+    text-decoration: none; /* إزالة خط تحت الرابط */
+    transition: background-color 0.3s; /* تأثير سلس عند التمرير */
+}
+
+.btn-quick-view:hover {
+    background-color: #0056b3; /* لون خلفية عند التمرير */
+}
+.container {
+    position: relative;
+    left: 8%;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    top: -7px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0px solid #F53737;
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1340px;
+    }
+}
+body{  overflow-x: hidden !important;}
+.ui-slider-horizontal .ui-slider-range {
+    background: #F53737;
+    height: 0px;
+}
+
+#colorFilter {
+    text-align: right;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* شريط فلترة لاسعر */
+.noUi-connect {
+    background: #ff2020 !important;
+}
+</style>
+<body>
+
+ 
+<header>
+    <div class="header-area">
+        <!-- الجزء الأول (Header-Top) -->
+        <div class="header-top d-none d-sm-block">
+            <div class="container1" style="margin-left: 3%;margin-right: 3%;">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="d-flex justify-content-between flex-wrap align-items-center">
+                            <div class="header-info-left">
+                                <ul>
+                                    <li><a href="CleanOut.html#faq">الأسئلة الشائعة</a></li>
+                                    <li><a href="About1.html">معلومات عنا</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-info-right d-flex">
+                                <ul class="order-list">
+                                    <li><a href="#">قائمة أمنياتي</a></li>
+                                    <li><a href="#">تتبع الطلب</a></li>
+                                </ul>
+                                <ul class="header-social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- الجزء الثاني (Header-Bottom) -->
+        <div class="header-bottom text-center">
+            <p dir="rtl">تخفيضات تصل إلى 50%  أسرع ! العرض لفترة محدودة <a href="#" class="browse-btn">تسوق الآن</a></p>
+        </div>
+    
+        <!-- الجزء الثالث (Header-Mid) -->
+        <div class="header-mid header-sticky">
+            <div class="container1">
+                <div class="menu-wrapper" style="margin: 0px;">
+                    <div class="logo" style="margin-left: 1%">
+                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="الشعار"></a>
+                    </div>
+                    <div class="main-menu d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">
+                            
+                                <li><a href="#">البيع</a>
+                                    <ul class="submenu">
+                                        <li style="text-align:center;"><a href="CleanOut.html">بيع معنا</a></li>
+                                        <li style="text-align:center;"><a href="blog.html">المدونة</a></li>
+                                        <li style="text-align:center;"><a href="blog-details.html">تفاصيل المدونة</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">تواصل معنا</a></li>
+                                <li class="new"><a href="categories.html">الحفلات</a></li>
+                                <li><a href="categories.html">الأطفال</a></li>
+                                <li><a href="categories.html">رجال</a></li>
+                                <li><a href="categories.html">نساء</a></li>
+                                <li><a href="index.html">الرئيسية</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+
+
+
+                    <div class=" main-menu d-none d-lg-block" style="margin-right: 4%">
+                        <nav  >
+                            <ul id="navigation">
+                                <li>
+                             
+<!--                                   
+                                    <li>
+                                        <div class="nav-search search-switch hearer_icon">
+                                            <a id="search_1" href="javascript:void(0)">
+                                                <span class="flaticon-search"></span>
+                                            </a>
+                                        </div>
+                                    </li> -->
+                                    <li class="cart"><a href="cart.html"><span class="flaticon-shopping-cart"></span></a></li>
+                                <li>
+                                    <a href="#" id="userIcon"> <span class="flaticon-user"></span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu"> <!-- قائمة المستخدم -->
+                                         <li style="text-align:center;" id="userAccount"><a href="UserDashboard.html">حسابي</a></li>
+                                    
+                                        <li style="text-align:center;"  id="login"><a href="login.html">حسابي/تسجيل</a></li>
+                                        <li style="text-align:center;"><a href="register.html">إنشاء حساب</a></li>
+                                    </ul>
+                                </li>
+                                </ul>
+                                
+                                </li>
+                             
+                            </ul>
+                        </nav>
+                    </div>
+    
+             
+    
+             
+    
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <!--shop  area start-->
+    <div class="shop_area mt-100 mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12">
+                    <!--shop wrapper start-->
+                    <!--shop toolbar start-->
+                   
+
+
+
+
+
+
+
+
+                     <!--shop toolbar end-->
+            <!-- <div class="row shop_wrapper" id="productContainer"></div> -->
+
+                     <!--shop toolbar end-->
+                 <!-- قسم المنتجات -->
+<div class="row product__filter" id="products-container">
+    <!-- الكاردات سيتم إضافتها هنا ديناميكيًا -->
+</div>
+
+                 
+                    <!--shop toolbar end-->
+                    <!--shop wrapper end-->
+                </div>
+                <div class="col-lg-3 col-md-12">
+                   <!--sidebar widget start-->
+                
+                   <aside class="sidebar_widget1">
+                    <div class="widget_inner1">
+                        <div class="widget_list widget_filter">
+                            <h3 class="filter-title">فلتر حسب السعر</h3>
+                            <form action="#" id="PriceRange">
+                                <div id="slider-range" class="slider"></div>
+                                <input type="text" name="text" id="amount" class="amount-input" placeholder="النطاق السعري" readonly />
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+                
+<!-- فلترة الألوان -->
+<div class="widget_list widget_color">
+    <h3>اختر حسب اللون</h3>
+    <select id="colorFilter">
+        <option value="" disabled selected>اختر لونًا</option>
+        <!-- الألوان ستضاف هنا ديناميكيًا -->
+    </select>
+</div>
+
+
+
+                            
+                          <!-- هاي مشان أضيف البراند -->
+<!-- هاي مشان أضيف البراند -->
+<div class="widget_list widget_manu" dir="rtl">
+    <h3>البراند</h3>
+    <div class="dropdown">
+        <button class="dropbtn">اختر البراند</button>
+        <div class="dropdown-content" id="brandFilter">
+            <!-- سيتم إضافة العلامات التجارية هنا -->
+        </div>
+    </div>
+</div>
+<div class="filter">
+    <h3>اختر الفئة الفرعية</h3>
+    <ul id="subcategoryFilter">
+        <!-- الفئات الفرعية ستظهر هنا -->
+    </ul>
+</div>
+                </div>
+
+            </div></div>
+
+            <footer>
+                <div class="footer-wrapper gray-bg">
+                    <div class="footer-area footer-padding">
+            
+                        <!-- قسم الاشتراك في النشرة الإخبارية -->
+                        <section class="subscribe-area">
+                            <div class="container">
+                                <div class="row justify-content-between subscribe-padding">
+                                    <div class="col-xxl-2 col-xl-2 col-lg-4">
+                                        <div class="footer-social">
+                                            <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9">
+                                        <div class="subscribe-caption">
+                                            <form action="#">
+                                                <input type="text" placeholder="أدخل بريدك الإلكتروني">
+                                                <button class="subscribe-btn">اشترك</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-xl-3 col-lg-4">
+                                        <div class="subscribe-caption">
+                                            <h3>اشترك في النشرة الإخبارية</h3>
+                                            <p>اشترك في النشرة الإخبارية للحصول على خصم 5% على جميع المنتجات.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            
+                        <!-- قسم معلومات الفوتر -->
+                        <div class="container">
+                            <div class="row justify-content-between">
+                              
+                                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                                    <div class="single-footer-caption mb-50">
+                                        <div class="footer-tittle">
+                                            <h4>تسوق للرجال</h4>
+                                            <ul>
+                                                <li><a href="#">أزياء الملابس</a></li>
+                                                <li><a href="#">شتاء</a></li>
+                                                <li><a href="#">صيف</a></li>
+                                                <li><a href="#">رسمية</a></li>
+                                                <li><a href="#">عادية</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                                    <div class="single-footer-caption mb-50">
+                                        <div class="footer-tittle" >
+                                            <h4>تسوق للنساء</h4>
+                                            <ul>
+                                                <li><a href="#">أزياء الملابس</a></li>
+                                                <li><a href="#">شتاء</a></li>
+                                                <li><a href="#">صيف</a></li>
+                                                <li><a href="#">رسمية</a></li>
+                                                <li><a href="#">عادية</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                                    <div class="single-footer-caption mb-50">
+                                        <div class="footer-tittle">
+                                            <h4>معلومات</h4>
+                                            <ul>
+                                                <li><a href="#">من نحن</a></li>
+                                                <li><a href="#">سياسة الخصوصية</a></li>
+                                                <li><a href="#">الشروط والأحكام</a></li>
+                                                <li><a href="#">اتصل بنا</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-8">
+                                    <div class="single-footer-caption mb-50">
+                                        <div class="single-footer-caption mb-20">
+                                            <div class="footer-logo mb-35">
+                                                <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="شعار"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </footer>
+            
+            <div id="back-top">
+            <a class="wrapper" title="Go to Top" href="#">
+            <div class="arrows-container">
+            <div class="arrow arrow-one">
+            </div>
+            <div class="arrow arrow-two">
+            </div>
+            </div>
+            </a>
+            </div>
+
+                
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", async function() {
+    const colorFilter = document.getElementById("colorFilter");
+    const productsContainer = document.getElementById("products-container");
+    const categoryId =localStorage.getItem("CategoryId")
+
+    // استدعاء API لجلب الألوان
+    try {
+        const colorsResponse = await fetch('https://localhost:44332/api/Products/COLOR');
+        const colors = await colorsResponse.json();
+        console.log("Colors:", colors); // تحقق من الألوان
+
+        if (Array.isArray(colors)) {
+            colors.forEach(color => {
+                const option = document.createElement("option");
+                option.value = color.colorName; // القيمة التي سيتم استخدامها
+                option.textContent = color.colorName; // نص الخيار
+                colorFilter.appendChild(option);
+            });
+        } else {
+            console.error("Expected an array of colors:", colors);
+        }
+
+        colorFilter.addEventListener('change', async function(event) {
+            const selectedColor = event.target.value; // احصل على اللون المحدد
+            console.log("Selected Color:", selectedColor); // تحقق من اللون المحدد
+
+            // جلب المنتجات بناءً على اللون المختار
+            try {
+         
+                const productsResponse = await fetch(`https://localhost:44332/api/Products/FilterByColorNew?color=${encodeURIComponent(selectedColor)}&mainCategoryId=${categoryId}`);        
+                        if (!productsResponse.ok) {
+                    throw new Error(`HTTP error! status: ${productsResponse.status}`);
+                }
+
+                const products = await productsResponse.json();
+                console.log("Filtered Products:", products);
+
+                const productArray = products.$values || [];
+                if (!Array.isArray(productArray)) {
+                    console.error("Expected an array of products:", productArray);
+                    return;
+                }
+
+                productsContainer.innerHTML = '';
+                productArray.forEach(element => {
+                    const productCard = `
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+    <article class="single_product" style="margin: 20px 0;">
+        <figure>
+            <div class="product_thumb">
+                <div class="label_product">
+                    ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="label_sale">${((element.Price - element.PriceWithDiscount) / element.Price * 100).toFixed(0)}%</span>` : ''}
+                    <span class="label_new">جديد</span>
+                </div>
+                <a class="primary_img" href="product-details.html" onclick="storeProductId(${element.ProductId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${element.Image}" alt="${element.Name}">
+                </a>
+            </div>
+            <div class="product_content grid_content">
+                <h4 class="product_name"><a href="product-details.html" onclick="storeProductId(${element.ProductId})">${element.Name}</a></h4>
+                <div class="price_box">
+                    <span class="current_price">${element.PriceWithDiscount !== null && element.PriceWithDiscount > 0 ? element.PriceWithDiscount + ' JD' : element.Price + ' JD'}</span>
+                    ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="old_price">${element.Price} JD</span>` : ''}
+                </div>
+                <div class="add_to_cart">
+                    <a href="cart.html" style="margin-bottom: 5px;" onclick="addToCart(${element.ProductId}, '${element.Name}', ${element.Price}, '${element.Image}')">+ أضف إلى السلة</a>
+                    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${element.ProductId})">عرض سريع</a>
+                </div>
+            </div>
+        </figure>
+    </article>
+</div>
+                    `;
+                    productsContainer.innerHTML += productCard;
+                });
+
+                if (productArray.length === 0) {
+                    productsContainer.innerHTML = "<p>No products found for the selected color.</p>";
+                }
+
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        });
+
+    } catch (error) {
+        console.error('Error fetching colors:', error);
+    }
+});
+
+// دالة مساعدة لتوليد النجوم بناءً على تقييم المنتج
+function renderStars(rating) {
+    let stars = '';
+    for (let i = 0; i < 5; i++) {
+        if (i < rating) {
+            stars += '★'; // نجمة مملوءة
+        } else {
+            stars += '☆'; // نجمة فارغة
+        }
+    }
+    return stars;
+}
+
+/////////////////////////////////////////
+const slider = document.getElementById('slider-range');
+
+// إنشاء شريط التمرير
+noUiSlider.create(slider, {
+    start: [0, 100], // القيم الابتدائية
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});
+
+// تحديث حقل الإدخال عند تغيير شريط التمرير
+slider.noUiSlider.on('update', function(values) {
+    document.getElementById('amount').value = `${values[0]} - ${values[1]}`;
+    filterByPrice(); // استدعاء دالة الفلترة هنا
+});
+
+async function filterByPrice() {
+    let productContainer = document.getElementById("products-container");
+    productContainer.innerHTML = ""; // تفريغ المحتوى الحالي
+    const categoryId = localStorage.getItem("CategoryId");
+    const minPrice = parseFloat(slider.noUiSlider.get()[0]);
+    const maxPrice = parseFloat(slider.noUiSlider.get()[1]);
+
+    console.log(`Min Price: ${minPrice}, Max Price: ${maxPrice}, Category ID: ${categoryId}`);
+
+    try {
+        let response = await fetch(`https://localhost:44332/api/Products/FilterByPriceNew?minPrice=${minPrice}&maxPrice=${maxPrice}&mainCategoryId=${categoryId}`);
+
+        if (!response.ok) {
+            console.error("HTTP error!", response.status);
+            return;
+        }
+
+        let data = await response.json();
+        console.log("Filtered Products:", data); // تحقق من البيانات المستلمة
+
+        // الوصول إلى المصفوفة من $values
+        const products = data.$values; // هنا نصل إلى المصفوفة
+
+        // تحقق من أن البيانات هي مصفوفة
+        if (!Array.isArray(products)) {
+            console.error("Expected data.$values to be an array, but got:", products);
+            return;
+        }
+
+        // عرض المنتجات باستخدام products.forEach
+        products.forEach((element) => {
+            productContainer.innerHTML += `
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <article class="single_product" style="margin: 20px 0;">
+                    <figure>
+                        <div class="product_thumb">
+                            <div class="label_product">
+                                <span class="label_new">جديد</span>
+                                ${element.PriceWithDiscount < element.Price && element.PriceWithDiscount !== null ? `
+                                    <span class="label_sale">${(
+                                      ((element.Price - element.PriceWithDiscount) / element.Price) * 100
+                                    ).toFixed(0)}%</span>
+                                ` : '' }
+                            </div>
+                            <a class="primary_img" href="product-details.html" onclick="storeProductId(${element.ProductId})">
+                                <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${element.Image}" alt="${element.Name}">
+                            </a>
+                            <a class="secondary_img" href="product-details.html" onclick="storeProductId(${element.ProductId})">
+                                <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${element.Image}" alt="${element.Name}">
+                            </a>
+                          
+                        </div>
+                        <div class="product_content grid_content">
+                            <h4 class="product_name"><a href="product-details.html">${element.Name}</a></h4>
+                            <div class="price_box">
+                                <span class="current_price">${element.PriceWithDiscount !== null && element.PriceWithDiscount > 0 ? element.PriceWithDiscount + ' JD' : element.Price + ' JD'}</span>
+                                ${element.PriceWithDiscount !== null && element.PriceWithDiscount < element.Price ? `<span class="old_price">${element.Price} JD</span>` : ''}
+                            </div>
+                           <div class="add_to_cart">
+    <a href="cart.html" style="margin-bottom:5px" onclick="addToCart(${element.ProductId}, '${element.Name}', ${element.Price}, '${element.Image}')">+ أضف إلى السلة</a>
+    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${element.ProductId})">عرض سريع</a>
+</div>
+                        </div>
+                    </figure>
+                </article>
+            </div>`;
+        });
+
+        // إذا لم يتم العثور على أي منتج
+        if (products.length === 0) {
+            productContainer.innerHTML = "<p>No products found within the selected price range.</p>";
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+// وظيفة لإضافة المنتج إلى السلة
+function addToCart(productId, productName, productPrice, productImage) {
+    console.log(`Adding to cart: ${productName} (${productId}) - $${productPrice}`);
+    // يمكن إضافة الكود الخاص بالسلة هنا
+}
+
+// وظيفة لحفظ معرف المنتج عند الضغط على المنتج
+function storeProductId(productId) {
+    console.log(`Stored product ID: ${productId}`);
+    // يمكن تخزين معرف المنتج لاستخدامه لاحقًا
+}
+
+
+////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", async function() {
+    const brandFilter = document.getElementById("brandFilter");
+    const productsContainer = document.getElementById("products-container");
+    const categoryId = localStorage.getItem('CategoryId');
+
+    // استدعاء API لجلب العلامات التجارية
+    try {
+        const brandsResponse = await fetch('https://localhost:44332/api/Products/GetUniqueBrands');
+        const brands = await brandsResponse.json();
+
+        if (Array.isArray(brands) && brands.length > 0) {
+            brands.forEach(brand => {
+                const listItem = document.createElement("a"); // استخدم "a" بدلاً من "li"
+                listItem.innerHTML = brand; // نص البراند فقط
+                listItem.setAttribute("data-brand", brand); // إضافة البيانات
+                brandFilter.appendChild(listItem); // أضف العنصر إلى dropdown-content
+            });
+        } else {
+            brandFilter.innerHTML = '<p>لا توجد علامات تجارية.</p>';
+        }
+
+        // إضافة حدث للنقر على العلامات التجارية
+        brandFilter.addEventListener('click', async function(event) {
+            if (event.target.tagName === 'A') {
+                event.preventDefault();
+                const selectedBrand = event.target.getAttribute('data-brand');
+
+                // جلب المنتجات بناءً على البراند المختار
+                try {
+                    const productsResponse = await fetch(`https://localhost:44332/api/Products/FilterByBrandNew?brand=${selectedBrand}&mainCategoryId=${categoryId}`);
+                    const products = await productsResponse.json();
+                    const productList = products.$values; // الوصول إلى المصفوفة
+
+                    productsContainer.innerHTML = ''; // تفريغ المحتوى الحالي
+
+                    if (!Array.isArray(productList) || productList.length === 0) {
+                        productsContainer.innerHTML = '<p>لا توجد منتجات بهذا البراند.</p>';
+                        return;
+                    }
+
+                    // عرض المنتجات
+                    productList.forEach(product => {
+                        const productCard = `
+                           <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+    <article class="single_product" style="margin: 20px 0;">
+        <figure>
+            <div class="product_thumb">
+                <div class="label_product">
+                    <span class="label_new">جديد</span>
+                    ${product.PriceWithDiscount && product.PriceWithDiscount < product.Price ? `
+                        <span class="label_sale">${((product.Price - product.PriceWithDiscount) / product.Price * 100).toFixed(0)}%</span>
+                    ` : ''}
+                </div>
+                <a class="primary_img" href="product-details.html" onclick="storeProductId(${product.ProductId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.Image}" alt="${product.Name}">
+                </a>
+                <a class="secondary_img" href="product-details.html" onclick="storeProductId(${product.ProductId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.Image}" alt="${product.Name}">
+                </a>
+            </div>
+            <div class="product_content grid_content">
+                <h4 class="product_name"><a href="product-details.html" onclick="storeProductId(${product.ProductId})">${product.Name}</a></h4>
+                <div class="price_box">
+                    <span class="current_price">${product.PriceWithDiscount !== null && product.PriceWithDiscount > 0 ? product.PriceWithDiscount + ' JD' : product.Price + ' JD'}</span>
+                    ${product.PriceWithDiscount !== null && product.PriceWithDiscount < product.Price ? `<span class="old_price">${product.Price} JD</span>` : ''}
+                </div>
+                <div class="add_to_cart">
+                    <a href="cart.html" title="أضف إلى السلة" style="margin-bottom:5px" onclick="addToCart(${product.ProductId}, '${product.Name}', ${product.PriceWithDiscount || 0}, '${product.Image}')">+ أضف إلى السلة</a>
+                    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${product.ProductId})">
+                        عرض سريع
+                    </a>
+                </div>
+            </div>
+        </figure>
+    </article>
+</div>
+                        `;
+                        productsContainer.innerHTML += productCard;
+                    });
+
+                } catch (error) {
+                    console.error('Error fetching products:', error);
+                    productsContainer.innerHTML = '<p>حدث خطأ أثناء جلب المنتجات.</p>';
+                }
+            }
+        });
+
+    } catch (error) {
+        console.error('Error fetching brands:', error);
+        brandFilter.innerHTML = '<p>حدث خطأ أثناء جلب العلامات التجارية.</p>';
+    }
+});
+
+//////////////////////////////////////
+// الدالة لتحميل المنتجات الخاصة بفئة معينة (مثل النساء)
+async function loadProductsByCategory() {
+    debugger
+    const categoryId = localStorage.getItem("CategoryId"); // استرجاع معرف الفئة الرئيسية
+
+    if (categoryId) {
+        // جلب المنتجات الخاصة بالفئة الرئيسية
+        const productsResponse = await fetch(`https://localhost:44332/api/Products/ByCategory/${categoryId}`);
+        const products = await productsResponse.json();
+        displayProducts(products); // عرض المنتجات
+
+        // جلب الفئات الفرعية
+        await loadSubcategories(categoryId);
+    }
+}
+
+// دالة لتحميل الفئات الفرعية وعرضها في الشريط الجانبي
+async function loadSubcategories(categoryId) {
+    try {
+        const response = await fetch(`https://localhost:44332/api/SubCategory/GetSUbCategoryBYCtegoryID/${categoryId}`);
+        const subcategories = await response.json();
+
+        // إضافة الفئات الفرعية إلى واجهة المستخدم
+        const subcategoryFilter = document.getElementById('subcategoryFilter');
+        subcategoryFilter.innerHTML = ''; // تفريغ المحتوى السابق
+
+        subcategories.forEach(subcategory => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<a href="#" data-id="${subcategory.subcategoryId}">${subcategory.subcategoryName}</a>`;
+            subcategoryFilter.appendChild(listItem);
+        });
+
+        // إضافة حدث للنقر على الفئات الفرعية
+        subcategoryFilter.addEventListener('click', async function(event) {
+            if (event.target.tagName === 'A') {
+                event.preventDefault(); // منع إعادة تحميل الصفحة
+
+                const subcategoryId = event.target.getAttribute('data-id'); // جلب معرف الفئة الفرعية
+
+                // جلب المنتجات بناءً على الفئة الفرعية المختارة
+                const productsResponse = await fetch(`https://localhost:44332/api/Products/GetProductBySubcategoryId ${subcategoryId}`);
+                if (productsResponse.ok) {
+                    const products = await productsResponse.json();
+                    displayProducts(products); // عرض المنتجات
+                } else {
+                    console.error('Error fetching products:', productsResponse.statusText);
+                    displayProducts([]); // عرض لا شيء إذا لم يتم العثور على منتجات
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching subcategories:', error);
+    }
+}
+
+// دالة لعرض المنتجات
+function displayProducts(products) {
+    debugger
+    const productsContainer = document.getElementById('products-container');
+    productsContainer.innerHTML = ''; // تفريغ المحتوى السابق
+
+    if (products.length === 0) {
+        productsContainer.innerHTML = '<p>لا توجد منتجات في هذه الفئة.</p>';
+        return;
+    }
+
+    products.forEach(product => {
+    const productCard = `
+      <div class="col-lg-4 col-md-4 col-sm-6 col-12" style="margin: 20px 0;">
+    <article class="single_product">
+        <figure>
+            <div class="product_thumb">
+                <div class="label_product">
+                    <span class="label_new">جديد</span>
+                    <!-- عرض الخصم إذا كان موجودًا وصالحًا -->
+                    ${product.priceWithDiscount && product.priceWithDiscount < product.price && product.priceWithDiscount > 0 ? `
+                        <span class="label_sale">${((product.price - product.priceWithDiscount) / product.price * 100).toFixed(0)}%</span>
+                    ` : ''}
+                </div>
+                <a class="primary_img" href="product-details.html" onclick="storeProductId(${product.productId})">
+                    <img src="../../../../Backend/Masterpiece/Masterpiece/Uploads/${product.image}" alt="${product.name}">
+                </a>
+                
+            </div>
+            <div class="product_content grid_content">
+                <h4 class="product_name">
+                    <a href="product-details.html">${product.name}</a>
+                </h4>
+               <div class="price_box">
+    <span class="current_price">
+        ${product.priceWithDiscount && product.priceWithDiscount > 0 && product.priceWithDiscount < product.price ? product.priceWithDiscount + ' JD' : product.price + ' JD'}
+    </span>
+    ${product.priceWithDiscount && product.priceWithDiscount < product.price ? `
+        <span class="old_price">${product.price} JD</span>
+    ` : ''}
+</div>
+                <div class="add_to_cart">
+    <a href="cart.html" class="btn btn-add-to-cart" style="margin-bottom:5px" onclick="addToCart(${product.productId}, '${product.name}', ${product.priceWithDiscount || product.price}, '${product.image}')">+ أضف إلى السلة</a>
+    <a href="#" class="btn btn-quick-view" onClick="storeProductId(${product.productId})">
+        <i class="ti-zoom-in"></i> عرض سريع
+    </a>
+</div>
+        </figure>
+    </article>
+</div>
+
+    `;
+    productsContainer.innerHTML += productCard;
+});
+
+}
+
+// حدث عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", loadProductsByCategory);
+
+
+/////////////////////////
+
+var UserId = localStorage.getItem("UserId");
+debugger
+async function addToCart(productId, name, price, image) {
+
+    if (UserId != null) {
+        var url = `https://localhost:44332/api/Cart/AddCartItem/${UserId}`;
+    
+        var data = {
+            ProductId: productId,
+            Quantity: 1,
+           
+        };
+
+        let response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            alert("Product added successfully to the cart!");
+            // Redirect to the cart page
+            window.location.href = "cart.html"; // استبدل هذا بالرابط الصحيح
+        } else {
+            let error = await response.text();
+            console.error("Error:", error);
+        }
+    } else {
+        const cartItem = {
+            product_id: productId,
+            quantity: 1,
+            name: name,
+            price: price,
+            image: image,
+        };
+
+        // Check if there is already a cart in localStorage
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        // Check if the product is already in the cart
+        let existingItem = cartItems.find((item) => item.product_id === productId);
+
+        if (existingItem) {
+            // If the product is already in the cart, update the quantity
+            existingItem.quantity = parseInt(existingItem.quantity) + 1; // Increment quantity by 1
+        } else {
+            // If it's a new product, add it to the cart array
+            cartItems.push(cartItem);
+        }
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        // تأكد من عرض تفاصيل المنتج
+        alert(`Product added successfully to the cart!\nName: ${name}\nPrice: $${price}\nQuantity: ${cartItem.quantity}`);
+        
+        // Redirect to the cart page
+        window.location.href = "cart.html"; // استبدل هذا بالرابط الصحيح
+    }
+}
+
+///////////////////////////////
+// بحط كود الخاص بالبرودكت ديتيلززز ان شاء الله يزبط 
+function storeProductId(productId) {
+    localStorage.setItem('productId', productId); // تخزين productId في localStorage
+    window.location.href = 'productdetalis1.html'; // إعادة التوجيه إلى صفحة التفاصيل
+}
+    </script> 
+    
+<!-- JS
+============================================ -->
+<!--jquery min js-->
+<script src="DornoStyle/DornoStyle/assets/js/vendor/jquery-3.4.1.min.js"></script>
+<!--popper min js-->
+<script src="DornoStyle/assets/js/popper.js"></script>
+<!--bootstrap min js-->
+<script src="DornoStyle/assets/js/bootstrap.min.js"></script>
+<!--owl carousel min js-->
+<script src="DornoStyle/assets/js/owl.carousel.min.js"></script>
+<!--slick min js-->
+<script src="DornoStyle/assets/js/slick.min.js"></script>
+<!--magnific popup min js-->
+<script src="DornoStyle/assets/js/jquery.magnific-popup.min.js"></script>
+<!--counterup min js-->
+<script src="DornoStyle/assets/js/jquery.counterup.min.js"></script>
+<!--jquery countdown min js-->
+<script src="DornoStyle/assets/js/jquery.countdown.js"></script>
+<!--jquery ui min js-->
+<script src="DornoStyle/assets/js/jquery.ui.js"></script>
+<!--jquery elevatezoom min js-->
+<script src="DornoStyle/assets/js/jquery.elevatezoom.js"></script>
+<!--isotope packaged min js-->
+<script src="DornoStyle/assets/js/isotope.pkgd.min.js"></script>
+<!--slinky menu js-->
+<script src="DornoStyle/assets/js/slinky.menu.js"></script>
+<!-- Plugins JS -->
+<script src="DornoStyle/assets/js/plugins.js"></script>
+
+<!-- Main JS -->
+<script src="DornoStyle/assets/js/main.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.shop_toolbar_btn button').on('click', function() {
+        // إزالة الفئة النشطة من جميع الأزرار
+        $('.shop_toolbar_btn button').removeClass('active');
+
+        // إضافة الفئة النشطة للزر الذي تم النقر عليه
+        $(this).addClass('active');
+
+        // تحديد نوع العرض بناءً على الزر الذي تم النقر عليه
+        var role = $(this).data('role');
+        
+        // تنفيذ الإجراء المناسب بناءً على نوع العرض
+        if (role === 'grid_3') {
+            $('#products-container').removeClass('grid-4 list').addClass('grid-3');
+        } else if (role === 'grid_4') {
+            $('#products-container').removeClass('grid-3 list').addClass('grid-4');
+        } else if (role === 'grid_list') {
+            $('#products-container').removeClass('grid-3 grid-4').addClass('list');
+        }
+    });
+});
+</script>
+</body>
+
+
+<!-- Mirrored from htmldemo.net/dorno/dorno/shop-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Sep 2024 19:54:28 GMT -->
+</html>

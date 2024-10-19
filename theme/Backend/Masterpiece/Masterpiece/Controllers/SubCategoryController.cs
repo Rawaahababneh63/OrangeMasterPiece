@@ -43,7 +43,15 @@ namespace Masterpiece.Controllers
         }
 
 
+        [HttpGet("CountAllSubCategory")]
+        public IActionResult CountAllCategory()
+        {
 
+            var categories = _db.Subcategories.ToList().Count;
+            return Ok(categories);
+
+
+        }
 
 
 

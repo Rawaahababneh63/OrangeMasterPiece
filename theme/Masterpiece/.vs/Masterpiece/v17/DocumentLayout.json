@@ -1,0 +1,357 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\SubCategoryController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Controllers\\SubCategoryController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\CategoryController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Controllers\\CategoryController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\categoryRequestDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\categoryRequestDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\VoucherController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Controllers\\VoucherController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\VoucherRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\VoucherRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\ProductDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\ProductDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Models\\Color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Models\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\SubCategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\SubCategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\UsersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Controllers\\UsersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Models\\Category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Models\\Subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\Models\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\IEmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\IEmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\UserRequestcscs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\UserRequestcscs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\TokenGenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\TokenGenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\PasswordHash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Masterpiece\\DTO\\PasswordHash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Color.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Color.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Color.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Color.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T16:01:32.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Product.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Product.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA3wBkAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T13:35:50.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\ProductDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\ProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T13:35:17.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SubCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\SubCategory.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\SubCategory.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\SubCategory.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\SubCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:17:04.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\SubCategoryController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\SubCategoryController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\SubCategoryController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\SubCategoryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJ4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:16:14.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAowGoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:02:21.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "categoryRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\categoryRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:29:14.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAMwCQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T16:41:47.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAA4AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:14:22.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Category.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:29:22.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Program.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Program.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Program.cs",
+              "RelativeToolTip": "Masterpiece\\Program.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAjwEQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:54:26.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Subcategory.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Subcategory.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\Subcategory.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\Subcategory.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\Subcategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T20:17:09.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Models\\MyDbContext.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Models\\MyDbContext.cs",
+              "RelativeToolTip": "Masterpiece\\Models\\MyDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:49:46.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\IEmailService.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\IEmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:58:47.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\EmailService.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\EmailService.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwCUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:59:13.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserRequestcscs.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\UserRequestcscs.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\UserRequestcscs.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\UserRequestcscs.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\UserRequestcscs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T16:43:52.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VoucherRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\VoucherRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:19:45.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VoucherController.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\VoucherController.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\Controllers\\VoucherController.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\Controllers\\VoucherController.cs",
+              "RelativeToolTip": "Masterpiece\\Controllers\\VoucherController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:17:56.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\appsettings.json",
+              "RelativeDocumentMoniker": "Masterpiece\\appsettings.json",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\appsettings.json",
+              "RelativeToolTip": "Masterpiece\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-13T13:41:52.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TokenGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\TokenGenerator.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\TokenGenerator.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\TokenGenerator.cs",
+              "RelativeToolTip": "Masterpiece\\TokenGenerator.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAIwCoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:39:14.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PasswordHash.cs",
+              "DocumentMoniker": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\PasswordHash.cs",
+              "RelativeDocumentMoniker": "Masterpiece\\DTO\\PasswordHash.cs",
+              "ToolTip": "C:\\Users\\Orangee\\Desktop\\rew\\preview.colorlib.com\\theme\\Masterpiece\\Masterpiece\\DTO\\PasswordHash.cs",
+              "RelativeToolTip": "Masterpiece\\DTO\\PasswordHash.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T13:39:54.997Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

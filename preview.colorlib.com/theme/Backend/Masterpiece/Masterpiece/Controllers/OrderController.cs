@@ -381,8 +381,31 @@ namespace Masterpiece.Controllers
 
             return Ok(newOrder); // أو أي استجابة تناسب احتياجاتك
         }
+        ////////////////////////////////////////////////////for admin cycle
+
+        [HttpGet("/AllOrders/")]
+        public IActionResult GetAllOrders()
+        {
+            var orders = _db.Orders.Join(_db.Users,
+                 o => o.OrderId,
+                 u => u.UserId,
+                 (o, u) => new {
+                     id = o.OrderId,
+                     Username = u.UserName,
+                     Email = u.Email,
+                     Status = o.Status,
+                     TotalAmount = o.Amount,
+                     OrderDate = o.Date
 
 
+                 }).OrderBy(r =>
+                 r.Status == "Pending" ? 0 :
+                 r.Status == "Shipped" ? 1 :
+                 r.Status == "Delivered" ? 2 :
+                 3).ToList();
+
+            return Ok(orders);
+        }
 
 
 

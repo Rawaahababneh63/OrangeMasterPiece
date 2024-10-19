@@ -1,0 +1,10 @@
+/*!
+Version: 3.0.0
+Author: Ankit Hingarajiya - DeskApp
+*/
+#app-content {
+    margin-left: 18.25rem;
+    min-height: 100vh;
+    min-width: 100vw;
+    transition: margin .25s ease-out;
+}

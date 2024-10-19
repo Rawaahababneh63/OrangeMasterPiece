@@ -43,5 +43,36 @@ namespace Masterpiece.DTO
                 }
             }
         }
+
+        public async Task SendEmailAsync(string email, string subject, string adminResponse)
+        {
+            // إعداد رسالة البريد الإلكتروني بشكل مشابه لطريقة SendEmail
+            var emailMessage = new MimeMessage();
+            emailMessage.From.Add(new MailboxAddress("Your Name", "teamorange077@gmail.com"));
+            emailMessage.To.Add(new MailboxAddress("", email));
+            emailMessage.Subject = subject;
+
+            var bodyBuilder = new BodyBuilder { HtmlBody = adminResponse };
+            emailMessage.Body = bodyBuilder.ToMessageBody();
+
+            using (var client = new SmtpClient())
+            {
+                try
+                {
+                    await client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                    await client.AuthenticateAsync("teamorange077@gmail.com", "vgwb vpry csun ohhg");
+                    await client.SendAsync(emailMessage);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error sending email: {ex.Message}");
+                }
+                finally
+                {
+                    await client.DisconnectAsync(true);
+                }
+            }
+        }
+
     }
 }

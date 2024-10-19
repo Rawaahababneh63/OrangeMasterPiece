@@ -39,6 +39,8 @@ public partial class MyDbContext : DbContext
 
     public virtual DbSet<Negotiation> Negotiations { get; set; }
 
+    public virtual DbSet<News> News { get; set; }
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<OrderItem> OrderItems { get; set; }
@@ -51,6 +53,10 @@ public partial class MyDbContext : DbContext
 
     public virtual DbSet<SaleRequest> SaleRequests { get; set; }
 
+    public virtual DbSet<Service> Services { get; set; }
+
+    public virtual DbSet<SubService> SubServices { get; set; }
+
     public virtual DbSet<Subcategory> Subcategories { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -59,7 +65,7 @@ public partial class MyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=ORANGE;Database=ProjectMasterPiece;Trusted_Connection=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server= ORANGE;Database=ProjectMasterPiece;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -250,6 +256,19 @@ public partial class MyDbContext : DbContext
                 .HasConstraintName("FK__Negotiati__User___74AE54BC");
         });
 
+        modelBuilder.Entity<News>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__News__3214EC0783E0F719");
+
+            entity.Property(e => e.ImageUrl).HasMaxLength(500);
+            entity.Property(e => e.Link).HasMaxLength(500);
+            entity.Property(e => e.PublishedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.ShortDescription).HasMaxLength(500);
+            entity.Property(e => e.Title).HasMaxLength(255);
+        });
+
         modelBuilder.Entity<Order>(entity =>
         {
             entity.HasKey(e => e.OrderId).HasName("PK__Orders__46596229191204C2");
@@ -333,6 +352,8 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.Image2).HasMaxLength(255);
             entity.Property(e => e.Image3).HasMaxLength(255);
             entity.Property(e => e.IsDonation).HasDefaultValue(false);
+            entity.Property(e => e.MaxPrice).HasColumnType("decimal(18, 2)");
+            entity.Property(e => e.MinPrice).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.PriceWithDiscount)
                 .HasColumnType("decimal(10, 2)")
@@ -374,6 +395,33 @@ public partial class MyDbContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK__SaleReque__UserI__534D60F1");
+        });
+
+        modelBuilder.Entity<Service>(entity =>
+        {
+            entity.HasKey(e => e.ServiceId).HasName("PK__Service__4550733F15271C35");
+
+            entity.ToTable("Service");
+
+            entity.Property(e => e.ServiceId)
+                .ValueGeneratedNever()
+                .HasColumnName("serviceID");
+            entity.Property(e => e.ServiceDescription).HasMaxLength(500);
+            entity.Property(e => e.ServiceName).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<SubService>(entity =>
+        {
+            entity.HasKey(e => e.SubServiceId).HasName("PK__subServi__C5C51FFA950428AF");
+
+            entity.ToTable("subService");
+
+            entity.Property(e => e.SubServiceId)
+                .ValueGeneratedNever()
+                .HasColumnName("subServiceID");
+            entity.Property(e => e.ServiceId).HasColumnName("serviceID");
+            entity.Property(e => e.SubServiceDescription).HasMaxLength(500);
+            entity.Property(e => e.SubServiceName).HasMaxLength(50);
         });
 
         modelBuilder.Entity<Subcategory>(entity =>

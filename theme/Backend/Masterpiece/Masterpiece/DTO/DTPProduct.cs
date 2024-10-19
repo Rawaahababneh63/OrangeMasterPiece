@@ -7,7 +7,7 @@
         public string Description { get; set; }
         public string Image { get; set; }
         // إضافة خاصية URL للصورة
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
         public int? ClothColorId { get; set; }
         public string TypeProduct { get; set; }
         public string Condition { get; set; }
